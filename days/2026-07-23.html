@@ -37,6 +37,14 @@
   .v-yes{color:#1a8a3c;font-weight:600;}
   .v-no{color:#b3261e;font-weight:600;}
   .v-watch{color:#b26a00;font-weight:600;}
+  .review{list-style:none;margin:8px 0;padding-left:0;}
+  .review li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px;}
+  .r-head{display:flex;align-items:flex-start;gap:10px;margin-bottom:4px;font-size:14px;line-height:1.5;}
+  .r-tag{flex-shrink:0;white-space:nowrap;font-size:12px;padding:2px 8px;border-radius:6px;font-weight:600;}
+  .r-yes{background:#e6f7ec;color:#1a8a3c;}
+  .r-no{background:#ffeaea;color:#b3261e;}
+  .r-watch{background:#fff3e0;color:#b26a00;}
+  .r-body{font-size:13px;color:var(--sub);margin:6px 0 0;line-height:1.6;}
   .gauge{height:10px;border-radius:999px;background:#eef0f3;overflow:hidden;margin:8px 0 4px;}
   .gauge > i{display:block;height:100%;background:var(--up);}
   .gval{font-size:13px;color:var(--sub);}
@@ -61,10 +69,24 @@
   <div class="sec">
     <h3>⏮ 前日观察回顾 · 核对 7-22 提出的 4 个观察点</h3>
     <p class="note">把上一交易日（7-22）「次日观察」的推测逐条对照今日盘面，标注验证结论，使观察链条可延续。下一日复盘将回看本页「七、次日观察」。</p>
-    <div class="kv"><span>① 商贸零售能否确认蓄积（进前5 + 放量突破）</span><span class="r"><b class="v-no">未验证</b> ｜ 今日板块未入领涨前排，仍处蓄势观察池</span></div>
-    <div class="kv"><span>② 资源/周期早哨持续性（防一日游）</span><span class="r"><b class="v-watch">延续观察</b> ｜ 有色延续（能源金属+5.65%／工业金属+3.58%），但石油、煤炭未入领涨前排</span></div>
-    <div class="kv"><span>③ 情绪回升（上涨占比回到 50%+）</span><span class="r"><b class="v-yes">已验证</b> ｜ 今日上涨占比 <b>77%</b>，由 27% 大幅回升</span></div>
-    <div class="kv"><span>④ 创业板是否止跌</span><span class="r"><b class="v-yes">已验证</b> ｜ 创业板 <b>+0.25%</b> 微涨企稳</span></div>
+    <ul class="review">
+      <li>
+        <div class="r-head"><span class="r-tag r-no">未验证</span><b>① 商贸零售能否确认蓄积（进前5 + 放量突破）</b></div>
+        <div class="r-body">今日板块未入领涨前排，仍处蓄势观察池。</div>
+      </li>
+      <li>
+        <div class="r-head"><span class="r-tag r-watch">延续观察</span><b>② 资源/周期早哨持续性（防一日游）</b></div>
+        <div class="r-body">有色延续（能源金属 +5.65%／工业金属 +3.58%），但石油、煤炭未入领涨前排。</div>
+      </li>
+      <li>
+        <div class="r-head"><span class="r-tag r-yes">已验证</span><b>③ 情绪回升（上涨占比回到 50%+）</b></div>
+        <div class="r-body">今日上涨占比 <b>77%</b>，由 27% 大幅回升。</div>
+      </li>
+      <li>
+        <div class="r-head"><span class="r-tag r-yes">已验证</span><b>④ 创业板是否止跌</b></div>
+        <div class="r-body">创业板 <b>+0.25%</b> 微涨企稳。</div>
+      </li>
+    </ul>
   </div>
 
   <div class="sec">
