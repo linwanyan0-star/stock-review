@@ -1,0 +1,64 @@
+{
+  "date": "2026-07-22",
+  "weekday": "周三",
+  "summary": "市场偏弱、情绪低迷(上涨占比27%)、缩量；指数估值高位，板块无明确主线，仅商贸零售初现蓄积。",
+  "indices": [
+    {"name": "沪深300", "close": 4710.14, "chg": -0.46, "valPct": 89.17, "band": "高估"},
+    {"name": "中证500", "close": 7753.8, "chg": -0.63, "valPct": 89.17, "band": "高估"},
+    {"name": "创业板指", "close": 3565.03, "chg": -3.23, "valPct": 86.67, "band": "高估"},
+    {"name": "中证红利", "close": 5452.59, "chg": 1.14, "valPct": 76.67, "band": "高估"},
+    {"name": "红利低波", "close": 10769.53, "chg": -1.31, "valPct": 73.08, "band": "样本不足"},
+    {"name": "恒生指数", "close": 24851.04, "chg": -0.97, "valPct": 53.72, "band": "合理·打折"},
+    {"name": "标普500", "close": 7509.2, "chg": 0.89, "valPct": 98.35, "band": "高估·打折"}
+  ],
+  "sentiment": {
+    "upCount": 1530, "downCount": 3876, "flatCount": 124, "upRatio": 27,
+    "upLimit": 48, "downLimit": 10,
+    "amount": 26533.45, "amountUnit": "亿", "amountChange": -3037.48,
+    "temperature": "偏低"
+  },
+  "sectors": {
+    "stageDist": {"蓄积": 1, "观测": 30},
+    "trackingPool": ["商贸零售", "钢铁", "家用电器", "农林牧渔"],
+    "earlySentinelBoard": [
+      {"name": "石油石化", "chg": 3.2},
+      {"name": "有色金属", "chg": 2.9},
+      {"name": "煤炭", "chg": 2.4}
+    ],
+    "stage3": false
+  },
+  "stocks": [
+    {"name": "创业黑马", "chg": 20.01, "board": "社会服务", "turnover": 15.44},
+    {"name": "托伦斯", "chg": 20.0, "board": "电子", "turnover": 54.0},
+    {"name": "惠城环保", "chg": 20.0, "board": "环保", "turnover": 11.51},
+    {"name": "津荣天宇", "chg": 13.56, "board": "机械设备", "turnover": 10.0},
+    {"name": "九洲集团", "chg": 11.88, "board": "公用事业", "turnover": 29.49},
+    {"name": "捷强装备", "chg": 11.72, "board": "国防军工", "turnover": 9.59},
+    {"name": "宏昌科技", "chg": 10.45, "board": "家用电器", "turnover": 7.68},
+    {"name": "海通发展", "chg": 10.05, "board": "交通运输", "turnover": 7.18},
+    {"name": "天安新材", "chg": 10.04, "board": "轻工制造", "turnover": 13.14},
+    {"name": "大有能源", "chg": 10.04, "board": "煤炭", "turnover": 6.21},
+    {"name": "金字火腿", "chg": 9.95, "board": "食品饮料", "turnover": 10.66}
+  ],
+  "fundFlow": {
+    "netInflowIndustries": [
+      {"name": "商贸零售", "val": 3.78},
+      {"name": "美容护理", "val": 1.64}
+    ],
+    "netOutflowTop": [
+      {"name": "电子", "val": -1267.89},
+      {"name": "通信", "val": -336.11},
+      {"name": "机械设备", "val": -238.07},
+      {"name": "国防军工", "val": -140.07},
+      {"name": "电力设备", "val": -138.15}
+    ],
+    "note": "行业5日主力净流入(亿)，整体净流出为主；北向/主力个股流向待自动化补全"
+  },
+  "nextWatch": [
+    "商贸零售能否确认①蓄积(排名进前5+放量突破)",
+    "资源/周期早哨(石油/有色/煤炭)持续性，防一日游",
+    "情绪回升：上涨占比能否回到50%以上",
+    "创业板是否止跌"
+  ],
+  "risk": "指数估值高位(73~89%)、情绪偏低(上涨占比27%)、量能萎缩、板块无明确主线；框架n=1小样本，新闻定性须人工核对"
+}

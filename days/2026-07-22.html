@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026-07-22 A 股盘面复盘</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#ffffff; --ink:#1f2329; --sub:#6b7280; --line:#eceef1;
+    --up:#e03b3b; --down:#1aa260; --brand:#2b5cff; --brand-soft:#eef2ff; --amber:#c88217;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;}
+  .wrap{max-width:680px;margin:0 auto;padding:16px 14px 48px;}
+  .back{display:inline-block;color:var(--brand);font-size:13px;text-decoration:none;margin:6px 0 10px;}
+  header{padding:4px 0 10px;border-bottom:1px solid var(--line);}
+  .date{font-size:13px;color:var(--sub);}
+  .title{font-size:20px;font-weight:700;margin:2px 0 0;}
+  .conclusion{background:var(--brand-soft);border-radius:14px;padding:14px;margin:16px 0;}
+  .conclusion .label{font-size:12px;color:#2742c4;font-weight:700;letter-spacing:1px;}
+  .conclusion .text{font-size:16px;font-weight:600;margin-top:6px;color:#1a2a6b;}
+  .src{font-size:12px;color:var(--sub);background:#eef6ee;border:1px solid #cfe9d4;border-radius:10px;padding:8px 12px;margin:14px 0;}
+  h2{font-size:16px;margin:22px 0 10px;}
+  .sec{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px;box-shadow:0 1px 2px rgba(0,0,0,.03);}
+  .sec h3{font-size:15px;margin:0 0 8px;}
+  .sec p{margin:6px 0;font-size:14px;}
+  .note{font-size:12px;color:var(--sub);margin:4px 0 8px;}
+  .kv{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;padding:5px 0;border-bottom:1px dashed var(--line);}
+  .kv:last-child{border-bottom:none;}
+  .kv .r{text-align:right;color:var(--sub);}
+  .kv .r b{color:var(--ink);}
+  .up{color:var(--up);font-weight:600;}
+  .down{color:var(--down);font-weight:600;}
+  ul{margin:6px 0;padding-left:18px;font-size:14px;}
+  li{margin:3px 0;}
+  .pill{display:inline-block;font-size:11px;padding:1px 8px;border-radius:999px;background:#fff3e0;color:#b26a00;margin-left:6px;}
+  .gauge{height:10px;border-radius:999px;background:#eef0f3;overflow:hidden;margin:8px 0 4px;}
+  .gauge > i{display:block;height:100%;background:var(--amber);}
+  .gval{font-size:13px;color:var(--sub);}
+  footer{color:var(--sub);font-size:12px;text-align:center;margin-top:24px;line-height:1.6;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← 返回归档</a>
+  <header>
+    <div class="date">2026-07-22 · 周三 · 交易日收盘</div>
+    <div class="date" style="color:var(--brand);font-weight:700;letter-spacing:1px;margin-top:6px;">一句话结论 · 给爸妈看</div>
+    <h1 class="title">今日市场偏弱、情绪低迷，建议控仓位、多看少动</h1>
+  </header>
+
+  <div class="src">✅ 本篇由真实数据聚合生成：指数观测（估值分位）、板块趋势观测（31 行业四阶段）、行情源涨跌分布（情绪宽度）。个人持仓/自选股未纳入。</div>
+
+  <h2>详细版</h2>
+
+  <div class="sec">
+    <h3>一、大盘概览（指数估值视角）</h3>
+    <p class="note">主指标 = 估值分位（PE 近10年）；&lt;40% 触发购买建议。本期 7 指数均 ≥53%，未触发。</p>
+    <div class="kv"><span>沪深300</span><span class="r"><b>4,710.14</b> <span class="down">-0.46%</span> ｜ 估值分位 89% 高估</span></div>
+    <div class="kv"><span>中证500</span><span class="r"><b>7,753.80</b> <span class="down">-0.63%</span> ｜ 估值分位 89% 高估</span></div>
+    <div class="kv"><span>创业板指</span><span class="r"><b>3,565.03</b> <span class="down">-3.23%</span> ｜ 估值分位 87% 高估</span></div>
+    <div class="kv"><span>中证红利</span><span class="r"><b>5,452.59</b> <span class="up">+1.14%</span> ｜ 估值分位 77% 高估</span></div>
+    <div class="kv"><span>红利低波</span><span class="r"><b>10,769.53</b> <span class="down">-1.31%</span> ｜ 估值分位 73%(短窗口) PE8.24 息4.45%</span></div>
+    <div class="kv"><span>恒生指数</span><span class="r"><b>24,851.04</b> <span class="down">-0.97%</span> ｜ 点位分位10年 54%(口径打折) 合理</span></div>
+    <div class="kv"><span>标普500</span><span class="r"><b>7,509.20</b> <span class="up">+0.89%</span> ｜ 点位分位 98%(美东07-21·打折) 高估</span></div>
+  </div>
+
+  <div class="sec">
+    <h3>二、市场情绪与宽度 <span class="pill">新增</span></h3>
+    <div class="gauge"><i style="width:27%"></i></div>
+    <div class="gval">情绪温度计：<b>偏低</b>（上涨占比 27%，低于 50% 荣枯线）</div>
+    <div class="kv"><span>涨跌家数</span><span class="r">上涨 <b>1,530</b> ／ 下跌 <b>3,876</b> ／ 平 124</span></div>
+    <div class="kv"><span>涨停 / 跌停</span><span class="r"><b>48</b> ／ <b>10</b></span></div>
+    <div class="kv"><span>两市成交</span><span class="r">约 <b>2.65 万亿</b> ／ 较前日 <span class="down">-3,037 亿</span>（缩量）</span></div>
+    <p class="note">涨跌区间：&gt;7% 涨 79 ／ 5~7% 97 ／ 2~5% 1,719 ／ &lt;2% 跌 2,877；跌多涨少，赚钱效应弱。</p>
+  </div>
+
+  <div class="sec">
+    <h3>三、板块结构（31 行业四阶段）</h3>
+    <p><b>阶段分布：</b>①蓄积 1 个（商贸零售）｜ 观测 30 个。无板块进入 ②发酵 / ③高潮。</p>
+    <p><b>蓄势观察池：</b>商贸零售、钢铁、家用电器、农林牧渔（量能静默、尚未放量突破）。</p>
+    <p><b>异动早哨·板块级（当日相对强）：</b>石油石化 +3.2%、有色金属 +2.9%、煤炭 +2.4%。</p>
+    <p class="note">早哨噪音较高，须人工核对新闻定性与适用性，不据此直接操作。</p>
+  </div>
+
+  <div class="sec">
+    <h3>四、个股盘面 · 市场级异动</h3>
+    <p class="note">以下为当日异动个股（市场公开数据，非个人持仓），供看盘面热度：</p>
+    <ul>
+      <li>创业黑马 <span class="up">+20.01%</span>（社会服务，换手15.4%）</li>
+      <li>托伦斯 <span class="up">+20.0%</span>（电子，换手54.0%）</li>
+      <li>惠城环保 <span class="up">+20.0%</span>（环保，换手11.5%）</li>
+      <li>津荣天宇 <span class="up">+13.56%</span>（机械设备）｜ 九洲集团 <span class="up">+11.88%</span>（公用事业）</li>
+      <li>捷强装备 <span class="up">+11.72%</span>（国防军工）｜ 宏昌科技 <span class="up">+10.45%</span>（家用电器）</li>
+      <li>海通发展 <span class="up">+10.05%</span>（交通运输）｜ 天安新材 <span class="up">+10.04%</span>（轻工）｜ 大有能源 <span class="up">+10.04%</span>（煤炭）｜ 金字火腿 <span class="up">+9.95%</span>（食品饮料）</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>五、资金面</h3>
+    <p><b>行业 5 日主力净流入（亿）：</b>仅商贸零售 +3.78、美容护理 +1.64 为净流入；其余普遍净流出，电子 -1,268、通信 -336、机械设备 -238、国防军工 -140、电力设备 -138 拖累最大。</p>
+    <p class="note">北向资金 / 主力个股流向为待补全维度（自动化下一阶段接入）。</p>
+  </div>
+
+  <div class="sec">
+    <h3>六、技术关键位</h3>
+    <p>沪深300 收 4,710（估值高位，暂无便宜信号）；创业板指 3,565 单日 -3.23% 偏弱；中证红利 5,452 相对抗跌 +1.14%。</p>
+  </div>
+
+  <div class="sec">
+    <h3>七、次日观察</h3>
+    <ul>
+      <li>商贸零售能否确认①蓄积（排名进前5 + 放量突破平台）。</li>
+      <li>资源/周期早哨（石油/有色/煤炭）持续性，防一日游。</li>
+      <li>情绪回升信号：上涨占比能否回到 50% 以上。</li>
+      <li>创业板是否止跌。</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>八、风险提示</h3>
+    <p>主要指数估值分位 73%~89% 处高位；市场情绪偏低（上涨占比27%）、量能萎缩；板块无明确主线，仅蓄势观察。板块框架为 n=1 小样本假说，新闻定性（事件驱动 vs 情绪发酵）须每日人工核对；出现实质政策/业绩催化应切换逻辑。</p>
+  </div>
+
+  <footer>数据来源于腾讯自选股等公开行情，可能存在延迟 ｜ 仅供家庭内部学习交流，不构成投资建议</footer>
+</div>
+</body>
+</html>
