@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026-07-24 A 股盘面复盘</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#ffffff; --ink:#1f2329; --sub:#6b7280; --line:#eceef1;
+    --up:#e03b3b; --down:#1aa260; --brand:#2b5cff; --brand-soft:#eef2ff; --amber:#c88217;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;}
+  .wrap{max-width:680px;margin:0 auto;padding:16px 14px 48px;}
+  .back{display:inline-block;color:var(--brand);font-size:13px;text-decoration:none;margin:6px 0 10px;}
+  header{padding:4px 0 10px;border-bottom:1px solid var(--line);}
+  .date{font-size:13px;color:var(--sub);}
+  .title{font-size:20px;font-weight:700;margin:2px 0 0;}
+  .conclusion{background:var(--brand-soft);border-radius:14px;padding:14px;margin:16px 0;}
+  .conclusion .label{font-size:12px;color:#2742c4;font-weight:700;letter-spacing:1px;}
+  .conclusion .text{font-size:16px;font-weight:600;margin-top:6px;color:#1a2a6b;}
+  .src{font-size:12px;color:var(--sub);background:#eef6ee;border:1px solid #cfe9d4;border-radius:10px;padding:8px 12px;margin:14px 0;}
+  h2{font-size:16px;margin:22px 0 10px;}
+  .sec{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px;box-shadow:0 1px 2px rgba(0,0,0,.03);}
+  .sec h3{font-size:15px;margin:0 0 8px;}
+  .sec p{margin:6px 0;font-size:14px;}
+  .note{font-size:12px;color:var(--sub);margin:4px 0 8px;}
+  .kv{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;padding:5px 0;border-bottom:1px dashed var(--line);}
+  .kv:last-child{border-bottom:none;}
+  .kv .r{text-align:right;color:var(--sub);}
+  .kv .r b{color:var(--ink);}
+  .up{color:var(--up);font-weight:600;}
+  .down{color:var(--down);font-weight:600;}
+  ul{margin:6px 0;padding-left:18px;font-size:14px;}
+  li{margin:3px 0;}
+  .pill{display:inline-block;font-size:11px;padding:1px 8px;border-radius:999px;background:#fff3e0;color:#b26a00;margin-left:6px;}
+  .v-yes{color:#1a8a3c;font-weight:600;}
+  .v-no{color:#b3261e;font-weight:600;}
+  .v-watch{color:#b26a00;font-weight:600;}
+  .review{list-style:none;margin:8px 0;padding-left:0;}
+  .review li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px;}
+  .r-head{display:flex;align-items:flex-start;gap:10px;margin-bottom:4px;font-size:14px;line-height:1.5;}
+  .r-tag{flex-shrink:0;white-space:nowrap;font-size:12px;padding:2px 8px;border-radius:6px;font-weight:600;}
+  .r-yes{background:#e6f7ec;color:#1a8a3c;}
+  .r-no{background:#ffeaea;color:#b3261e;}
+  .r-watch{background:#fff3e0;color:#b26a00;}
+  .r-body{font-size:13px;color:var(--sub);margin:6px 0 0;line-height:1.6;}
+  .gauge{height:10px;border-radius:999px;background:#eef0f3;overflow:hidden;margin:8px 0 4px;}
+  .gauge > i{display:block;height:100%;background:var(--up);}
+  .gval{font-size:13px;color:var(--sub);}
+  footer{color:var(--sub);font-size:12px;text-align:center;margin-top:24px;line-height:1.6;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← 返回归档</a>
+  <header>
+    <div class="date">2026-07-24 · 周五 · 交易日收盘</div>
+    <div class="conclusion">
+      <div class="label">一句话结论</div>
+      <div class="text">市场普跌回调、情绪骤降至冰点（上涨占比仅 10%），前日主线电网/新能源/有色一日游熄火，仅军工/半导体/银行逆势；缩量下跌，建议观望控仓。</div>
+    </div>
+  </header>
+
+  <div class="src">✅ 本篇由真实数据聚合生成（回溯 2026-07-24 收盘）：指数行情（data_quote）、涨跌宽度（data_changedist）、板块涨跌与资金（data_sector / data_hot）、热门概念（data_hot）。个人持仓/自选股未纳入。指数估值分位因画像接口 T+1 延迟未取，改用 TTM PE 标注。</div>
+
+  <h2>详细版</h2>
+
+  <div class="sec">
+    <h3>⏮ 前日观察回顾 · 核对 7-23 提出的 4 个观察点</h3>
+    <p class="note">把上一交易日（7-23）「次日观察」的推测逐条对照今日盘面，标注验证结论，使观察链条可延续。下一日复盘将回看本页「七、次日观察」。</p>
+    <ul class="review">
+      <li>
+        <div class="r-head"><span class="r-tag r-no">未验证</span><b>① 情绪能否延续（上涨占比维持 50%+，涨停家数不大幅回落）</b></div>
+        <div class="r-body">今日上涨占比骤降至 <b>10%</b>（7-23 为 77%），涨停仅 43 只（7-23 为 129），情绪由高涨直接反转杀跌。</div>
+      </li>
+      <li>
+        <div class="r-head"><span class="r-tag r-no">未验证</span><b>② 主线持续性：电网/新能源/有色是真实主线还是一日游</b></div>
+        <div class="r-body">前日主线全线退潮：电网设备 <b class="down">-3.24%</b>、能源金属 <b class="down">-4.90%</b>、工业金属 <b class="down">-4.93%</b>，属典型一日游熄火。</div>
+      </li>
+      <li>
+        <div class="r-head"><span class="r-tag r-yes">已验证</span><b>③ 半导体能否止跌</b></div>
+        <div class="r-body">半导体 <b class="up">+0.59%</b> 逆势微红、资金净流入居首（+36.5 亿），在普跌中相对抗跌，初步止跌。</div>
+      </li>
+      <li>
+        <div class="r-head"><span class="r-tag r-no">未验证</span><b>④ 成交能否放量</b></div>
+        <div class="r-body">两市成交约 <b>1.93 万亿</b>，较前日 <b class="down">-2641 亿</b>，为缩量下跌而非放量，未达放量条件。</div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>一、大盘概览（指数涨跌 + TTM PE）</h3>
+    <p class="note">今日五大指数全线收绿，中证500 跌幅最深；PE 为 TTM 口径，估值分位待画像接口刷新后补全。</p>
+    <div class="kv"><span>上证指数</span><span class="r"><b>3,814.20</b> <span class="down">-1.61%</span> ｜ PE 17.0x</span></div>
+    <div class="kv"><span>深证成指</span><span class="r"><b>13,774.68</b> <span class="down">-2.47%</span> ｜ PE 44.6x</span></div>
+    <div class="kv"><span>创业板指</span><span class="r"><b>3,480.87</b> <span class="down">-2.65%</span> ｜ PE 59.5x（偏高）</span></div>
+    <div class="kv"><span>沪深300</span><span class="r"><b>4,649.19</b> <span class="down">-1.67%</span> ｜ PE 14.4x</span></div>
+    <div class="kv"><span>中证500</span><span class="r"><b>7,532.70</b> <span class="down">-2.61%</span> ｜ PE 35.7x</span></div>
+  </div>
+
+  <div class="sec">
+    <h3>二、市场情绪与宽度 <span class="pill">情绪冰点</span></h3>
+    <div class="gauge"><i style="width:10%"></i></div>
+    <div class="gval">情绪温度计：<b class="down">冰点</b>（上涨占比 10%，昨日 77%；涨停 43 只，赚钱效应骤降）</div>
+    <div class="kv"><span>涨跌家数</span><span class="r">上涨 <b>555</b> ／ 下跌 <b>4,940</b> ／ 平 36</span></div>
+    <div class="kv"><span>涨停 / 跌停</span><span class="r"><b>43</b> ／ <b>25</b></span></div>
+    <div class="kv"><span>两市成交</span><span class="r">约 <b>1.93 万亿</b> ／ 较前日 <span class="down">-2,641 亿</span>（缩量）</span></div>
+    <p class="note">涨跌区间：&gt;7% 涨 37 ／ 5~7% 38 ／ 2~5% 131 ／ 0~2% 306；0~2% 跌 1,077 ／ 2~5% 3,152 ／ 5~7% 516 ／ &gt;7% 跌 170 ／ 跌停 25。普跌格局，仅少数板块逆势。</p>
+  </div>
+
+  <div class="sec">
+    <h3>三、板块结构（申万一级 + 热门概念）</h3>
+    <p><b>领涨方向（逆势）：</b>地面兵装Ⅱ <b class="up">+2.23%</b>、摩托车及其他 <b class="up">+1.63%</b>、国有大型银行Ⅱ <b class="up">+0.84%</b>、半导体 <b class="up">+0.59%</b>、股份制银行 <b class="up">+0.32%</b>。</p>
+    <p><b>领跌方向：</b>贵金属 <b class="down">-5.56%</b>、工业金属 <b class="down">-4.93%</b>、能源金属 <b class="down">-4.90%</b>、元件 <b class="down">-3.37%</b>、农化制品 <b class="down">-3.60%</b>、电力 <b class="down">-3.48%</b>、通信设备 <b class="down">-3.25%</b>、电网设备 <b class="down">-3.24%</b>、煤炭开采 <b class="down">-3.12%</b>、化学原料 <b class="down">-3.21%</b>。</p>
+    <p><b>热门概念：</b>防护服 +2.82%、中兵系 +2.66%、气溶胶检测 +1.52%、昨日连板 +1.22%、大基金二期 +1.21%（军工/半导体链逆势活跃）。</p>
+    <p class="note">主线逻辑：前日主线（电网/新能源/有色）集体退潮，资金转向防御与事件驱动——军工（地面兵装/中兵系）、半导体（大基金二期）逆势，银行护盘；整体呈风险偏好骤降的普跌结构。</p>
+  </div>
+
+  <div class="sec">
+    <h3>四、个股盘面 · 市场级异动</h3>
+    <p class="note">以下为当日异动个股（市场公开数据，非个人持仓），供看盘面热度：</p>
+    <ul>
+      <li>托伦斯 <span class="up">+20.00%</span>（半导体）｜ 中光防雷 <span class="up">+20.02%</span>（通信设备）｜ 五洲医疗 <span class="up">+20.00%</span>（昨日连板）</li>
+      <li>光力科技 <span class="up">+20.02%</span>（CPO）｜ 长城军工 <span class="up">+9.99%</span>（地面兵装Ⅱ）｜ 东晶电子 <span class="up">+9.97%</span>（元件）</li>
+      <li>新亚制程 <span class="up">+10.10%</span>（其他电子Ⅱ）｜ 新能股份 <span class="up">+9.96%</span>（电力）</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>五、资金面（行业主力净流入）</h3>
+    <p><b>净流入前排（亿元）：</b>半导体 <b class="up">+36.53</b>、地面兵装Ⅱ <b class="up">+3.70</b>、其他电子Ⅱ <b class="up">+2.62</b>。</p>
+    <p><b>净流出前排：</b>通信设备 <b class="down">-65.90</b>、电力 <b class="down">-63.01</b>、元件 <b class="down">-56.22</b>。</p>
+    <p class="note">资金从前期主线（通信/电力/元件）大幅撤离，逆势涌入半导体；与前日主线熄火、半导体止跌互相印证。银行板块资金平稳，呈护盘特征。</p>
+  </div>
+
+  <div class="sec">
+    <h3>六、技术关键位</h3>
+    <p>上证 3,814、深成指 13,775、创业板 3,481 全线破位下行，中证500 跌幅最深（-2.61%）弱势明显；无任何指数站上短期均线，整体为空头排列的普跌，无企稳信号。</p>
+  </div>
+
+  <div class="sec">
+    <h3>七、次日观察</h3>
+    <ul>
+      <li>普跌后能否企稳：上涨占比回升至 30%+、跌停家数收敛（今日跌停 25、&gt;7% 跌 170，恐慌尚可控）。</li>
+      <li>逆势方向（军工/半导体/银行）延续还是补跌：决定市场是风格切换还是全面转弱。</li>
+      <li>成交是否继续萎缩：今日 1.93 万亿已缩量，关注地量是否触发短线修复。</li>
+      <li>前日主线（电网/新能源/有色）是中线退潮还是短线洗盘：决定下一阶段主线归属。</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>八、风险提示</h3>
+    <p>普跌+情绪冰点，缩量下跌非见底信号，更偏风险释放；指数估值：创业板 PE 59.5x 仍偏高，上证 17.0x / 沪深300 14.4x 中性。板块涨跌为单日观察，新闻定性（事件驱动 vs 情绪发酵）须每日人工核对；出现实质政策/业绩催化应切换逻辑。</p>
+  </div>
+
+  <footer>数据来源于腾讯自选股等公开行情，可能存在延迟 ｜ 仅供家庭内部学习交流，不构成投资建议</footer>
+</div>
+</body>
+</html>

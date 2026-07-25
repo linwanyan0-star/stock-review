@@ -1,0 +1,7 @@
+# === 隐私保护：禁止将私密报告推上公开 GitHub Pages 仓库 ===
+# 个股跟踪每日报告（含户数/持仓等私密数据）不得进入公开仓库
+*stock-tracking*.html
+*tracking*.html
+# 其他可能的私密产物
+private/
+*.secret.*
