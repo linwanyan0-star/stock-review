@@ -5,3 +5,5 @@
 # 其他可能的私密产物
 private/
 *.secret.*
+# WorkBuddy 自动化内部元数据（执行记录等），非站点内容，禁止进入公开仓库
+.workbuddy/
