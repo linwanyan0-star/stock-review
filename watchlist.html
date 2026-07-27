@@ -25,10 +25,10 @@
   .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 12px;}
   @media(min-width:560px){.grid{grid-template-columns:repeat(4,1fr);}}
   .m{background:#fafbfc;border:1px solid var(--line);border-radius:10px;padding:7px 9px;}
+  .m.wide{grid-column:1 / -1;}
   .m-l{font-size:11px;color:var(--sub);margin-bottom:2px;}
   .m-v{font-size:14px;font-weight:600;}
-  .up{color:#dc2626;}.down{color:#16a34a;}.ok{color:#16a34a;}.warn{color:#b26a00;}.mid{color:#6b7280;}
-  .sig{font-size:11px;font-weight:600;margin-left:2px;}
+  .up{color:#dc2626;} .down{color:#16a34a;} .ok{color:#16a34a;} .warn{color:#b26a00;} .mid{color:#6b7280;}
   footer{color:var(--sub);font-size:12px;text-align:center;margin-top:24px;line-height:1.6;}
 </style>
 </head>
@@ -36,26 +36,235 @@
 <div class="wrap">
   <a class="back" href="index.html">← 返回归档</a>
   <header>
-    <div class="date">个股跟踪 · 家庭共享 · 数据截至 2026-07-24 收盘快照</div>
+    <div class="date">个股跟踪 · 家庭共享 · 数据截至 2026-07-27 收盘快照</div>
     <h1 class="title">我的关注个股（共 16 只）</h1>
   </header>
-  <div class="note">📌 本页信息与「个股跟踪」自动化任务<b>同源一致</b>：每个股票的当日涨跌、板块涨跌、52周百分位、板块一致性、主力资金、户数等，均取自该任务生成的同一份数据（2026-07-24 收盘快照），非另起炉灶估算。仅展示市场公开数据，不含个人持仓等私密信息；更完整的图表与三维详解见每日自动化报告。</div>
-  <div class="card"><div class="ch"><span class="idx">1</span><span class="nm">京东方Ａ</span><span class="code">sz000725</span><span class="tag">电子</span><span class="px">¥5.80</span></div><div class="grid"><div class="m"><div class="m-l">个股当日</div><div class="m-v -4.29%">down</div></div><div class="m"><div class="m-l">板块当日</div><div class="m-v -0.76%">down</div></div><div class="m"><div class="m-l">相对板块</div><div class="m-v 跑输">warn</div></div><div class="m"><div class="m-l">52周百分位</div><div class="m-v 35.90%"></div></div><div class="m"><div class="m-l">板块一致性</div><div class="m-v 一致"></div></div><div class="m"><div class="m-l">主力当日</div><div class="m-v -12.07亿">down</div></div><div class="m"><div class="m-l">公开户数</div><div class="m-v 100.0万"></div></div><div class="m"><div class="m-l">测算户数</div><div class="m-v 110.1万 <span class="sig up">+10.1%</span>"></div></div></div></div>
-<div class="card"><div class="ch"><span class="idx">2</span><span class="nm">比亚迪</span><span class="code">sz002594</span><span class="tag">汽车</span><span class="px">¥91.89</span></div><div class="grid"><div class="m"><div class="m-l">个股当日</div><div class="m-v -0.82%">down</div></div><div class="m"><div class="m-l">板块当日</div><div class="m-v -2.04%">down</div></div><div class="m"><div class="m-l">相对板块</div><div class="m-v 跑赢">ok</div></div><div class="m"><div class="m-l">52周百分位</div><div class="m-v 36.70%"></div></div><div class="m"><div class="m-l">板块一致性</div><div class="m-v 背离↑(逆板块走强)"></div></div><div class="m"><div class="m-l">主力当日</div><div class="m-v -1.57亿">down</div></div><div class="m"><div class="m-l">公开户数</div><div class="m-v 71.9万"></div></div><div class="m"><div class="m-l">测算户数</div><div class="m-v 71.4万 <span class="sig down">-0.6%</span>"></div></div></div></div>
-<div class="card"><div class="ch"><span class="idx">3</span><span class="nm">泡泡玛特</span><span class="code">hk09992</span><span class="tag hk">恒生科技</span><span class="px">¥160.20</span></div><div class="grid"><div class="m"><div class="m-l">个股当日</div><div class="m-v -1.11%">down</div></div><div class="m"><div class="m-l">板块当日</div><div class="m-v -2.00%">down</div></div><div class="m"><div class="m-l">相对板块</div><div class="m-v 跑赢">ok</div></div><div class="m"><div class="m-l">52周百分位</div><div class="m-v 11.40%"></div></div><div class="m"><div class="m-l">板块一致性</div><div class="m-v 一致"></div></div><div class="m"><div class="m-l">主力当日</div><div class="m-v —">—</div></div><div class="m"><div class="m-l">港股通持仓</div><div class="m-v 24.59%"></div></div><div class="m"><div class="m-l">持股(亿股)</div><div class="m-v 3.28"></div></div></div></div>
-<div class="card"><div class="ch"><span class="idx">4</span><span class="nm">阿里巴巴</span><span class="code">hk09988</span><span class="tag hk">恒生科技</span><span class="px">¥108.80</span></div><div class="grid"><div class="m"><div class="m-l">个股当日</div><div class="m-v -5.31%">down</div></div><div class="m"><div class="m-l">板块当日</div><div class="m-v -2.00%">down</div></div><div class="m"><div class="m-l">相对板块</div><div class="m-v 跑输">warn</div></div><div class="m"><div class="m-l">52周百分位</div><div class="m-v 20.90%"></div></div><div class="m"><div class="m-l">板块一致性</div><div class="m-v 偏强(同向上更优)"></div></div><div class="m"><div class="m-l">主力当日</div><div class="m-v -2.08亿">down</div></div><div class="m"><div class="m-l">港股通持仓</div><div class="m-v 10.51%"></div></div><div class="m"><div class="m-l">持股(亿股)</div><div class="m-v 20.15"></div></div></div></div>
-<div class="card"><div class="ch"><span class="idx">5</span><span class="nm">腾讯控股</span><span class="code">hk00700</span><span class="tag hk">恒生科技</span><span class="px">¥434.00</span></div><div class="grid"><div class="m"><div class="m-l">个股当日</div><div class="m-v -2.52%">down</div></div><div class="m"><div class="m-l">板块当日</div><div class="m-v -2.00%">down</div></div><div class="m"><div class="m-l">相对板块</div><div class="m-v 跑输">warn</div></div><div class="m"><div class="m-l">52周百分位</div><div class="m-v 8.60%"></div></div><div class="m"><div class="m-l">板块一致性</div><div class="m-v 一致"></div></div><div class="m"><div class="m-l">主力当日</div><div class="m-v 0.99亿">up</div></div><div class="m"><div class="m-l">港股通持仓</div><div class="m-v 11.75%"></div></div><div class="m"><div class="m-l">持股(亿股)</div><div class="m-v 10.68"></div></div></div></div>
-<div class="card"><div class="ch"><span class="idx">6</span><span class="nm">儒意电影（万达电影）</span><span class="code">sz002739</span><span class="tag">传媒</span><span class="px">¥8.87</span></div><div class="grid"><div class="m"><div class="m-l">个股当日</div><div class="m-v -2.31%">down</div></div><div class="m"><div class="m-l">板块当日</div><div class="m-v -3.49%">down</div></div><div class="m"><div class="m-l">相对板块</div><div class="m-v 跑赢">ok</div></div><div class="m"><div class="m-l">52周百分位</div><div class="m-v 20.90%"></div></div><div class="m"><div class="m-l">板块一致性</div><div class="m-v 偏强(同向上更优)"></div></div><div class="m"><div class="m-l">主力当日</div><div class="m-v -0.18亿">down</div></div><div class="m"><div class="m-l">公开户数</div><div class="m-v 13.6万"></div></div><div class="m"><div class="m-l">测算户数</div><div class="m-v 13.8万 <span class="sig up">+1.7%</span>"></div></div></div></div>
-<div class="card"><div class="ch"><span class="idx">7</span><span class="nm">天下秀</span><span class="code">sh600556</span><span class="tag">传媒</span><span class="px">¥4.11</span></div><div class="grid"><div class="m"><div class="m-l">个股当日</div><div class="m-v -3.75%">down</div></div><div class="m"><div class="m-l">板块当日</div><div class="m-v -3.49%">down</div></div><div class="m"><div class="m-l">相对板块</div><div class="m-v 跑输">warn</div></div><div class="m"><div class="m-l">52周百分位</div><div class="m-v 0.90%"></div></div><div class="m"><div class="m-l">板块一致性</div><div class="m-v 一致"></div></div><div class="m"><div class="m-l">主力当日</div><div class="m-v -0.17亿">down</div></div><div class="m"><div class="m-l">公开户数</div><div class="m-v 16.4万"></div></div><div class="m"><div class="m-l">测算户数</div><div class="m-v 16.5万 <span class="sig up">+0.7%</span>"></div></div></div></div>
-<div class="card"><div class="ch"><span class="idx">8</span><span class="nm">巨人网络</span><span class="code">sz002558</span><span class="tag">传媒</span><span class="px">¥24.18</span></div><div class="grid"><div class="m"><div class="m-l">个股当日</div><div class="m-v -4.28%">down</div></div><div class="m"><div class="m-l">板块当日</div><div class="m-v -3.49%">down</div></div><div class="m"><div class="m-l">相对板块</div><div class="m-v 跑输">warn</div></div><div class="m"><div class="m-l">52周百分位</div><div class="m-v 4.50%"></div></div><div class="m"><div class="m-l">板块一致性</div><div class="m-v 偏弱(同向下更弱)"></div></div><div class="m"><div class="m-l">主力当日</div><div class="m-v -2.14亿">down</div></div><div class="m"><div class="m-l">公开户数</div><div class="m-v 6.9万"></div></div><div class="m"><div class="m-l">测算户数</div><div class="m-v 6.9万 <span class="sig down">-1.4%</span>"></div></div></div></div>
-<div class="card"><div class="ch"><span class="idx">9</span><span class="nm">普洛药业</span><span class="code">sz000739</span><span class="tag">医药生物</span><span class="px">¥19.71</span></div><div class="grid"><div class="m"><div class="m-l">个股当日</div><div class="m-v -4.27%">down</div></div><div class="m"><div class="m-l">板块当日</div><div class="m-v -3.54%">down</div></div><div class="m"><div class="m-l">相对板块</div><div class="m-v 跑输">warn</div></div><div class="m"><div class="m-l">52周百分位</div><div class="m-v 73.80%"></div></div><div class="m"><div class="m-l">板块一致性</div><div class="m-v 偏强(同向上更优)"></div></div><div class="m"><div class="m-l">主力当日</div><div class="m-v -0.28亿">down</div></div><div class="m"><div class="m-l">公开户数</div><div class="m-v 3.4万"></div></div><div class="m"><div class="m-l">测算户数</div><div class="m-v 3.4万 <span class="sig down">-0.3%</span>"></div></div></div></div>
-<div class="card"><div class="ch"><span class="idx">10</span><span class="nm">科大讯飞</span><span class="code">sz002230</span><span class="tag">计算机</span><span class="px">¥38.89</span></div><div class="grid"><div class="m"><div class="m-l">个股当日</div><div class="m-v -3.95%">down</div></div><div class="m"><div class="m-l">板块当日</div><div class="m-v -3.63%">down</div></div><div class="m"><div class="m-l">相对板块</div><div class="m-v 跑输">warn</div></div><div class="m"><div class="m-l">52周百分位</div><div class="m-v 0.00%"></div></div><div class="m"><div class="m-l">板块一致性</div><div class="m-v 偏强(同向上更优)"></div></div><div class="m"><div class="m-l">主力当日</div><div class="m-v -4.07亿">down</div></div><div class="m"><div class="m-l">公开户数</div><div class="m-v 43.1万"></div></div><div class="m"><div class="m-l">测算户数</div><div class="m-v 43.5万 <span class="sig up">+0.9%</span>"></div></div></div></div>
-<div class="card"><div class="ch"><span class="idx">11</span><span class="nm">沃尔核材</span><span class="code">sz002130</span><span class="tag">电力设备</span><span class="px">¥15.48</span></div><div class="grid"><div class="m"><div class="m-l">个股当日</div><div class="m-v -3.85%">down</div></div><div class="m"><div class="m-l">板块当日</div><div class="m-v -2.41%">down</div></div><div class="m"><div class="m-l">相对板块</div><div class="m-v 跑输">warn</div></div><div class="m"><div class="m-l">52周百分位</div><div class="m-v 2.90%"></div></div><div class="m"><div class="m-l">板块一致性</div><div class="m-v 一致"></div></div><div class="m"><div class="m-l">主力当日</div><div class="m-v -0.45亿">down</div></div><div class="m"><div class="m-l">公开户数</div><div class="m-v 23.2万"></div></div><div class="m"><div class="m-l">测算户数</div><div class="m-v 23.5万 <span class="sig up">+1.1%</span>"></div></div></div></div>
-<div class="card"><div class="ch"><span class="idx">12</span><span class="nm">三七互娱</span><span class="code">sz002555</span><span class="tag">传媒</span><span class="px">¥18.16</span></div><div class="grid"><div class="m"><div class="m-l">个股当日</div><div class="m-v -1.73%">down</div></div><div class="m"><div class="m-l">板块当日</div><div class="m-v -3.49%">down</div></div><div class="m"><div class="m-l">相对板块</div><div class="m-v 跑赢">ok</div></div><div class="m"><div class="m-l">52周百分位</div><div class="m-v 19.30%"></div></div><div class="m"><div class="m-l">板块一致性</div><div class="m-v 偏强(同向上更优)"></div></div><div class="m"><div class="m-l">主力当日</div><div class="m-v -0.35亿">down</div></div><div class="m"><div class="m-l">公开户数</div><div class="m-v 16.7万"></div></div><div class="m"><div class="m-l">测算户数</div><div class="m-v 16.8万 <span class="sig up">+0.9%</span>"></div></div></div></div>
-<div class="card"><div class="ch"><span class="idx">13</span><span class="nm">广电计量</span><span class="code">sz002967</span><span class="tag">社会服务</span><span class="px">¥15.96</span></div><div class="grid"><div class="m"><div class="m-l">个股当日</div><div class="m-v -2.09%">down</div></div><div class="m"><div class="m-l">板块当日</div><div class="m-v -3.16%">down</div></div><div class="m"><div class="m-l">相对板块</div><div class="m-v 跑赢">ok</div></div><div class="m"><div class="m-l">52周百分位</div><div class="m-v 0.60%"></div></div><div class="m"><div class="m-l">板块一致性</div><div class="m-v 一致"></div></div><div class="m"><div class="m-l">主力当日</div><div class="m-v -0.09亿">down</div></div><div class="m"><div class="m-l">公开户数</div><div class="m-v 3.0万"></div></div><div class="m"><div class="m-l">测算户数</div><div class="m-v 3.0万 <span class="sig up">+0.7%</span>"></div></div></div></div>
-<div class="card"><div class="ch"><span class="idx">14</span><span class="nm">东方财富</span><span class="code">sz300059</span><span class="tag">非银金融</span><span class="px">¥19.41</span></div><div class="grid"><div class="m"><div class="m-l">个股当日</div><div class="m-v -4.29%">down</div></div><div class="m"><div class="m-l">板块当日</div><div class="m-v -2.35%">down</div></div><div class="m"><div class="m-l">相对板块</div><div class="m-v 跑输">warn</div></div><div class="m"><div class="m-l">52周百分位</div><div class="m-v 18.20%"></div></div><div class="m"><div class="m-l">板块一致性</div><div class="m-v 背离↓(跑输板块)"></div></div><div class="m"><div class="m-l">主力当日</div><div class="m-v -15.69亿">down</div></div><div class="m"><div class="m-l">公开户数</div><div class="m-v 102.4万"></div></div><div class="m"><div class="m-l">测算户数</div><div class="m-v 104.4万 <span class="sig up">+1.9%</span>"></div></div></div></div>
-<div class="card"><div class="ch"><span class="idx">15</span><span class="nm">长电科技</span><span class="code">sh600584</span><span class="tag">电子</span><span class="px">¥82.90</span></div><div class="grid"><div class="m"><div class="m-l">个股当日</div><div class="m-v 2.59%">up</div></div><div class="m"><div class="m-l">板块当日</div><div class="m-v -0.76%">down</div></div><div class="m"><div class="m-l">相对板块</div><div class="m-v 跑赢">ok</div></div><div class="m"><div class="m-l">52周百分位</div><div class="m-v 61.10%"></div></div><div class="m"><div class="m-l">板块一致性</div><div class="m-v 偏强(同向上更优)"></div></div><div class="m"><div class="m-l">主力当日</div><div class="m-v 1.73亿">up</div></div><div class="m"><div class="m-l">公开户数</div><div class="m-v 32.0万"></div></div><div class="m"><div class="m-l">测算户数</div><div class="m-v 35.9万 <span class="sig up">+12.0%</span>"></div></div></div></div>
-<div class="card"><div class="ch"><span class="idx">16</span><span class="nm">珂玛科技</span><span class="code">sz301611</span><span class="tag">电子</span><span class="px">¥94.68</span></div><div class="grid"><div class="m"><div class="m-l">个股当日</div><div class="m-v -0.49%">down</div></div><div class="m"><div class="m-l">板块当日</div><div class="m-v -0.76%">down</div></div><div class="m"><div class="m-l">相对板块</div><div class="m-v 跑赢">ok</div></div><div class="m"><div class="m-l">52周百分位</div><div class="m-v 31.70%"></div></div><div class="m"><div class="m-l">板块一致性</div><div class="m-v 偏弱(同向下更弱)"></div></div><div class="m"><div class="m-l">主力当日</div><div class="m-v -1.12亿">down</div></div><div class="m"><div class="m-l">公开户数</div><div class="m-v 4.2万"></div></div><div class="m"><div class="m-l">测算户数</div><div class="m-v 4.6万 <span class="sig up">+7.5%</span>"></div></div></div></div>
+  <div class="note">📌 修复说明：数值显示 bug 已修复（原本百分比/金额被写进 class，现在文本正确显示）；52周百分位由收盘价相对52周高低点计算；日趋势新增 5日/10日/20日累计涨跌幅；A股主力净流入、港股南向主力均取自 fund flow；港股通持仓取自 south_holding。公开户数因季报滞后（最新多为2026-03-31），本版暂不展示，避免无效信息。仅展示市场公开数据，不含个人持仓等私密信息。</div>
+  <div class="card">
+  <div class="ch"><span class="idx">1</span><span class="nm">京东方Ａ</span><span class="code">sz000725</span><span class="tag">电子</span><span class="px">¥5.97</span></div>
+  <div class="grid">
+    <div class="m"><div class="m-l">个股当日</div><div class="m-v up">+3.11%</div></div>
+    <div class="m"><div class="m-l">板块当日</div><div class="m-v up">+2.55%</div></div>
+    <div class="m"><div class="m-l">相对板块</div><div class="m-v up">跑赢 +0.56pp</div></div>
+    <div class="m"><div class="m-l">52周百分位</div><div class="m-v">38.8%</div></div>
+    <div class="m"><div class="m-l">5日趋势</div><div class="m-v up">+3.11%</div></div>
+    <div class="m"><div class="m-l">10日趋势</div><div class="m-v down">-12.59%</div></div>
+    <div class="m"><div class="m-l">20日趋势</div><div class="m-v down">-24.91%</div></div>
+    <div class="m"><div class="m-l">主力当日</div><div class="m-v up">+7.34亿</div></div>
+    
+    <div class="m wide"><div class="m-l">板块一致性</div><div class="m-v">偏强(同向上更优)</div></div>
+  </div>
+</div><div class="card">
+  <div class="ch"><span class="idx">2</span><span class="nm">比亚迪</span><span class="code">sz002594</span><span class="tag">汽车</span><span class="px">¥92.40</span></div>
+  <div class="grid">
+    <div class="m"><div class="m-l">个股当日</div><div class="m-v up">+0.56%</div></div>
+    <div class="m"><div class="m-l">板块当日</div><div class="m-v up">+2.24%</div></div>
+    <div class="m"><div class="m-l">相对板块</div><div class="m-v down">跑输 -1.68pp</div></div>
+    <div class="m"><div class="m-l">52周百分位</div><div class="m-v">38.0%</div></div>
+    <div class="m"><div class="m-l">5日趋势</div><div class="m-v down">-1.62%</div></div>
+    <div class="m"><div class="m-l">10日趋势</div><div class="m-v up">+6.23%</div></div>
+    <div class="m"><div class="m-l">20日趋势</div><div class="m-v up">+16.02%</div></div>
+    <div class="m"><div class="m-l">主力当日</div><div class="m-v mid">-0.05亿</div></div>
+    
+    <div class="m wide"><div class="m-l">板块一致性</div><div class="m-v">偏弱(同向上更弱)</div></div>
+  </div>
+</div><div class="card">
+  <div class="ch"><span class="idx">3</span><span class="nm">泡泡玛特</span><span class="code">hk09992</span><span class="tag hk">恒生科技</span><span class="px">¥165.20</span></div>
+  <div class="grid">
+    <div class="m"><div class="m-l">个股当日</div><div class="m-v up">+2.67%</div></div>
+    <div class="m"><div class="m-l">板块当日</div><div class="m-v up">+1.57%</div></div>
+    <div class="m"><div class="m-l">相对板块</div><div class="m-v up">跑赢 +1.10pp</div></div>
+    <div class="m"><div class="m-l">52周百分位</div><div class="m-v">13.9%</div></div>
+    <div class="m"><div class="m-l">5日趋势</div><div class="m-v up">+0.73%</div></div>
+    <div class="m"><div class="m-l">10日趋势</div><div class="m-v up">+7.62%</div></div>
+    <div class="m"><div class="m-l">20日趋势</div><div class="m-v up">+4.23%</div></div>
+    <div class="m"><div class="m-l">南向主力</div><div class="m-v up">+0.60亿</div></div>
+    <div class="m"><div class="m-l">港股通持仓</div><div class="m-v">24.65% / 3.28亿股</div></div>
+    <div class="m wide"><div class="m-l">板块一致性</div><div class="m-v">偏强(同向上更优)</div></div>
+  </div>
+</div><div class="card">
+  <div class="ch"><span class="idx">4</span><span class="nm">阿里巴巴-W</span><span class="code">hk09988</span><span class="tag hk">恒生科技</span><span class="px">¥111.00</span></div>
+  <div class="grid">
+    <div class="m"><div class="m-l">个股当日</div><div class="m-v up">+0.91%</div></div>
+    <div class="m"><div class="m-l">板块当日</div><div class="m-v up">+1.57%</div></div>
+    <div class="m"><div class="m-l">相对板块</div><div class="m-v down">跑输 -0.66pp</div></div>
+    <div class="m"><div class="m-l">52周百分位</div><div class="m-v">23.2%</div></div>
+    <div class="m"><div class="m-l">5日趋势</div><div class="m-v down">-4.97%</div></div>
+    <div class="m"><div class="m-l">10日趋势</div><div class="m-v up">+0.27%</div></div>
+    <div class="m"><div class="m-l">20日趋势</div><div class="m-v up">+24.02%</div></div>
+    <div class="m"><div class="m-l">南向主力</div><div class="m-v up">+7.98亿</div></div>
+    <div class="m"><div class="m-l">港股通持仓</div><div class="m-v">10.38% / 19.90亿股</div></div>
+    <div class="m wide"><div class="m-l">板块一致性</div><div class="m-v">偏弱(同向上更弱)</div></div>
+  </div>
+</div><div class="card">
+  <div class="ch"><span class="idx">5</span><span class="nm">腾讯控股</span><span class="code">hk00700</span><span class="tag hk">恒生科技</span><span class="px">¥443.00</span></div>
+  <div class="grid">
+    <div class="m"><div class="m-l">个股当日</div><div class="m-v up">+1.93%</div></div>
+    <div class="m"><div class="m-l">板块当日</div><div class="m-v up">+1.57%</div></div>
+    <div class="m"><div class="m-l">相对板块</div><div class="m-v up">跑赢 +0.36pp</div></div>
+    <div class="m"><div class="m-l">52周百分位</div><div class="m-v">12.0%</div></div>
+    <div class="m"><div class="m-l">5日趋势</div><div class="m-v down">-7.28%</div></div>
+    <div class="m"><div class="m-l">10日趋势</div><div class="m-v down">-3.19%</div></div>
+    <div class="m"><div class="m-l">20日趋势</div><div class="m-v up">+7.58%</div></div>
+    <div class="m"><div class="m-l">南向主力</div><div class="m-v up">+1.53亿</div></div>
+    <div class="m"><div class="m-l">港股通持仓</div><div class="m-v">11.68% / 10.62亿股</div></div>
+    <div class="m wide"><div class="m-l">板块一致性</div><div class="m-v">偏强(同向上更优)</div></div>
+  </div>
+</div><div class="card">
+  <div class="ch"><span class="idx">6</span><span class="nm">儒意电影</span><span class="code">sz002739</span><span class="tag">传媒</span><span class="px">¥8.97</span></div>
+  <div class="grid">
+    <div class="m"><div class="m-l">个股当日</div><div class="m-v up">+1.24%</div></div>
+    <div class="m"><div class="m-l">板块当日</div><div class="m-v up">+3.33%</div></div>
+    <div class="m"><div class="m-l">相对板块</div><div class="m-v down">跑输 -2.09pp</div></div>
+    <div class="m"><div class="m-l">52周百分位</div><div class="m-v">22.5%</div></div>
+    <div class="m"><div class="m-l">5日趋势</div><div class="m-v down">-1.21%</div></div>
+    <div class="m"><div class="m-l">10日趋势</div><div class="m-v down">-4.47%</div></div>
+    <div class="m"><div class="m-l">20日趋势</div><div class="m-v down">-4.88%</div></div>
+    <div class="m"><div class="m-l">主力当日</div><div class="m-v down">-0.89亿</div></div>
+    
+    <div class="m wide"><div class="m-l">板块一致性</div><div class="m-v">偏弱(同向上更弱)</div></div>
+  </div>
+</div><div class="card">
+  <div class="ch"><span class="idx">7</span><span class="nm">天下秀</span><span class="code">sh600556</span><span class="tag">传媒</span><span class="px">¥4.33</span></div>
+  <div class="grid">
+    <div class="m"><div class="m-l">个股当日</div><div class="m-v up">+5.35%</div></div>
+    <div class="m"><div class="m-l">板块当日</div><div class="m-v up">+3.33%</div></div>
+    <div class="m"><div class="m-l">相对板块</div><div class="m-v up">跑赢 +2.02pp</div></div>
+    <div class="m"><div class="m-l">52周百分位</div><div class="m-v">5.0%</div></div>
+    <div class="m"><div class="m-l">5日趋势</div><div class="m-v up">+3.34%</div></div>
+    <div class="m"><div class="m-l">10日趋势</div><div class="m-v up">+3.59%</div></div>
+    <div class="m"><div class="m-l">20日趋势</div><div class="m-v down">-1.25%</div></div>
+    <div class="m"><div class="m-l">主力当日</div><div class="m-v up">+0.18亿</div></div>
+    
+    <div class="m wide"><div class="m-l">板块一致性</div><div class="m-v">偏强(同向上更优)</div></div>
+  </div>
+</div><div class="card">
+  <div class="ch"><span class="idx">8</span><span class="nm">巨人网络</span><span class="code">sz002558</span><span class="tag">传媒</span><span class="px">¥24.72</span></div>
+  <div class="grid">
+    <div class="m"><div class="m-l">个股当日</div><div class="m-v up">+2.23%</div></div>
+    <div class="m"><div class="m-l">板块当日</div><div class="m-v up">+3.33%</div></div>
+    <div class="m"><div class="m-l">相对板块</div><div class="m-v down">跑输 -1.10pp</div></div>
+    <div class="m"><div class="m-l">52周百分位</div><div class="m-v">6.3%</div></div>
+    <div class="m"><div class="m-l">5日趋势</div><div class="m-v down">-17.55%</div></div>
+    <div class="m"><div class="m-l">10日趋势</div><div class="m-v down">-13.20%</div></div>
+    <div class="m"><div class="m-l">20日趋势</div><div class="m-v down">-9.22%</div></div>
+    <div class="m"><div class="m-l">主力当日</div><div class="m-v up">+0.43亿</div></div>
+    
+    <div class="m wide"><div class="m-l">板块一致性</div><div class="m-v">偏弱(同向上更弱)</div></div>
+  </div>
+</div><div class="card">
+  <div class="ch"><span class="idx">9</span><span class="nm">普洛药业</span><span class="code">sz000739</span><span class="tag">医药生物</span><span class="px">¥20.40</span></div>
+  <div class="grid">
+    <div class="m"><div class="m-l">个股当日</div><div class="m-v up">+3.66%</div></div>
+    <div class="m"><div class="m-l">板块当日</div><div class="m-v up">+2.49%</div></div>
+    <div class="m"><div class="m-l">相对板块</div><div class="m-v up">跑赢 +1.17pp</div></div>
+    <div class="m"><div class="m-l">52周百分位</div><div class="m-v">83.9%</div></div>
+    <div class="m"><div class="m-l">5日趋势</div><div class="m-v up">+1.90%</div></div>
+    <div class="m"><div class="m-l">10日趋势</div><div class="m-v up">+12.15%</div></div>
+    <div class="m"><div class="m-l">20日趋势</div><div class="m-v up">+19.79%</div></div>
+    <div class="m"><div class="m-l">主力当日</div><div class="m-v down">-0.18亿</div></div>
+    
+    <div class="m wide"><div class="m-l">板块一致性</div><div class="m-v">偏强(同向上更优)</div></div>
+  </div>
+</div><div class="card">
+  <div class="ch"><span class="idx">10</span><span class="nm">科大讯飞</span><span class="code">sz002230</span><span class="tag">计算机</span><span class="px">¥39.73</span></div>
+  <div class="grid">
+    <div class="m"><div class="m-l">个股当日</div><div class="m-v up">+2.19%</div></div>
+    <div class="m"><div class="m-l">板块当日</div><div class="m-v up">+2.72%</div></div>
+    <div class="m"><div class="m-l">相对板块</div><div class="m-v down">跑输 -0.53pp</div></div>
+    <div class="m"><div class="m-l">52周百分位</div><div class="m-v">4.1%</div></div>
+    <div class="m"><div class="m-l">5日趋势</div><div class="m-v down">-3.03%</div></div>
+    <div class="m"><div class="m-l">10日趋势</div><div class="m-v down">-5.18%</div></div>
+    <div class="m"><div class="m-l">20日趋势</div><div class="m-v up">+0.94%</div></div>
+    <div class="m"><div class="m-l">主力当日</div><div class="m-v up">+0.72亿</div></div>
+    
+    <div class="m wide"><div class="m-l">板块一致性</div><div class="m-v">偏弱(同向上更弱)</div></div>
+  </div>
+</div><div class="card">
+  <div class="ch"><span class="idx">11</span><span class="nm">沃尔核材</span><span class="code">sz002130</span><span class="tag">电力设备</span><span class="px">¥15.96</span></div>
+  <div class="grid">
+    <div class="m"><div class="m-l">个股当日</div><div class="m-v up">+3.10%</div></div>
+    <div class="m"><div class="m-l">板块当日</div><div class="m-v up">+3.56%</div></div>
+    <div class="m"><div class="m-l">相对板块</div><div class="m-v down">跑输 -0.46pp</div></div>
+    <div class="m"><div class="m-l">52周百分位</div><div class="m-v">5.3%</div></div>
+    <div class="m"><div class="m-l">5日趋势</div><div class="m-v up">+4.18%</div></div>
+    <div class="m"><div class="m-l">10日趋势</div><div class="m-v down">-2.27%</div></div>
+    <div class="m"><div class="m-l">20日趋势</div><div class="m-v down">-8.15%</div></div>
+    <div class="m"><div class="m-l">主力当日</div><div class="m-v up">+0.10亿</div></div>
+    
+    <div class="m wide"><div class="m-l">板块一致性</div><div class="m-v">偏弱(同向上更弱)</div></div>
+  </div>
+</div><div class="card">
+  <div class="ch"><span class="idx">12</span><span class="nm">三七互娱</span><span class="code">sz002555</span><span class="tag">传媒</span><span class="px">¥18.46</span></div>
+  <div class="grid">
+    <div class="m"><div class="m-l">个股当日</div><div class="m-v up">+1.65%</div></div>
+    <div class="m"><div class="m-l">板块当日</div><div class="m-v up">+3.33%</div></div>
+    <div class="m"><div class="m-l">相对板块</div><div class="m-v down">跑输 -1.68pp</div></div>
+    <div class="m"><div class="m-l">52周百分位</div><div class="m-v">21.2%</div></div>
+    <div class="m"><div class="m-l">5日趋势</div><div class="m-v down">-2.94%</div></div>
+    <div class="m"><div class="m-l">10日趋势</div><div class="m-v up">+0.71%</div></div>
+    <div class="m"><div class="m-l">20日趋势</div><div class="m-v down">-2.33%</div></div>
+    <div class="m"><div class="m-l">主力当日</div><div class="m-v up">+0.21亿</div></div>
+    
+    <div class="m wide"><div class="m-l">板块一致性</div><div class="m-v">偏弱(同向上更弱)</div></div>
+  </div>
+</div><div class="card">
+  <div class="ch"><span class="idx">13</span><span class="nm">广电计量</span><span class="code">sz002967</span><span class="tag">社会服务</span><span class="px">¥16.38</span></div>
+  <div class="grid">
+    <div class="m"><div class="m-l">个股当日</div><div class="m-v up">+2.63%</div></div>
+    <div class="m"><div class="m-l">板块当日</div><div class="m-v up">+3.56%</div></div>
+    <div class="m"><div class="m-l">相对板块</div><div class="m-v down">跑输 -0.93pp</div></div>
+    <div class="m"><div class="m-l">52周百分位</div><div class="m-v">5.2%</div></div>
+    <div class="m"><div class="m-l">5日趋势</div><div class="m-v down">-1.09%</div></div>
+    <div class="m"><div class="m-l">10日趋势</div><div class="m-v down">-5.15%</div></div>
+    <div class="m"><div class="m-l">20日趋势</div><div class="m-v down">-8.59%</div></div>
+    <div class="m"><div class="m-l">主力当日</div><div class="m-v down">-0.07亿</div></div>
+    
+    <div class="m wide"><div class="m-l">板块一致性</div><div class="m-v">偏弱(同向上更弱)</div></div>
+  </div>
+</div><div class="card">
+  <div class="ch"><span class="idx">14</span><span class="nm">东方财富</span><span class="code">sz300059</span><span class="tag">非银金融</span><span class="px">¥19.65</span></div>
+  <div class="grid">
+    <div class="m"><div class="m-l">个股当日</div><div class="m-v up">+1.29%</div></div>
+    <div class="m"><div class="m-l">板块当日</div><div class="m-v up">+0.14%</div></div>
+    <div class="m"><div class="m-l">相对板块</div><div class="m-v up">跑赢 +1.15pp</div></div>
+    <div class="m"><div class="m-l">52周百分位</div><div class="m-v">20.2%</div></div>
+    <div class="m"><div class="m-l">5日趋势</div><div class="m-v down">-2.63%</div></div>
+    <div class="m"><div class="m-l">10日趋势</div><div class="m-v down">-0.96%</div></div>
+    <div class="m"><div class="m-l">20日趋势</div><div class="m-v down">-2.24%</div></div>
+    <div class="m"><div class="m-l">主力当日</div><div class="m-v up">+0.43亿</div></div>
+    
+    <div class="m wide"><div class="m-l">板块一致性</div><div class="m-v">偏强(同向上更优)</div></div>
+  </div>
+</div><div class="card">
+  <div class="ch"><span class="idx">15</span><span class="nm">长电科技</span><span class="code">sh600584</span><span class="tag">电子</span><span class="px">¥82.35</span></div>
+  <div class="grid">
+    <div class="m"><div class="m-l">个股当日</div><div class="m-v down">-0.66%</div></div>
+    <div class="m"><div class="m-l">板块当日</div><div class="m-v up">+2.55%</div></div>
+    <div class="m"><div class="m-l">相对板块</div><div class="m-v down">跑输 -3.21pp</div></div>
+    <div class="m"><div class="m-l">52周百分位</div><div class="m-v">60.4%</div></div>
+    <div class="m"><div class="m-l">5日趋势</div><div class="m-v up">+6.96%</div></div>
+    <div class="m"><div class="m-l">10日趋势</div><div class="m-v down">-16.86%</div></div>
+    <div class="m"><div class="m-l">20日趋势</div><div class="m-v down">-20.24%</div></div>
+    <div class="m"><div class="m-l">主力当日</div><div class="m-v down">-8.00亿</div></div>
+    
+    <div class="m wide"><div class="m-l">板块一致性</div><div class="m-v">背离↓(逆板块走弱)</div></div>
+  </div>
+</div><div class="card">
+  <div class="ch"><span class="idx">16</span><span class="nm">珂玛科技</span><span class="code">sz301611</span><span class="tag">电子</span><span class="px">¥100.10</span></div>
+  <div class="grid">
+    <div class="m"><div class="m-l">个股当日</div><div class="m-v up">+5.81%</div></div>
+    <div class="m"><div class="m-l">板块当日</div><div class="m-v up">+2.55%</div></div>
+    <div class="m"><div class="m-l">相对板块</div><div class="m-v up">跑赢 +3.26pp</div></div>
+    <div class="m"><div class="m-l">52周百分位</div><div class="m-v">35.5%</div></div>
+    <div class="m"><div class="m-l">5日趋势</div><div class="m-v up">+8.39%</div></div>
+    <div class="m"><div class="m-l">10日趋势</div><div class="m-v down">-29.04%</div></div>
+    <div class="m"><div class="m-l">20日趋势</div><div class="m-v down">-43.45%</div></div>
+    <div class="m"><div class="m-l">主力当日</div><div class="m-v down">-0.16亿</div></div>
+    
+    <div class="m wide"><div class="m-l">板块一致性</div><div class="m-v">偏强(同向上更优)</div></div>
+  </div>
+</div>
   <footer>信息同步自「个股跟踪」自动化任务 ｜ 仅供家庭内部学习交流，不构成投资建议</footer>
 </div>
 </body>
