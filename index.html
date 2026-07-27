@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日 A 股盘面复盘 · 家庭版</title>
+<title>家庭 A 股复盘站</title>
 <style>
   :root{
     --bg:#f5f6f8; --card:#ffffff; --ink:#1f2329; --sub:#6b7280; --line:#eceef1;
@@ -15,30 +15,50 @@
   header{padding:18px 0 6px;}
   .title{font-size:20px;font-weight:700;margin:0;}
   .sub{color:var(--sub);font-size:13px;margin-top:4px;}
-  .tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:999px;background:#e6f7ec;color:#1a8a3c;margin-left:6px;vertical-align:middle;}
+  /* 模块分区 */
+  .module{margin-top:22px;}
+  .module-h{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;margin:0 0 10px;padding-left:10px;border-left:4px solid var(--brand);}
+  .module-h .ico{font-size:17px;}
   .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px;box-shadow:0 1px 2px rgba(0,0,0,.03);display:block;text-decoration:none;color:inherit;}
   .card .date{font-size:13px;color:var(--sub);}
   .card .day{font-weight:700;font-size:16px;margin:2px 0 8px;}
   .card .sum{font-size:14px;}
+  .tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:999px;background:#e6f7ec;color:#1a8a3c;margin-left:6px;vertical-align:middle;}
   .empty{color:var(--sub);text-align:center;padding:40px 0;font-size:14px;}
-  footer{color:var(--sub);font-size:12px;text-align:center;margin-top:24px;}
+  footer{color:var(--sub);font-size:12px;text-align:center;margin-top:28px;}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <h1 class="title">每日 A 股盘面复盘</h1>
+    <h1 class="title">家庭 A 股复盘站</h1>
     <div class="sub">AI 每个交易日收盘后生成 · 家庭共享 · 长期积累</div>
   </header>
-  <a class="card" href="watchlist.html" style="margin-bottom:12px;">
-    <div class="date">📌 我的关注个股</div>
-    <div class="day">查看 16 只跟踪标的与所属板块 →</div>
-  </a>
-  <a class="card" href="market-cycle/index.html" style="margin-bottom:12px;">
-    <div class="date">📈 市场周期数据观测</div>
-    <div class="day">量能 / 资金 / 板块四维度原始数据 + 周期阶段与资金性质判断（每个交易日更新）→</div>
-  </a>
-  <div id="list"></div>
+
+  <!-- 模块 1：我的关注个股 -->
+  <section class="module">
+    <h2 class="module-h"><span class="ico">📌</span>我的关注个股</h2>
+    <a class="card" href="watchlist.html">
+      <div class="date">跟踪标的</div>
+      <div class="day">查看关注个股与所属板块、当日盘面表现 →</div>
+    </a>
+  </section>
+
+  <!-- 模块 2：市场周期数据观测 -->
+  <section class="module">
+    <h2 class="module-h"><span class="ico">📈</span>市场周期数据观测</h2>
+    <a class="card" href="market-cycle/index.html">
+      <div class="date">量能 / 资金 / 板块 / 周期</div>
+      <div class="day">四维度原始数据 + 周期阶段与资金性质判断（每个交易日更新）→</div>
+    </a>
+  </section>
+
+  <!-- 模块 3：每日复盘 -->
+  <section class="module">
+    <h2 class="module-h"><span class="ico">🗓️</span>每日复盘</h2>
+    <div id="list"></div>
+  </section>
+
   <footer>数据来源于公开行情，可能存在延迟 ｜ 仅供家庭内部学习交流，不构成投资建议</footer>
 </div>
 <script>
