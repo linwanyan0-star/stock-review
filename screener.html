@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>条件选股 · 家庭版</title>
+<style>
+  :root{--bg:#f5f6f8;--card:#fff;--ink:#1f2329;--sub:#6b7280;--line:#eceef1;--brand:#2b5cff;--brand-soft:#eef2ff;}
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6;}
+  .wrap{max-width:860px;margin:0 auto;padding:16px 14px 48px;}
+  .back{display:inline-block;color:var(--brand);font-size:13px;text-decoration:none;margin:6px 0 10px;}
+  header{padding:4px 0 10px;border-bottom:1px solid var(--line);}
+  .title{font-size:20px;font-weight:700;margin:2px 0 0;}
+  .sub{font-size:12px;color:var(--sub);margin-top:4px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:12px 0;box-shadow:0 1px 2px rgba(0,0,0,.03);}
+  .sec-title{font-size:14px;font-weight:700;margin:0 0 12px;display:flex;align-items:center;gap:6px;}
+  .sec-title .n{width:20px;height:20px;border-radius:6px;background:var(--brand-soft);color:#2742c4;font-size:12px;display:inline-flex;align-items:center;justify-content:center;}
+  .filters{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+  @media(max-width:560px){.filters{grid-template-columns:1fr;}}
+  .fitem label{display:block;font-size:12px;color:var(--sub);margin-bottom:6px;}
+  .range{display:flex;align-items:center;gap:6px;}
+  .range input{flex:1;min-width:0;width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:9px;font-size:14px;background:#fafbfc;color:var(--ink);}
+  .range span{color:var(--sub);font-size:12px;}
+  .hint{font-size:11px;color:var(--sub);margin-top:4px;}
+  /* 多选下拉 */
+  .ms{position:relative;}
+  .ms-btn{width:100%;text-align:left;padding:9px 12px;border:1px solid var(--line);border-radius:9px;background:#fafbfc;color:var(--ink);font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;}
+  .ms-btn .ph{color:var(--sub);}
+  .ms-pop{position:absolute;left:0;right:0;top:calc(100% + 6px);background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);z-index:20;padding:10px;display:none;}
+  .ms-pop.open{display:block;}
+  .ms-search{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:9px;font-size:14px;margin-bottom:8px;}
+  .ms-list{max-height:240px;overflow:auto;}
+  .ms-opt{display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:8px;cursor:pointer;font-size:14px;}
+  .ms-opt:hover{background:var(--brand-soft);}
+  .ms-opt input{width:16px;height:16px;accent-color:var(--brand);}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
+  .chip{font-size:12px;background:var(--brand-soft);color:#2742c4;padding:3px 9px;border-radius:999px;display:inline-flex;align-items:center;gap:5px;}
+  .chip b{cursor:pointer;font-weight:700;}
+  .actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:14px;}
+  .btn{padding:9px 18px;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;}
+  .btn.primary{background:var(--brand);color:#fff;}
+  .btn.ghost{background:#eef1f6;color:var(--ink);}
+  .btn:disabled{opacity:.6;cursor:default;}
+  .auto{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--sub);margin-left:auto;}
+  .meta{font-size:12px;color:var(--sub);margin:4px 2px 10px;}
+  .err{background:#fff1f0;border:1px solid #ffccc7;color:#cf1322;border-radius:10px;padding:10px 12px;font-size:13px;margin:10px 0;display:none;}
+  .err.show{display:block;}
+  /* 结果表 */
+  .tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  table{width:100%;border-collapse:collapse;font-size:13px;min-width:640px;}
+  th,td{padding:9px 10px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--line);}
+  th:nth-child(1),td:nth-child(1),th:nth-child(2),td:nth-child(2){text-align:left;}
+  th{color:var(--sub);font-weight:600;cursor:pointer;user-select:none;position:sticky;top:0;background:#fafbfc;}
+  th .ar{font-size:10px;color:var(--brand);}
+  tbody tr:hover{background:#fafbff;}
+  td.name{font-weight:600;}
+  td a{color:var(--brand);text-decoration:none;}
+  .up{color:#dc2626;} .down{color:#16a34a;} .mid{color:#6b7280;}
+  .pos{color:#dc2626;} .neg{color:#16a34a;}
+  .empty{text-align:center;color:var(--sub);padding:30px 0;font-size:14px;}
+  footer{color:var(--sub);font-size:12px;text-align:center;margin-top:24px;line-height:1.6;}
+  .spin{display:inline-block;width:14px;height:14px;border:2px solid #fff;border-top-color:transparent;border-radius:50%;animation:sp 0.7s linear infinite;vertical-align:-2px;margin-right:6px;}
+  @keyframes sp{to{transform:rotate(360deg);}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">← 返回首页</a>
+  <header>
+    <h1 class="title">条件选股</h1>
+    <div class="sub">实时行情来自东方财富（push2 接口），点击「查询」即拉取最新快照 · 仅供研究，非投资建议</div>
+  </header>
+
+  <div class="card">
+    <div class="filters">
+      <div class="fitem">
+        <label>① 涨跌幅范围（%）</label>
+        <div class="range">
+          <input id="chgMin" type="number" step="0.1" placeholder="最小 如 -5">
+          <span>~</span>
+          <input id="chgMax" type="number" step="0.1" placeholder="最大 如 9.9">
+        </div>
+        <div class="hint">留空表示不限制该边界</div>
+      </div>
+
+      <div class="fitem">
+        <label>② 换手率上下限（%）</label>
+        <div class="range">
+          <input id="turnMin" type="number" step="0.1" placeholder="最小 如 3">
+          <span>~</span>
+          <input id="turnMax" type="number" step="0.1" placeholder="最大 如 20">
+        </div>
+        <div class="hint">换手率 = 当日成交量 / 流通股本</div>
+      </div>
+
+      <div class="fitem">
+        <label>③ 市值上下限（亿元，总市值）</label>
+        <div class="range">
+          <input id="capMin" type="number" step="1" placeholder="最小 如 50">
+          <span>~</span>
+          <input id="capMax" type="number" step="1" placeholder="最大 如 500">
+        </div>
+        <div class="hint">留空表示不限制该边界</div>
+      </div>
+
+      <div class="fitem">
+        <label>④ 板块关键词（可选 · 可多选）</label>
+        <div class="ms">
+          <button type="button" class="ms-btn" id="msBtn"><span class="ph" id="msPh">全部市场（点此选择板块）</span></button>
+          <div class="ms-pop" id="msPop">
+            <input class="ms-search" id="msSearch" type="text" placeholder="搜索板块关键词…">
+            <div class="ms-list" id="msList"></div>
+          </div>
+        </div>
+        <div class="chips" id="msChips"></div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn primary" id="runBtn">查询</button>
+      <button class="btn ghost" id="resetBtn">重置</button>
+      <label class="auto"><input type="checkbox" id="autoChk"> 自动刷新（30 秒）</label>
+    </div>
+    <div class="err" id="err"></div>
+    <div class="meta" id="meta"></div>
+  </div>
+
+  <div class="card">
+    <div class="tbl-scroll">
+      <table id="tbl">
+        <thead>
+          <tr>
+            <th data-k="f12">代码</th>
+            <th data-k="f14">名称</th>
+            <th data-k="f2">现价</th>
+            <th data-k="f3">涨跌幅<span class="ar"></span></th>
+            <th data-k="f8">换手率<span class="ar"></span></th>
+            <th data-k="f20">总市值(亿)<span class="ar"></span></th>
+            <th data-k="f21">流通市值(亿)<span class="ar"></span></th>
+            <th data-k="f62">主力净流入(亿)<span class="ar"></span></th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <footer>
+    数据来源：东方财富实时行情接口（客户端直接请求，无中间服务器）。<br>
+    板块列表在页面打开时自动加载；若加载失败，选股将退化为「全市场」筛选。<br>
+    本页为家庭内部研究工具，所有数据为公开市场数据，不含任何个人持仓信息。
+  </footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var API = "https://push2.eastmoney.com/api/qt/clist/get";
+  var MAX_ROWS = 400;          // 渲染上限（性能）
+  var boards = [];             // {code, name}
+  var selected = new Set();    // 选中的板块 code
+  var sortKey = "f3", sortDir = -1;
+  var autoTimer = null;
+
+  var $ = function(id){ return document.getElementById(id); };
+
+  function showErr(msg){
+    var e = $("err"); e.textContent = msg; e.classList.add("show");
+  }
+  function hideErr(){ $("err").classList.remove("show"); }
+
+  // ---------- 板块列表加载 ----------
+  function loadBoards(){
+    var url = API + "?pn=1&pz=500&po=1&np=1&fltt=2&invt=2&fid=f62&fs=m:90+t:2&fields=f12,f14";
+    fetch(url).then(function(r){ return r.json(); }).then(function(j){
+      if(j && j.data && j.data.diff){
+        boards = j.data.diff.map(function(d){ return {code:d.f12, name:d.f14}; })
+                    .filter(function(b){ return b.code && b.name; });
+        renderMsList("");
+      } else { disableBoard(); }
+    }).catch(function(){ disableBoard(); });
+  }
+  function disableBoard(){
+    $("msPh").textContent = "板块列表获取失败 · 已退化为全市场";
+    $("msBtn").disabled = true;
+  }
+
+  // ---------- 多选下拉 ----------
+  function renderMsList(q){
+    q = (q||"").trim();
+    var html = "";
+    boards.forEach(function(b){
+      if(q && b.name.indexOf(q) === -1) return;
+      var checked = selected.has(b.code) ? "checked" : "";
+      html += '<label class="ms-opt"><input type="checkbox" value="'+b.code+'" '+checked+' data-name="'+b.name+'">'+b.name+'</label>';
+    });
+    if(!html) html = '<div class="ms-opt" style="color:var(--sub)">无匹配板块</div>';
+    $("msList").innerHTML = html;
+    $("msList").querySelectorAll("input").forEach(function(cb){
+      cb.addEventListener("change", function(){
+        if(cb.checked) selected.add(cb.value); else selected.delete(cb.value);
+        updateMsUI();
+      });
+    });
+  }
+  function updateMsUI(){
+    var n = selected.size;
+    if(n === 0){ $("msPh").textContent = "全部市场（点此选择板块）"; }
+    else { $("msPh").textContent = "已选 "+n+" 个板块"; }
+    // chips
+    var chips = "";
+    selected.forEach(function(code){
+      var b = boards.find(function(x){ return x.code === code; });
+      var nm = b ? b.name : code;
+      chips += '<span class="chip">'+nm+' <b data-code="'+code+'">×</b></span>';
+    });
+    $("msChips").innerHTML = chips;
+    $("msChips").querySelectorAll("b").forEach(function(x){
+      x.addEventListener("click", function(){
+        selected.delete(x.getAttribute("data-code"));
+        updateMsUI(); renderMsList($("msSearch").value);
+      });
+    });
+  }
+  $("msBtn").addEventListener("click", function(){
+    $("msPop").classList.toggle("open");
+  });
+  $("msSearch").addEventListener("input", function(){ renderMsList(this.value); });
+  document.addEventListener("click", function(e){
+    if(!e.target.closest(".ms")) $("msPop").classList.remove("open");
+  });
+
+  // ---------- 查询 ----------
+  function buildFs(){
+    if(selected.size === 0){
+      return "m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23"; // 全 A（沪/深/京 主板）
+    }
+    var arr = [];
+    selected.forEach(function(c){ arr.push("b:"+c); });
+    return arr.join("+");
+  }
+
+  function fetchAll(fs){
+    var out = [], page = 1;
+    function one(){
+      var url = API + "?pn="+page+"&pz=5000&po=1&np=1&fltt=2&invt=2&fid=f3&fs="+encodeURIComponent(fs)+"&fields=f12,f13,f14,f2,f3,f8,f20,f21,f62,f6";
+      return fetch(url).then(function(r){ return r.json(); }).then(function(j){
+        if(!j || !j.data || !j.data.diff) throw new Error("接口返回异常");
+        out = out.concat(j.data.diff);
+        if(j.data.diff.length < 5000 || out.length >= (j.data.total||0) || page >= 6) return out;
+        page++; return one();
+      });
+    }
+    return one();
+  }
+
+  function num(v){ return (v === undefined || v === null || v === "") ? NaN : parseFloat(v); }
+
+  function run(){
+    hideErr();
+    var btn = $("runBtn");
+    btn.disabled = true; btn.innerHTML = '<span class="spin"></span>查询中…';
+    var t0 = Date.now();
+
+    var chgMin = num($("chgMin").value), chgMax = num($("chgMax").value);
+    var turnMin = num($("turnMin").value), turnMax = num($("turnMax").value);
+    var capMin = num($("capMin").value), capMax = num($("capMax").value);
+
+    fetchAll(buildFs()).then(function(all){
+      var res = all.filter(function(d){
+        var chg = num(d.f3), turn = num(d.f8), cap = num(d.f20)/1e8;
+        if(!isNaN(chgMin) && chg < chgMin) return false;
+        if(!isNaN(chgMax) && chg > chgMax) return false;
+        if(!isNaN(turnMin) && turn < turnMin) return false;
+        if(!isNaN(turnMax) && turn > turnMax) return false;
+        if(!isNaN(capMin) && cap < capMin) return false;
+        if(!isNaN(capMax) && cap > capMax) return false;
+        return true;
+      });
+
+      res.sort(function(a,b){
+        var va = num(a[sortKey]), vb = num(b[sortKey]);
+        if(isNaN(va)) va = -Infinity; if(isNaN(vb)) vb = -Infinity;
+        return (va - vb) * sortDir;
+      });
+
+      render(res);
+      var sec = ((Date.now()-t0)/1000).toFixed(1);
+      var shown = Math.min(res.length, MAX_ROWS);
+      $("meta").textContent = "命中 "+res.length+" 只"+(res.length>MAX_ROWS?("，显示前 "+MAX_ROWS+" 只"):"")+" · 耗时 "+sec+"s · 快照为查询时刻实时数据";
+    }).catch(function(err){
+      showErr("实时数据拉取失败：" + (err && err.message ? err.message : err) + "。可能是网络受限或接口跨域被阻；请稍后重试，或检查浏览器网络。");
+    }).then(function(){
+      btn.disabled = false; btn.textContent = "查询";
+    });
+  }
+
+  function render(rows){
+    var tb = $("tbody");
+    if(!rows.length){ tb.innerHTML = '<tr><td colspan="8" class="empty">没有符合条件的股票，试着放宽条件</td></tr>'; return; }
+    var html = "";
+    var lim = Math.min(rows.length, MAX_ROWS);
+    for(var i=0;i<lim;i++){
+      var d = rows[i];
+      var chg = num(d.f3), turn = num(d.f8), cap = num(d.f20)/1e8, fc = num(d.f21)/1e8, main = num(d.f62)/1e8;
+      var chgCls = chg>0?"up":(chg<0?"down":"mid");
+      var mainCls = main>0?"pos":(main<0?"neg":"mid");
+      var mkt = d.f13 === 1 ? "sh" : "sz";
+      var link = "https://quote.eastmoney.com/"+mkt+d.f12+".html";
+      html += "<tr>"
+        + '<td><a href="'+link+'" target="_blank" rel="noopener">'+d.f12+'</a></td>'
+        + '<td class="name">'+d.f14+'</td>'
+        + '<td>'+fmt(d.f2)+'</td>'
+        + '<td class="'+chgCls+'">'+fmtPct(chg)+'</td>'
+        + '<td>'+fmt(turn)+'%</td>'
+        + '<td>'+fmt(cap)+'</td>'
+        + '<td>'+fmt(fc)+'</td>'
+        + '<td class="'+mainCls+'">'+fmtSigned(main)+'</td>'
+        + "</tr>";
+    }
+    tb.innerHTML = html;
+  }
+  function fmt(v){ if(isNaN(num(v))) return "—"; return (Math.round(num(v)*100)/100).toLocaleString("zh-CN"); }
+  function fmtPct(v){ if(isNaN(num(v))) return "—"; return (num(v)>0?"+":"")+(Math.round(num(v)*100)/100)+"%"; }
+  function fmtSigned(v){ if(isNaN(num(v))) return "—"; return (num(v)>0?"+":"")+(Math.round(num(v)*100)/100).toLocaleString("zh-CN"); }
+
+  // 排序表头
+  $("tbl").querySelectorAll("th").forEach(function(th){
+    th.addEventListener("click", function(){
+      var k = th.getAttribute("data-k");
+      if(sortKey === k) sortDir = -sortDir; else { sortKey = k; sortDir = -1; }
+      $("tbl").querySelectorAll("th .ar").forEach(function(a){ a.textContent=""; });
+      th.querySelector(".ar").textContent = sortDir<0 ? "▼" : "▲";
+      run();
+    });
+  });
+
+  $("runBtn").addEventListener("click", run);
+  $("resetBtn").addEventListener("click", function(){
+    ["chgMin","chgMax","turnMin","turnMax","capMin","capMax"].forEach(function(id){ $(id).value=""; });
+    selected.clear(); updateMsUI(); renderMsList(""); hideErr(); $("meta").textContent=""; $("tbody").innerHTML="";
+  });
+  $("autoChk").addEventListener("change", function(){
+    if(this.checked){
+      if(autoTimer) clearInterval(autoTimer);
+      autoTimer = setInterval(run, 30000);
+      run();
+    } else { if(autoTimer) clearInterval(autoTimer); autoTimer = null; }
+  });
+
+  // 初始化
+  loadBoards();
+  updateMsUI();
+})();
+</script>
+</body>
+</html>
