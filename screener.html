@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>条件选股 · 家庭版</title>
 <style>
-  :root{--bg:#f5f6f8;--card:#fff;--ink:#1f2329;--sub:#6b7280;--line:#eceef1;--brand:#2b5cff;--brand-soft:#eef2ff;}
+  :root{--bg:#f5f6f8;--card:#fff;--ink:#1f2329;--sub:#6b7280;--line:#eceef1;--brand:#2b5cff;--brand-soft:#eef2ff;--warn:#f59e0b;}
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
   body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6;}
   .wrap{max-width:860px;margin:0 auto;padding:16px 14px 48px;}
@@ -23,7 +23,6 @@
   .range input{flex:1;min-width:0;width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:9px;font-size:14px;background:#fafbfc;color:var(--ink);}
   .range span{color:var(--sub);font-size:12px;}
   .hint{font-size:11px;color:var(--sub);margin-top:4px;}
-  /* 多选下拉 */
   .ms{position:relative;}
   .ms-btn{width:100%;text-align:left;padding:9px 12px;border:1px solid var(--line);border-radius:9px;background:#fafbfc;color:var(--ink);font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;}
   .ms-btn .ph{color:var(--sub);}
@@ -46,7 +45,8 @@
   .meta{font-size:12px;color:var(--sub);margin:4px 2px 10px;}
   .err{background:#fff1f0;border:1px solid #ffccc7;color:#cf1322;border-radius:10px;padding:10px 12px;font-size:13px;margin:10px 0;display:none;}
   .err.show{display:block;}
-  /* 结果表 */
+  .warn{background:#fffbe6;border:1px solid #ffe58f;color:#d48806;border-radius:10px;padding:8px 12px;font-size:12px;margin:8px 0;display:none;}
+  .warn.show{display:block;}
   .tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
   table{width:100%;border-collapse:collapse;font-size:13px;min-width:640px;}
   th,td{padding:9px 10px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--line);}
@@ -69,7 +69,7 @@
   <a class="back" href="index.html">← 返回首页</a>
   <header>
     <h1 class="title">条件选股</h1>
-    <div class="sub">实时行情来自东方财富（push2 接口），点击「查询」即拉取最新快照 · 仅供研究，非投资建议</div>
+    <div class="sub">点击「查询」即从浏览器实时拉取最新行情；支持东方财富 + 腾讯行情双源自动兜底 · 仅供研究，非投资建议</div>
   </header>
 
   <div class="card">
@@ -123,6 +123,7 @@
       <label class="auto"><input type="checkbox" id="autoChk"> 自动刷新（30 秒）</label>
     </div>
     <div class="err" id="err"></div>
+    <div class="warn" id="warn"></div>
     <div class="meta" id="meta"></div>
   </div>
 
@@ -131,14 +132,14 @@
       <table id="tbl">
         <thead>
           <tr>
-            <th data-k="f12">代码</th>
-            <th data-k="f14">名称</th>
-            <th data-k="f2">现价</th>
-            <th data-k="f3">涨跌幅<span class="ar"></span></th>
-            <th data-k="f8">换手率<span class="ar"></span></th>
-            <th data-k="f20">总市值(亿)<span class="ar"></span></th>
-            <th data-k="f21">流通市值(亿)<span class="ar"></span></th>
-            <th data-k="f62">主力净流入(亿)<span class="ar"></span></th>
+            <th data-k="code">代码</th>
+            <th data-k="name">名称</th>
+            <th data-k="price">现价</th>
+            <th data-k="chg">涨跌幅<span class="ar"></span></th>
+            <th data-k="turn">换手率<span class="ar"></span></th>
+            <th data-k="cap">总市值(亿)<span class="ar"></span></th>
+            <th data-k="fcap">流通市值(亿)<span class="ar"></span></th>
+            <th data-k="main">主力净流入(亿)<span class="ar"></span></th>
           </tr>
         </thead>
         <tbody id="tbody"></tbody>
@@ -147,8 +148,8 @@
   </div>
 
   <footer>
-    数据来源：东方财富实时行情接口（客户端直接请求，无中间服务器）。<br>
-    板块列表在页面打开时自动加载；若加载失败，选股将退化为「全市场」筛选。<br>
+    数据来源：东方财富 push2 / 腾讯 qt.gtimg.cn（客户端直接请求，无中间服务器）。<br>
+    板块列表来自本地预置的申万一级行业映射；若东方财富被网络拦截，自动切换腾讯行情源。<br>
     本页为家庭内部研究工具，所有数据为公开市场数据，不含任何个人持仓信息。
   </footer>
 </div>
@@ -156,33 +157,45 @@
 <script>
 (function(){
   "use strict";
-  var API = "https://push2.eastmoney.com/api/qt/clist/get";
-  var MAX_ROWS = 400;          // 渲染上限（性能）
-  var boards = [];             // {code, name}
-  var selected = new Set();    // 选中的板块 code
-  var sortKey = "f3", sortDir = -1;
+  var EM_API = "https://push2.eastmoney.com/api/qt/clist/get";
+  var TX_API = "https://qt.gtimg.cn/q=";
+  var MAX_ROWS = 400;
+  var BATCH = 320;            // 腾讯每批代码数
+  var EM_TIMEOUT = 8000;      // 东方财富超时时间（ms）
+
+  var universe = null;        // {meta, stocks:{code:{name,sector,sectorCode}}}
+  var boards = [];            // [{code,name}]
+  var selected = new Set();   // sectorCode
+  var sortKey = "chg", sortDir = -1;
   var autoTimer = null;
+  var lastProvider = "";
 
   var $ = function(id){ return document.getElementById(id); };
 
-  function showErr(msg){
-    var e = $("err"); e.textContent = msg; e.classList.add("show");
-  }
+  function showErr(msg){ var e=$("err"); e.textContent=msg; e.classList.add("show"); }
   function hideErr(){ $("err").classList.remove("show"); }
+  function showWarn(msg){ var e=$("warn"); e.textContent=msg; e.classList.add("show"); }
+  function hideWarn(){ $("warn").classList.remove("show"); }
 
-  // ---------- 板块列表加载 ----------
-  function loadBoards(){
-    var url = API + "?pn=1&pz=500&po=1&np=1&fltt=2&invt=2&fid=f62&fs=m:90+t:2&fields=f12,f14";
-    fetch(url).then(function(r){ return r.json(); }).then(function(j){
-      if(j && j.data && j.data.diff){
-        boards = j.data.diff.map(function(d){ return {code:d.f12, name:d.f14}; })
-                    .filter(function(b){ return b.code && b.name; });
-        renderMsList("");
-      } else { disableBoard(); }
-    }).catch(function(){ disableBoard(); });
+  // ---------- 加载本地 universe ----------
+  function loadUniverse(){
+    return fetch("screener/universe.json", {cache:"no-store"}).then(function(r){
+      if(!r.ok) throw new Error("universe.json "+r.status);
+      return r.json();
+    }).then(function(j){
+      universe = j;
+      boards = Object.keys(universe.meta.sectors).map(function(code){
+        return {code:code, name:universe.meta.sectors[code]};
+      }).sort(function(a,b){ return a.name.localeCompare(b.name,"zh-CN"); });
+      renderMsList("");
+      $("msPh").textContent = "全部市场（点此选择板块）";
+      $("msBtn").disabled = false;
+    }).catch(function(err){
+      disableBoard("板块映射加载失败："+err.message);
+    });
   }
-  function disableBoard(){
-    $("msPh").textContent = "板块列表获取失败 · 已退化为全市场";
+  function disableBoard(msg){
+    $("msPh").textContent = msg || "板块列表不可用";
     $("msBtn").disabled = true;
   }
 
@@ -206,9 +219,7 @@
   }
   function updateMsUI(){
     var n = selected.size;
-    if(n === 0){ $("msPh").textContent = "全部市场（点此选择板块）"; }
-    else { $("msPh").textContent = "已选 "+n+" 个板块"; }
-    // chips
+    $("msPh").textContent = n===0 ? "全部市场（点此选择板块）" : "已选 "+n+" 个板块";
     var chips = "";
     selected.forEach(function(code){
       var b = boards.find(function(x){ return x.code === code; });
@@ -223,29 +234,38 @@
       });
     });
   }
-  $("msBtn").addEventListener("click", function(){
-    $("msPop").classList.toggle("open");
-  });
+  $("msBtn").addEventListener("click", function(){ $("msPop").classList.toggle("open"); });
   $("msSearch").addEventListener("input", function(){ renderMsList(this.value); });
   document.addEventListener("click", function(e){
     if(!e.target.closest(".ms")) $("msPop").classList.remove("open");
   });
 
-  // ---------- 查询 ----------
-  function buildFs(){
-    if(selected.size === 0){
-      return "m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23"; // 全 A（沪/深/京 主板）
-    }
+  // ---------- 代码池（按板块过滤后） ----------
+  function getCodes(){
+    if(!universe) return [];
+    var stocks = universe.stocks;
+    var codes = [];
+    Object.keys(stocks).forEach(function(code){
+      if(selected.size === 0 || selected.has(stocks[code].sectorCode)){
+        codes.push(code);
+      }
+    });
+    return codes;
+  }
+
+  // ---------- 东方财富 ----------
+  function buildEmFs(){
+    if(selected.size === 0) return "m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23";
     var arr = [];
     selected.forEach(function(c){ arr.push("b:"+c); });
     return arr.join("+");
   }
-
-  function fetchAll(fs){
+  function fetchEm(){
+    var fs = buildEmFs();
     var out = [], page = 1;
     function one(){
-      var url = API + "?pn="+page+"&pz=5000&po=1&np=1&fltt=2&invt=2&fid=f3&fs="+encodeURIComponent(fs)+"&fields=f12,f13,f14,f2,f3,f8,f20,f21,f62,f6";
-      return fetch(url).then(function(r){ return r.json(); }).then(function(j){
+      var url = EM_API + "?pn="+page+"&pz=5000&po=1&np=1&fltt=2&invt=2&fid=f3&fs="+encodeURIComponent(fs)+"&fields=f12,f13,f14,f2,f3,f8,f20,f21,f62,f6";
+      return fetchWithTimeout(url, EM_TIMEOUT).then(function(r){ return r.json(); }).then(function(j){
         if(!j || !j.data || !j.data.diff) throw new Error("接口返回异常");
         out = out.concat(j.data.diff);
         if(j.data.diff.length < 5000 || out.length >= (j.data.total||0) || page >= 6) return out;
@@ -254,11 +274,98 @@
     }
     return one();
   }
+  function normalizeEm(rows){
+    return rows.map(function(d){
+      var mkt = d.f13 === 1 ? "sh" : "sz";
+      return {
+        code: d.f12,
+        mkt: mkt,
+        name: d.f14,
+        price: num(d.f2),
+        chg: num(d.f3),
+        turn: num(d.f8),
+        cap: num(d.f20)/1e8,
+        fcap: num(d.f21)/1e8,
+        main: num(d.f62)/1e8,
+        sector: sectorName(mkt + d.f12)
+      };
+    });
+  }
+
+  // ---------- 腾讯行情兜底 ----------
+  function fetchTx(){
+    var codes = getCodes();
+    if(codes.length === 0) return Promise.reject(new Error("未获取到股票代码池"));
+    var batches = [];
+    for(var i=0;i<codes.length;i+=BATCH) batches.push(codes.slice(i,i+BATCH));
+    return Promise.all(batches.map(function(batch){ return fetchTxBatch(batch); }))
+      .then(function(results){ return [].concat.apply([], results); });
+  }
+  function fetchTxBatch(codes){
+    var url = TX_API + codes.join(",");
+    return fetch(url).then(function(r){ return r.arrayBuffer(); }).then(function(ab){
+      var text = new TextDecoder("gbk").decode(ab);
+      return parseTx(text);
+    });
+  }
+  function parseTx(text){
+    var rows = [];
+    text.split(";").forEach(function(line){
+      line = line.trim();
+      if(!line) return;
+      var m = line.match(/^v_(sh\d+|sz\d+|bj\d+)=\"(.*)\"$/);
+      if(!m) return;
+      var code = m[1];
+      var parts = m[2].split("~");
+      // 腾讯字段索引（verified with 京东方A 2026-07-28）:
+      // 0 market_type, 1 name, 2 code_num, 3 price, 4 prev_close, 5 open,
+      // ... 31 change, 32 change_percent, 33 high, 34 low,
+      // 36 volume, 37 amount(万元), 38 turnover_rate,
+      // 44 circulating_market_cap(亿), 45 total_market_cap(亿)
+      var name = parts[1] || "";
+      var price = num(parts[3]);
+      var chg = num(parts[32]);
+      var turn = num(parts[38]);
+      var cap = num(parts[45]);
+      var fcap = num(parts[44]);
+      if(isNaN(price) && isNaN(chg)) return; // 无效/停牌
+      rows.push({
+        code: code.replace(/^(sh|sz|bj)/,""),
+        mkt: code.substring(0,2),
+        name: name,
+        price: price,
+        chg: chg,
+        turn: turn,
+        cap: cap,
+        fcap: fcap,
+        main: NaN,
+        sector: sectorName(code)
+      });
+    });
+    return rows;
+  }
+
+  function sectorName(code){
+    if(!universe) return "";
+    var c = universe.stocks[code];
+    return c ? c.sector : "";
+  }
+
+  function fetchWithTimeout(url, ms){
+    var ctrl = new AbortController();
+    var t = setTimeout(function(){ ctrl.abort(); }, ms);
+    return fetch(url, {signal:ctrl.signal}).finally(function(){ clearTimeout(t); });
+  }
 
   function num(v){ return (v === undefined || v === null || v === "") ? NaN : parseFloat(v); }
 
+  // ---------- 查询主流程 ----------
   function run(){
-    hideErr();
+    hideErr(); hideWarn();
+    if(!universe){
+      showErr("股票代码池仍在加载中，请稍候再点查询。");
+      return;
+    }
     var btn = $("runBtn");
     btn.disabled = true; btn.innerHTML = '<span class="spin"></span>查询中…';
     var t0 = Date.now();
@@ -267,30 +374,39 @@
     var turnMin = num($("turnMin").value), turnMax = num($("turnMax").value);
     var capMin = num($("capMin").value), capMax = num($("capMax").value);
 
-    fetchAll(buildFs()).then(function(all){
+    fetchEm().then(function(raw){
+      lastProvider = "东方财富";
+      return normalizeEm(raw);
+    }).catch(function(err){
+      // 东方财富失败 → 腾讯兜底
+      console.log("Eastmoney failed, fallback to Tencent:", err && err.message);
+      return fetchTx().then(function(raw){
+        lastProvider = "腾讯行情";
+        showWarn("东方财富接口在当前网络不可用，已自动切换为腾讯行情源；主力净流入字段暂不可得。");
+        return raw;
+      });
+    }).then(function(all){
       var res = all.filter(function(d){
-        var chg = num(d.f3), turn = num(d.f8), cap = num(d.f20)/1e8;
-        if(!isNaN(chgMin) && chg < chgMin) return false;
-        if(!isNaN(chgMax) && chg > chgMax) return false;
-        if(!isNaN(turnMin) && turn < turnMin) return false;
-        if(!isNaN(turnMax) && turn > turnMax) return false;
-        if(!isNaN(capMin) && cap < capMin) return false;
-        if(!isNaN(capMax) && cap > capMax) return false;
+        if(isNaN(d.chg) && isNaN(d.turn) && isNaN(d.cap)) return false;
+        if(!isNaN(chgMin) && d.chg < chgMin) return false;
+        if(!isNaN(chgMax) && d.chg > chgMax) return false;
+        if(!isNaN(turnMin) && d.turn < turnMin) return false;
+        if(!isNaN(turnMax) && d.turn > turnMax) return false;
+        if(!isNaN(capMin) && d.cap < capMin) return false;
+        if(!isNaN(capMax) && d.cap > capMax) return false;
         return true;
       });
-
       res.sort(function(a,b){
         var va = num(a[sortKey]), vb = num(b[sortKey]);
         if(isNaN(va)) va = -Infinity; if(isNaN(vb)) vb = -Infinity;
         return (va - vb) * sortDir;
       });
-
       render(res);
       var sec = ((Date.now()-t0)/1000).toFixed(1);
       var shown = Math.min(res.length, MAX_ROWS);
-      $("meta").textContent = "命中 "+res.length+" 只"+(res.length>MAX_ROWS?("，显示前 "+MAX_ROWS+" 只"):"")+" · 耗时 "+sec+"s · 快照为查询时刻实时数据";
+      $("meta").textContent = "命中 "+res.length+" 只"+(res.length>MAX_ROWS?"，显示前 "+MAX_ROWS+" 只":"")+" · 耗时 "+sec+"s · 数据源："+lastProvider;
     }).catch(function(err){
-      showErr("实时数据拉取失败：" + (err && err.message ? err.message : err) + "。可能是网络受限或接口跨域被阻；请稍后重试，或检查浏览器网络。");
+      showErr("实时数据拉取失败："+(err && err.message ? err.message : err)+" · 已尝试东方财富与腾讯两个行情源，均不可用。请检查浏览器网络或稍后重试。");
     }).then(function(){
       btn.disabled = false; btn.textContent = "查询";
     });
@@ -303,20 +419,18 @@
     var lim = Math.min(rows.length, MAX_ROWS);
     for(var i=0;i<lim;i++){
       var d = rows[i];
-      var chg = num(d.f3), turn = num(d.f8), cap = num(d.f20)/1e8, fc = num(d.f21)/1e8, main = num(d.f62)/1e8;
-      var chgCls = chg>0?"up":(chg<0?"down":"mid");
-      var mainCls = main>0?"pos":(main<0?"neg":"mid");
-      var mkt = d.f13 === 1 ? "sh" : "sz";
-      var link = "https://quote.eastmoney.com/"+mkt+d.f12+".html";
+      var chgCls = d.chg>0?"up":(d.chg<0?"down":"mid");
+      var mainCls = d.main>0?"pos":(d.main<0?"neg":"mid");
+      var link = "https://quote.eastmoney.com/"+d.mkt+d.code+".html";
       html += "<tr>"
-        + '<td><a href="'+link+'" target="_blank" rel="noopener">'+d.f12+'</a></td>'
-        + '<td class="name">'+d.f14+'</td>'
-        + '<td>'+fmt(d.f2)+'</td>'
-        + '<td class="'+chgCls+'">'+fmtPct(chg)+'</td>'
-        + '<td>'+fmt(turn)+'%</td>'
-        + '<td>'+fmt(cap)+'</td>'
-        + '<td>'+fmt(fc)+'</td>'
-        + '<td class="'+mainCls+'">'+fmtSigned(main)+'</td>'
+        + '<td><a href="'+link+'" target="_blank" rel="noopener">'+d.code+'</a></td>'
+        + '<td class="name">'+d.name+'</td>'
+        + '<td>'+fmt(d.price)+'</td>'
+        + '<td class="'+chgCls+'">'+fmtPct(d.chg)+'</td>'
+        + '<td>'+fmt(d.turn)+'%</td>'
+        + '<td>'+fmt(d.cap)+'</td>'
+        + '<td>'+fmt(d.fcap)+'</td>'
+        + '<td class="'+mainCls+'">'+(isNaN(d.main)?"—":fmtSigned(d.main))+'</td>'
         + "</tr>";
     }
     tb.innerHTML = html;
@@ -339,7 +453,7 @@
   $("runBtn").addEventListener("click", run);
   $("resetBtn").addEventListener("click", function(){
     ["chgMin","chgMax","turnMin","turnMax","capMin","capMax"].forEach(function(id){ $(id).value=""; });
-    selected.clear(); updateMsUI(); renderMsList(""); hideErr(); $("meta").textContent=""; $("tbody").innerHTML="";
+    selected.clear(); updateMsUI(); renderMsList(""); hideErr(); hideWarn(); $("meta").textContent=""; $("tbody").innerHTML="";
   });
   $("autoChk").addEventListener("change", function(){
     if(this.checked){
@@ -350,8 +464,7 @@
   });
 
   // 初始化
-  loadBoards();
-  updateMsUI();
+  loadUniverse().then(function(){ updateMsUI(); });
 })();
 </script>
 </body>
