@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026-07-28 A 股盘面复盘</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#ffffff; --ink:#1f2329; --sub:#6b7280; --line:#eceef1;
+    --up:#e03b3b; --down:#1aa260; --brand:#2b5cff; --brand-soft:#eef2ff; --amber:#c88217;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;}
+  .wrap{max-width:680px;margin:0 auto;padding:16px 14px 48px;}
+  .back{display:inline-block;color:var(--brand);font-size:13px;text-decoration:none;margin:6px 0 10px;}
+  header{padding:4px 0 10px;border-bottom:1px solid var(--line);}
+  .date{font-size:13px;color:var(--sub);}
+  .title{font-size:20px;font-weight:700;margin:2px 0 0;}
+  .conclusion{background:var(--brand-soft);border-radius:14px;padding:14px;margin:16px 0;}
+  .conclusion .label{font-size:12px;color:#2742c4;font-weight:700;letter-spacing:1px;}
+  .conclusion .text{font-size:16px;font-weight:600;margin-top:6px;color:#1a2a6b;}
+  .src{font-size:12px;color:var(--sub);background:#eef6ee;border:1px solid #cfe9d4;border-radius:10px;padding:8px 12px;margin:14px 0;}
+  h2{font-size:16px;margin:22px 0 10px;}
+  .sec{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px;box-shadow:0 1px 2px rgba(0,0,0,.03);}
+  .sec h3{font-size:15px;margin:0 0 8px;}
+  .sec p{margin:6px 0;font-size:14px;}
+  .note{font-size:12px;color:var(--sub);margin:4px 0 8px;}
+  .kv{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;padding:5px 0;border-bottom:1px dashed var(--line);}
+  .kv:last-child{border-bottom:none;}
+  .kv .r{text-align:right;color:var(--sub);}
+  .kv .r b{color:var(--ink);}
+  .up{color:var(--up);font-weight:600;}
+  .down{color:var(--down);font-weight:600;}
+  ul{margin:6px 0;padding-left:18px;font-size:14px;}
+  li{margin:3px 0;}
+  .pill{display:inline-block;font-size:11px;padding:1px 8px;border-radius:999px;background:#fff3e0;color:#b26a00;margin-left:6px;}
+  .v-yes{color:#1a8a3c;font-weight:600;}
+  .v-no{color:#b3261e;font-weight:600;}
+  .v-watch{color:#b26a00;font-weight:600;}
+  .review{list-style:none;margin:8px 0;padding-left:0;}
+  .review li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px;}
+  .r-head{display:flex;align-items:flex-start;gap:10px;margin-bottom:4px;font-size:14px;line-height:1.5;}
+  .r-tag{flex-shrink:0;white-space:nowrap;font-size:12px;padding:2px 8px;border-radius:6px;font-weight:600;}
+  .r-yes{background:#e6f7ec;color:#1a8a3c;}
+  .r-no{background:#ffeaea;color:#b3261e;}
+  .r-watch{background:#fff3e0;color:#b26a00;}
+  .r-body{font-size:13px;color:var(--sub);margin:6px 0 0;line-height:1.6;}
+  .gauge{height:10px;border-radius:999px;background:#eef0f3;overflow:hidden;margin:8px 0 4px;}
+  .gauge > i{display:block;height:100%;background:var(--up);}
+  .gval{font-size:13px;color:var(--sub);}
+  footer{color:var(--sub);font-size:12px;text-align:center;margin-top:24px;line-height:1.6;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← 返回归档</a>
+  <header>
+    <div class="date">2026-07-28 · 周二 · 交易日收盘</div>
+    <div class="conclusion">
+      <div class="label">一句话结论</div>
+      <div class="text">周二高低切换式重挫：科技主线全面崩塌（通信 -10.88%、电子 -7.02%，创业板指单日 -7.35%），资金转向银行/白酒/消费防御（食品饮料 +2.14%、银行 +1.51%）；上涨家数占比 47% 但权重科技闪崩，半导体/通信设备/元件三行业主力净流出合计约 633 亿，昨日过热情绪单日兑现，防守优先、勿抄底科技左侧。</div>
+    </div>
+  </header>
+
+  <div class="src">✅ 本篇由真实数据聚合生成（2026-07-28 收盘）：指数行情（data_quote）、涨跌宽度（data_changedist）、板块涨跌与资金（data_sector）、热门概念（板块热度榜）。个人持仓/自选股未纳入。指数估值分位未取，采用 TTM PE 标注。</div>
+
+  <h2>详细版</h2>
+
+  <div class="sec">
+    <h3>⏮ 前日观察回顾 · 核对 7-27 提出的 5 个观察点</h3>
+    <p class="note">把上一交易日（7-27）「次日观察」的推测逐条对照今日盘面，标注验证结论，使观察链条可延续。下一日复盘将回看本页「七、次日观察」。</p>
+    <ul class="review">
+      <li>
+        <div class="r-head"><span class="r-tag r-no">未验证</span><b>① 过热后的持续性：上涨占比能否维持 50%+、涨停晋级与连板高度</b></div>
+        <div class="r-body">持续性证伪：上涨占比从 93% 骤降至 <b>47%</b>（跌破 50%），涨停从 121 只腰斩至 <b>68</b> 只，五大指数全线重挫。唯「昨日连板」概念 <b class="up">+4.81%</b> 逆势居热度榜前排，高位人气股仍在但普涨情绪一日终结。</div>
+      </li>
+      <li>
+        <div class="r-head"><span class="r-tag r-no">未验证</span><b>② 存储/PCB 主线（元件/玻璃玻纤/电子布/电池）能否放量续攻</b></div>
+        <div class="r-body">主线全面崩塌：元件 <b class="down">-9.31%</b>、玻璃玻纤 <b class="down">-7.14%</b>、通信设备 <b class="down">-12.44%</b>、电池 <b class="down">-2.54%</b>，元件主力净流出 128 亿。周一的存储/PCB 反攻被证伪为脉冲，未能续攻。</div>
+      </li>
+      <li>
+        <div class="r-head"><span class="r-tag r-yes">已验证</span><b>③ 半导体量价资金背离（涨 1.10% 但净流出 83 亿）：补涨还是补跌</b></div>
+        <div class="r-body">确认为补跌：半导体今日 <b class="down">-7.47%</b>、主力再净流出 <b>293 亿</b>（5 日累计 -503 亿），昨日「指数涨、资金撤」的背离信号一日兑现，是本轮最有效的领先信号。</div>
+      </li>
+      <li>
+        <div class="r-head"><span class="r-tag r-watch">延续观察</span><b>④ 量能持续性：2.08 万亿后能否守住 2 万亿</b></div>
+        <div class="r-body">名义守住：两市成交约 <b>2.03 万亿</b>（较昨缩 508 亿），仍在 2 万亿上方；但「缩量+暴跌」组合已说明周一放量长阳属单日脉冲，量能质量转差，继续观察是否跌破 2 万亿。</div>
+      </li>
+      <li>
+        <div class="r-head"><span class="r-tag r-yes">已验证</span><b>⑤ 滞涨权重（银行/食品饮料/非银）是否补涨：高低切换即科技退潮信号</b></div>
+        <div class="r-body">精准兑现：食品饮料 <b class="up">+2.14%</b>、银行 <b class="up">+1.51%</b> 领涨两市，国有大行/白酒主力净流入居前，科技全面退潮——昨日提示的「高低切换=科技主线退潮信号」当日应验。</div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>一、大盘概览（指数涨跌 + TTM PE）</h3>
+    <p class="note">五大指数全线收跌、双创重挫远超主板，创业板指 -7.35% 为近阶段最大单日跌幅；PE 为 TTM 口径，估值分位待补全。</p>
+    <div class="kv"><span>上证指数</span><span class="r"><b>3,813.31</b> <span class="down">-1.16%</span> ｜ PE 17.6x</span></div>
+    <div class="kv"><span>深证成指</span><span class="r"><b>13,509.68</b> <span class="down">-4.52%</span> ｜ PE 43.8x</span></div>
+    <div class="kv"><span>创业板指</span><span class="r"><b>3,327.03</b> <span class="down">-7.35%</span> ｜ PE 57.5x（偏高）</span></div>
+    <div class="kv"><span>沪深300</span><span class="r"><b>4,569.52</b> <span class="down">-2.83%</span> ｜ PE 14.3x</span></div>
+    <div class="kv"><span>中证500</span><span class="r"><b>7,443.43</b> <span class="down">-3.59%</span> ｜ PE 35.2x</span></div>
+  </div>
+
+  <div class="sec">
+    <h3>二、市场情绪与宽度 <span class="pill">结构性重挫</span></h3>
+    <div class="gauge"><i style="width:47%"></i></div>
+    <div class="gval">情绪温度计：<b class="v-watch">中性偏弱</b>（上涨占比 47%，上一交易日 93%；官方口径：涨数占比 47% 属「正常」区间——宽度与指数严重背离）</div>
+    <div class="kv"><span>涨跌家数</span><span class="r">上涨 <b>2,603</b> ／ 下跌 <b>2,769</b> ／ 平 161</span></div>
+    <div class="kv"><span>涨停 / 跌停</span><span class="r"><b>68</b> ／ <b>52</b></span></div>
+    <div class="kv"><span>两市成交</span><span class="r">约 <b>2.03 万亿</b> ／ 较前日 <span class="down">-508 亿</span>（微缩）</span></div>
+    <p class="note">涨跌区间：涨停 68 ／ &gt;7% 涨 26 ／ 5~7% 70 ／ 2~5% 522 ／ 0~2% 1,917；0~2% 跌 1,368 ／ 2~5% 786 ／ 5~7% 276 ／ &gt;7% 跌 287 ／ 跌停 52。特征鲜明：涨跌家数近乎对半，但深跌股（&gt;5% 跌 615 只）远多于大涨股——指数级暴跌集中在科技权重，并非全面股灾，属结构性重挫+高低切换。</p>
+  </div>
+
+  <div class="sec">
+    <h3>三、板块结构（申万一级 + 热门概念）</h3>
+    <p><b>领涨方向：</b>食品饮料 <b class="up">+2.14%</b>、商贸零售 <b class="up">+1.53%</b>、银行 <b class="up">+1.51%</b>、交通运输 <b class="up">+0.84%</b>、家用电器 <b class="up">+0.81%</b>。</p>
+    <p><b>领跌方向：</b>通信 <b class="down">-10.88%</b>、电子 <b class="down">-7.02%</b>、综合 <b class="down">-3.79%</b>、机械设备 <b class="down">-3.62%</b>、建筑材料 <b class="down">-3.11%</b>（电力设备 -2.63%、国防军工 -2.42%、有色金属 -2.12% 亦重挫）。</p>
+    <p><b>热门概念：</b>昨日连板 +4.81%、电子签名 +3.92%、财税改革 +3.49%、休闲食品 +3.45%、AI编程 +2.76%、CIPS概念 +2.70%（申万二级中白酒Ⅱ +2.36%、国有大型银行Ⅱ +2.56% 居前）。</p>
+    <p class="note">主线逻辑：昨日领衔的存储/PCB/覆铜板链（元件/玻璃玻纤/通信设备）今日成为跌幅最深区域，通信 -10.88% 创极端单日跌幅；资金整体切向低估值防御（银行/白酒/零售/家电）与题材短线（CIPS/财税改革/连板股）。风格从科技进攻一日切换回防御，且科技端跌幅远大于防御端涨幅，属避险式切换而非轮动式切换。</p>
+  </div>
+
+  <div class="sec">
+    <h3>四、个股盘面 · 市场级异动</h3>
+    <p class="note">以下为当日异动个股（市场公开数据，非个人持仓），供看盘面热度：</p>
+    <ul>
+      <li>*ST清越 <span class="up">+20.22%</span>（昨日首板）｜ 安诺其 <span class="up">+20.09%</span>（芯片概念/化工）｜ 科蓝软件 <span class="up">+19.95%</span>（CIPS/财税改革）</li>
+      <li>五洲医疗 <span class="up">+10.28%</span>（昨日连板）｜ 东晶电子 <span class="up">+10.04%</span>（元件逆势）｜ 金种子酒 <span class="up">+10.01%</span>（白酒）</li>
+      <li>盐津铺子 <span class="up">+10.01%</span>（休闲食品）｜ 南京熊猫 <span class="up">+9.99%</span>（通信设备逆势）｜ 传智教育 <span class="up">+9.97%</span>（教育）｜ 农业银行 <span class="up">+3.57%</span>（国有大行，创新高方向）</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>五、资金面（行业主力净流入）</h3>
+    <p><b>净流入前排（亿元）：</b>国有大型银行Ⅱ <b class="up">+13.17</b>（5日 +5.42）、白酒Ⅱ <b class="up">+7.68</b>（5日 +6.38）、股份制银行Ⅱ <b class="up">+6.68</b>（5日 -3.88）。</p>
+    <p><b>净流出前排：</b>半导体 <b class="down">-293.36</b>（5日 -502.91）、通信设备 <b class="down">-211.59</b>（5日 -438.85）、元件 <b class="down">-128.26</b>（5日 -162.44）。</p>
+    <p class="note">资金结构极端一边倒：科技三行业单日净流出合计约 633 亿、5 日累计超 1,100 亿，为连续性撤离而非单日砸盘；流入端（银行/白酒合计不足 30 亿）体量远小于流出端，说明主力资金整体离场观望、防御方向只是「避风港」而非新主线，增量并未接棒。</p>
+  </div>
+
+  <div class="sec">
+    <h3>六、技术关键位</h3>
+    <p>上证收 3,813 跌破 3,850，盘中低点 3,797 精确试探 3,800 整数关后收回，3,800 得失是短期多空分界；深成指 13,510 击穿 14,000 平台，创业板指 3,327 单日 -7.35% 直逼 3,300，双创 20 日跌幅已达 -16.6% / -23.4%，技术破位明确。沪深300 4,570 回到 7 月中旬平台下沿；上证 52 周低点 3,547 为极限参照。反弹先看能否收复 3,850，创业板止跌信号未现前不言底。</p>
+  </div>
+
+  <div class="sec">
+    <h3>七、次日观察</h3>
+    <ul>
+      <li>上证 3,800 整数关得失：今日盘中已试探（低点 3,797），若放量跌破则打开下方空间；收复 3,850 才算企稳第一步。</li>
+      <li>科技抛压是否衰竭：半导体/通信设备/元件主力净流出（今日 633 亿、5 日超 1,100 亿）能否显著收敛，缩不动量前不接飞刀。</li>
+      <li>防御方向（银行/白酒/消费）持续性：是避险一日游还是中线高低切换成立，观察大行能否连续创新高、白酒 5 日资金是否持续为正。</li>
+      <li>宽度与指数的背离修复方向：47% 上涨占比若继续走弱（&lt;30%）则由结构性下跌转全面下跌；若回升则确认仅科技出清。</li>
+      <li>量能：2.03 万亿微缩后是否跌破 2 万亿；恐慌放量长阴或地量缩至 1.7 万亿以下均是阶段情绪极值信号。</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>八、风险提示</h3>
+    <p>创业板指单日 -7.35%、通信行业 -10.88% 属极端波动，技术破位后杀跌动能可能延续，左侧抄底科技风险极高；双创 PE（创业板 57.5x / 深成指 43.8x）虽经暴跌仍处高位，估值消化或未结束。防御方向单日大涨后追高同样有回撤风险（流入体量小、持续性未证实）。上涨占比 47% 与指数暴跌的背离为罕见结构，后续演化路径不确定性大；板块涨跌为单日观察，新闻定性（事件驱动 vs 情绪发酵）须每日人工核对；出现实质政策/业绩催化应切换逻辑。</p>
+  </div>
+
+  <a class="card" href="../market-cycle/2026-07-28.html" style="margin-top:14px;">
+    <div class="date">📈 相关分析</div>
+    <div class="day">查看本日「市场周期数据观测」：量能 / 资金 / 板块四维度原始数据 + 周期阶段与资金性质判断 →</div>
+  </a>
+  <footer>数据来源于腾讯自选股等公开行情，可能存在延迟 ｜ 仅供家庭内部学习交流，不构成投资建议</footer>
+</div>
+</body>
+</html>
