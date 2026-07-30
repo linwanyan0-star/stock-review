@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026-07-30 A 股盘面复盘</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#ffffff; --ink:#1f2329; --sub:#6b7280; --line:#eceef1;
+    --up:#e03b3b; --down:#1aa260; --brand:#2b5cff; --brand-soft:#eef2ff; --amber:#c88217;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;}
+  .wrap{max-width:680px;margin:0 auto;padding:16px 14px 48px;}
+  .back{display:inline-block;color:var(--brand);font-size:13px;text-decoration:none;margin:6px 0 10px;}
+  header{padding:4px 0 10px;border-bottom:1px solid var(--line);}
+  .date{font-size:13px;color:var(--sub);}
+  .title{font-size:20px;font-weight:700;margin:2px 0 0;}
+  .conclusion{background:var(--brand-soft);border-radius:14px;padding:14px;margin:16px 0;}
+  .conclusion .label{font-size:12px;color:#2742c4;font-weight:700;letter-spacing:1px;}
+  .conclusion .text{font-size:16px;font-weight:600;margin-top:6px;color:#1a2a6b;}
+  .src{font-size:12px;color:var(--sub);background:#eef6ee;border:1px solid #cfe9d4;border-radius:10px;padding:8px 12px;margin:14px 0;}
+  h2{font-size:16px;margin:22px 0 10px;}
+  .sec{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px;box-shadow:0 1px 2px rgba(0,0,0,.03);}
+  .sec h3{font-size:15px;margin:0 0 8px;}
+  .sec p{margin:6px 0;font-size:14px;}
+  .note{font-size:12px;color:var(--sub);margin:4px 0 8px;}
+  .kv{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;padding:5px 0;border-bottom:1px dashed var(--line);}
+  .kv:last-child{border-bottom:none;}
+  .kv .r{text-align:right;color:var(--sub);}
+  .kv .r b{color:var(--ink);}
+  .up{color:var(--up);font-weight:600;}
+  .down{color:var(--down);font-weight:600;}
+  ul{margin:6px 0;padding-left:18px;font-size:14px;}
+  li{margin:3px 0;}
+  .pill{display:inline-block;font-size:11px;padding:1px 8px;border-radius:999px;background:#fff3e0;color:#b26a00;margin-left:6px;}
+  .v-yes{color:#1a8a3c;font-weight:600;}
+  .v-no{color:#b3261e;font-weight:600;}
+  .v-watch{color:#b26a00;font-weight:600;}
+  .review{list-style:none;margin:8px 0;padding-left:0;}
+  .review li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px;}
+  .r-head{display:flex;align-items:flex-start;gap:10px;margin-bottom:4px;font-size:14px;line-height:1.5;}
+  .r-tag{flex-shrink:0;white-space:nowrap;font-size:12px;padding:2px 8px;border-radius:6px;font-weight:600;}
+  .r-yes{background:#e6f7ec;color:#1a8a3c;}
+  .r-no{background:#ffeaea;color:#b3261e;}
+  .r-watch{background:#fff3e0;color:#b26a00;}
+  .r-body{font-size:13px;color:var(--sub);margin:6px 0 0;line-height:1.6;}
+  .gauge{height:10px;border-radius:999px;background:#eef0f3;overflow:hidden;margin:8px 0 4px;}
+  .gauge > i{display:block;height:100%;background:var(--up);}
+  .gval{font-size:13px;color:var(--sub);}
+  footer{color:var(--sub);font-size:12px;text-align:center;margin-top:24px;line-height:1.6;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← 返回归档</a>
+  <header>
+    <div class="date">2026-07-30 · 周四 · 交易日收盘</div>
+    <div class="conclusion">
+      <div class="label">一句话结论</div>
+      <div class="text">周四延续「高低切换式」下跌：科技主线（通信 -7.52%、电子 -6.53%）连续第二日崩塌，资金加速撤离（半导体/通信设备/元件 5 日主力净流出累计超 1100 亿）；银行（+2.48%）、食品饮料（+2.52%）等防御方向连续两日领涨，高低切换成立。但上涨占比降至 31%、两市放量至 2.34 万亿却普跌（放量下跌＝派发），结构性风险未解除——防守不追高、科技不接飞刀。</div>
+    </div>
+  </header>
+
+  <div class="src">✅ 本篇由真实数据聚合生成（2026-07-30 收盘）：指数行情（data_quote）、涨跌宽度（data_changedist）、申万一级板块涨跌与资金（data_sector / data_quote）、热门概念（板块热度榜）。个人持仓/自选股未纳入。指数估值分位未取，采用 TTM PE 标注。</div>
+
+  <h2>详细版</h2>
+
+  <div class="sec">
+    <h3>⏮ 前日观察回顾 · 核对 7-28 提出的 5 个观察点</h3>
+    <p class="note">把上一交易日（7-28）「次日观察」的推测逐条对照今日盘面，标注验证结论，使观察链条可延续。下一日复盘将回看本页「七、次日观察」。</p>
+    <ul class="review">
+      <li>
+        <div class="r-head"><span class="r-tag r-watch">延续观察</span><b>① 上证 3,800 整数关得失：放量跌破则打开下行空间，收复 3,850 才算企稳</b></div>
+        <div class="r-body">关口暂守但未企稳：今日收 <b>3,804.69</b> 仍在 3,800 上方，但盘中低点 <b>3,767.5</b> 已刺穿前日 3,797 低点，高点 <b>3,839.3</b> 仍未补 3,850 缺口。3,800 多空分界有效，但下档已松动，等待方向确认。</div>
+      </li>
+      <li>
+        <div class="r-head"><span class="r-tag r-no">未验证</span><b>② 科技抛压是否衰竭：半导体/通信设备/元件主力净流出能否显著收敛</b></div>
+        <div class="r-body">抛压未衰竭、继续撤离：今日通信 <b class="down">-7.52%</b>、电子 <b class="down">-6.53%</b> 再重挫，三行业单日主力净流出合计约 <b class="down">320 亿</b>（5 日累计 <b class="down">-1,117 亿</b>）。净流出较 7-28 的 633 亿减半但未止，缩不动量前不接飞刀。</div>
+      </li>
+      <li>
+        <div class="r-head"><span class="r-tag r-yes">已验证</span><b>③ 防御方向（银行/白酒/消费）持续性：避险一日游还是中线高低切换成立</b></div>
+        <div class="r-body">高低切换成立、连续领涨：银行 <b class="up">+2.48%</b>、食品饮料 <b class="up">+2.52%</b> 再居全市场前列，白酒Ⅱ 5 日主力净流入 <b class="up">+30.17 亿</b>转正、股份制银行 5 日 <b class="up">+15.33 亿</b>，资金连续两日向防御集中，主线切换信号得到确认。</div>
+      </li>
+      <li>
+        <div class="r-head"><span class="r-tag r-watch">延续观察</span><b>④ 宽度与指数背离修复方向：47% 若继续走弱（&lt;30%）则由结构性下跌转全面下跌</b></div>
+        <div class="r-body">宽度继续恶化、逼近临界：上涨占比从 47% 降至 <b>31%</b>，已逼近「全面下跌」30% 临界线但尚未跌破；跌停 83 只、&gt;5% 大跌股约 950 只远多于大涨股，普跌特征加重。回升方确认仅科技出清。</div>
+      </li>
+      <li>
+        <div class="r-head"><span class="r-tag r-watch">延续观察</span><b>⑤ 量能：2.03 万亿微缩后是否跌破 2 万亿</b></div>
+        <div class="r-body">未破 2 万亿但「放量下跌」：两市成交约 <b>2.34 万亿</b>（较前日 <b class="up">+462 亿</b>），未触发破位信号，但指数量价背离——放量却普跌，属典型派发结构，量能质量转差，警惕高位承接转弱。</div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>一、大盘概览（指数涨跌 + TTM PE）</h3>
+    <p class="note">五大指数全线收跌，创业板指 -3.97% 领跌、主板相对抗跌；PE 为 TTM 口径，估值分位待补全。</p>
+    <div class="kv"><span>上证指数</span><span class="r"><b>3,804.69</b> <span class="down">-0.62%</span> ｜ PE 17.6x</span></div>
+    <div class="kv"><span>深证成指</span><span class="r"><b>13,285.80</b> <span class="down">-2.73%</span> ｜ PE 43.2x</span></div>
+    <div class="kv"><span>创业板指</span><span class="r"><b>3,244.62</b> <span class="down">-3.97%</span> ｜ PE 55.9x（偏高）</span></div>
+    <div class="kv"><span>沪深300</span><span class="r"><b>4,549.72</b> <span class="down">-1.10%</span> ｜ PE 14.4x</span></div>
+    <div class="kv"><span>中证500</span><span class="r"><b>7,309.58</b> <span class="down">-2.86%</span> ｜ PE 34.5x</span></div>
+  </div>
+
+  <div class="sec">
+    <h3>二、市场情绪与宽度 <span class="pill">放量下跌</span></h3>
+    <div class="gauge"><i style="width:31%"></i></div>
+    <div class="gval">情绪温度计：<b class="v-no">偏弱</b>（上涨占比 31%，上一交易日 47%；官方口径：涨数占比 31% 属「偏低」区间——普跌特征加重）</div>
+    <div class="kv"><span>涨跌家数</span><span class="r">上涨 <b>1,768</b> ／ 下跌 <b>3,635</b> ／ 平 131</span></div>
+    <div class="kv"><span>涨停 / 跌停</span><span class="r"><b>56</b> ／ <b>83</b></span></div>
+    <div class="kv"><span>两市成交</span><span class="r">约 <b>2.34 万亿</b> ／ 较前日 <span class="up">+462 亿</span>（放量）</span></div>
+    <p class="note">涨跌区间：涨停 56 ／ &gt;7% 28 ／ 7~5% 46 ／ 5~2% 398 ／ 2~0% 1,240；平 131；0~2% 跌 1,430 ／ 2~5% 1,173 ／ 5~7% 427 ／ &gt;7% 跌 522 ／ 跌停 83。特征鲜明：&gt;5% 大跌股约 949 只、&gt;5% 大涨股仅约 74 只，跌多涨少、普跌扩散；且「放量 + 普跌」组合指向主力派发而非抄底承接。</p>
+  </div>
+
+  <div class="sec">
+    <h3>三、板块结构（申万一级 + 热门概念）</h3>
+    <p><b>领涨方向：</b>食品饮料 <b class="up">+2.52%</b>、银行 <b class="up">+2.48%</b>、石油石化 <b class="up">+1.93%</b>、农林牧渔 <b class="up">+1.16%</b>、美容护理 <b class="up">+1.11%</b>。</p>
+    <p><b>领跌方向：</b>通信 <b class="down">-7.52%</b>、电子 <b class="down">-6.53%</b>、综合 <b class="down">-4.11%</b>、机械设备 <b class="down">-3.95%</b>、国防军工 <b class="down">-2.04%</b>（计算机 -1.86%、环保 -1.80%、电力设备 -1.14% 亦走弱）。</p>
+    <p><b>热门概念：</b>华为汽车股权合作 +4.71%、银行概念 +2.43%、消费精选 +2.35%、主营聚乙烯 +2.19%、稳定币概念 +2.19%、敦煌网概念 +1.94%。</p>
+    <p class="note">主线逻辑：科技主线（通信/电子）连续第二日崩塌、5 日累计跌幅已达 -16.70% / -12.55%，资金从 TMT 切换至低估值防御（银行 PB 0.52、食品饮料）与资源（石油石化/煤炭）的「避险 + 高低切换」格局持续强化；消费（白酒/农林牧渔/美容护理）接力成为新的防御分支。风格上仍是防御占优、科技失血，与 7-28 提示的高低切换方向一致。</p>
+  </div>
+
+  <div class="sec">
+    <h3>四、个股盘面 · 市场级异动</h3>
+    <p class="note">以下为当日异动个股（市场公开数据，非个人持仓），供看盘面热度：</p>
+    <ul>
+      <li>N欣兴工具 <span class="up">+145.38%</span>（新股首日）｜ 火星人 <span class="up">+20.04%</span>（消费精选）｜ 普联软件 <span class="up">+20.03%</span>（稳定币/TMT）</li>
+      <li>昀冢科技 <span class="up">+16.16%</span>（昨日涨停延续）｜ 通源石油 <span class="up">+10.56%</span>（油服）｜ 金徽酒 <span class="up">+10.03%</span>（白酒）</li>
+      <li>江淮汽车 <span class="up">+10.01%</span>（华为汽车概念）｜ 德明利 <span class="up">+10.00%</span>（元件逆势）｜ 浦发银行 <span class="up">+4.63%</span>（银行领涨）</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>五、资金面（行业主力净流入）</h3>
+    <p><b>净流入前排（亿元）：</b>股份制银行Ⅱ <b class="up">+18.05</b>（5日 +15.33）、白酒Ⅱ <b class="up">+15.87</b>（5日 +30.17）、乘用车 <b class="up">+10.56</b>（5日 +20.54）。</p>
+    <p><b>净流出前排：</b>通信设备 <b class="down">-121.89</b>（5日 -391.22）、半导体 <b class="down">-104.72</b>（5日 -526.84）、元件 <b class="down">-93.66</b>（5日 -199.16）。</p>
+    <p class="note">资金结构延续极端一边倒：科技三行业单日净流出合计约 <b class="down">320 亿</b>、5 日累计 <b class="down">-1,117 亿</b>，为连续性撤离（通信/半导体 5 日分别 -391 / -527 亿）；流入端集中在银行/白酒/乘用车防御与汽车（合计不到 45 亿），体量远小于流出端，说明主力整体仍在撤离、防御方向只是「避风港」而非新增量主线。科技失血未收敛，是盘面最大隐患。</p>
+  </div>
+
+  <div class="sec">
+    <h3>六、技术关键位</h3>
+    <p>上证收 3,804.69 守住 3,800，但盘中低点 3,767.5 已刺穿前日 3,797 低点、高点 3,839.3 未补 3,850 缺口，3,800 是多空分界，下档看 3,750 / 3,700；深成指 13,285 继续下行、创业板指 3,244 续跌，双创 20 日跌幅已达约 -19% / -14%，技术破位未止。沪深300 4,549 回到 7 月中旬平台下沿；反弹先看收复 3,850，创业板/电子/通信止跌信号未现前不言底。</p>
+  </div>
+
+  <div class="sec">
+    <h3>七、次日观察</h3>
+    <ul>
+      <li>科技抛压是否真正衰竭：通信（-7.52%）/电子（-6.53%）连续重挫，主力净流出今日 320 亿、5 日累计 -1,117 亿；观察单日净流出能否收敛至百亿内、双创是否出现止跌 K 线。</li>
+      <li>防御行情持续性：银行（+2.48%）/食品饮料（+2.52%）连续两日领涨且 5 日资金转正（白酒 +30 亿），是中线高低切换还是避险脉冲，看银行能否再创新高、食品饮料 5 日线是否延续。</li>
+      <li>上证 3,800 关：今日收 3,804.69 守住，但盘中 3,767.5 已刺穿前日低点，3,850 缺口未补；跌破 3,800 则看 3,750 / 3,700。</li>
+      <li>宽度：上涨占比 47%→31% 继续走弱、逼近全面下跌临界（30%）；若跌破 30% 则结构性下跌转为普跌，回升方确认仅科技出清。</li>
+      <li>量能：今日放量至 2.34 万亿却普跌（派发特征），警惕高位承接转弱；后续若再放量长阴或缩至 1.8 万亿以下均为阶段情绪极值信号。</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>八、风险提示</h3>
+    <p>创业板指 -3.97% 续跌、通信/电子两日累计跌幅巨大（通信 5 日 -16.70%、电子 5 日 -12.55%），技术破位后杀跌动能或延续，左侧抄底科技风险极高；双创 PE（创业板 55.9x / 深成指 43.2x）虽经回调仍处高位，估值消化或未结束。上涨占比 31% 逼近全面下跌临界，宽度与指数背离未修复，后续演化路径不确定性大；防御方向连续大涨后追高同样有回撤风险（银行 PB 0.52 股息防御属性强但短期已累积涨幅）。「放量 + 普跌」组合显示主力派发，板块涨跌为单日观察，新闻定性（事件驱动 vs 情绪发酵）须每日人工核对；出现实质政策/业绩催化应切换逻辑。</p>
+  </div>
+
+  <a class="card" href="../market-cycle/2026-07-30.html" style="margin-top:14px;">
+    <div class="date">📈 相关分析</div>
+    <div class="day">查看本日「市场周期数据观测」：量能 / 资金 / 板块四维度原始数据 + 周期阶段与资金性质判断 →</div>
+  </a>
+  <footer>数据来源于腾讯自选股等公开行情，可能存在延迟 ｜ 仅供家庭内部学习交流，不构成投资建议</footer>
+</div>
+</body>
+</html>

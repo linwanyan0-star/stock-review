@@ -1,0 +1,100 @@
+{
+  "date": "2026-07-30",
+  "weekday": "周四",
+  "conclusion": "周四延续「高低切换式」下跌：科技主线（通信 -7.52%、电子 -6.53%）连续第二日崩塌，资金加速撤离（半导体/通信设备/元件 5 日主力净流出累计超 1100 亿）；银行（+2.48%）、食品饮料（+2.52%）等防御方向连续两日领涨，高低切换成立。但上涨占比降至 31%、两市放量至 2.34 万亿却普跌（放量下跌＝派发），结构性风险未解除——防守不追高、科技不接飞刀。",
+  "summary": "五大指数全线下跌(上证 -0.62% ~ 创业板 -3.97%)，科技连续重挫(通信 -7.52%/电子 -6.53%)与防御领涨(食品饮料 +2.52%/银行 +2.48%)分化延续；上涨占比 31%、涨停 56/跌停 83；科技三行业主力净流出 320 亿(5 日 -1117 亿)；成交 2.34 万亿放量 +462 亿但普跌。",
+  "indices": [
+    {"name": "上证指数", "code": "sh000001", "price": 3804.69, "change_percent": -0.62, "pe_ttm": 17.62},
+    {"name": "深证成指", "code": "sz399001", "price": 13285.80, "change_percent": -2.73, "pe_ttm": 43.20},
+    {"name": "创业板指", "code": "sz399006", "price": 3244.62, "change_percent": -3.97, "pe_ttm": 55.87},
+    {"name": "沪深300", "code": "sh000300", "price": 4549.72, "change_percent": -1.10, "pe_ttm": 14.35},
+    {"name": "中证500", "code": "sh000905", "price": 7309.58, "change_percent": -2.86, "pe_ttm": 34.49}
+  ],
+  "sentiment": {
+    "upCount": 1768,
+    "downCount": 3635,
+    "flatCount": 131,
+    "upLimit": 56,
+    "downLimit": 83,
+    "upRatio": 31,
+    "upRatioComment": "当前市场上涨家数占比全市场 31%，市场情绪偏低。",
+    "totalAmount": 23428.09,
+    "totalAmountUnit": "亿元",
+    "amountChange": 462.30,
+    "gaugeLabel": "偏弱",
+    "distribution": {
+      "limit_up": 56,
+      "up_gt7": 28,
+      "up_7_5": 46,
+      "up_5_2": 398,
+      "up_2_0": 1240,
+      "flat": 131,
+      "down_0_2": 1430,
+      "down_2_5": 1173,
+      "down_5_7": 427,
+      "down_gt7": 522,
+      "limit_down": 83
+    }
+  },
+  "sectors": {
+    "sw1_top5": [
+      {"name": "食品饮料", "change_percent": 2.52},
+      {"name": "银行", "change_percent": 2.48},
+      {"name": "石油石化", "change_percent": 1.93},
+      {"name": "农林牧渔", "change_percent": 1.16},
+      {"name": "美容护理", "change_percent": 1.11}
+    ],
+    "sw1_bottom5": [
+      {"name": "通信", "change_percent": -7.52},
+      {"name": "电子", "change_percent": -6.53},
+      {"name": "综合", "change_percent": -4.11},
+      {"name": "机械设备", "change_percent": -3.95},
+      {"name": "国防军工", "change_percent": -2.04}
+    ],
+    "hot_concepts_top": [
+      {"name": "华为汽车股权合作", "change_percent": 4.71},
+      {"name": "银行概念", "change_percent": 2.43},
+      {"name": "消费精选", "change_percent": 2.35},
+      {"name": "主营聚乙烯", "change_percent": 2.19},
+      {"name": "稳定币概念", "change_percent": 2.19},
+      {"name": "敦煌网概念", "change_percent": 1.94}
+    ]
+  },
+  "stocks": {
+    "note": "以下为市场公开异动个股，非个人持仓",
+    "movers": [
+      {"name": "N欣兴工具", "code": "sz301677", "change_percent": 145.38, "reason": "新股首日"},
+      {"name": "火星人", "code": "sz300894", "change_percent": 20.04, "reason": "消费精选"},
+      {"name": "普联软件", "code": "sz300996", "change_percent": 20.03, "reason": "稳定币/TMT"},
+      {"name": "昀冢科技", "code": "sh688260", "change_percent": 16.16, "reason": "昨日涨停延续"},
+      {"name": "通源石油", "code": "sz300164", "change_percent": 10.56, "reason": "油服工程"},
+      {"name": "金徽酒", "code": "sh603919", "change_percent": 10.03, "reason": "白酒"},
+      {"name": "江淮汽车", "code": "sh600418", "change_percent": 10.01, "reason": "华为汽车概念"},
+      {"name": "德明利", "code": "sz001309", "change_percent": 10.00, "reason": "元件逆势"},
+      {"name": "浦发银行", "code": "sh600000", "change_percent": 4.63, "reason": "银行领涨"}
+    ]
+  },
+  "fundFlow": {
+    "inflow_top": [
+      {"sector": "股份制银行Ⅱ", "net_inflow": 18.05, "net_inflow_d5": 15.33, "unit": "亿元"},
+      {"sector": "白酒Ⅱ", "net_inflow": 15.87, "net_inflow_d5": 30.17, "unit": "亿元"},
+      {"sector": "乘用车", "net_inflow": 10.56, "net_inflow_d5": 20.54, "unit": "亿元"}
+    ],
+    "outflow_top": [
+      {"sector": "通信设备", "net_inflow": -121.89, "net_inflow_d5": -391.22, "unit": "亿元"},
+      {"sector": "半导体", "net_inflow": -104.72, "net_inflow_d5": -526.84, "unit": "亿元"},
+      {"sector": "元件", "net_inflow": -93.66, "net_inflow_d5": -199.16, "unit": "亿元"}
+    ],
+    "tech_outflow_total": -320.27,
+    "tech_outflow_d5": -1117.22,
+    "tech_outflow_unit": "亿元"
+  },
+  "nextWatch": [
+    "科技抛压是否真正衰竭：通信(-7.52%)/电子(-6.53%)连续重挫，主力净流出今日 320 亿、5 日累计 -1,117 亿；观察单日净流出能否收敛至百亿内、双创是否出现止跌 K 线。",
+    "防御行情持续性：银行(+2.48%)/食品饮料(+2.52%)连续两日领涨且 5 日资金转正(白酒 +30 亿)，是中线高低切换还是避险脉冲，看银行能否再创新高、食品饮料 5 日线是否延续。",
+    "上证 3,800 关：今日收 3,804.69 守住，但盘中 3,767.5 已刺穿前日低点，3,850 缺口未补；跌破 3,800 则看 3,750 / 3,700。",
+    "宽度：上涨占比 47%→31% 继续走弱、逼近全面下跌临界(30%)；若跌破 30% 则结构性下跌转为普跌，回升方确认仅科技出清。",
+    "量能：今日放量至 2.34 万亿却普跌(派发特征)，警惕高位承接转弱；后续若再放量长阴或缩至 1.8 万亿以下均为阶段情绪极值信号。"
+  ],
+  "risk": "创业板指 -3.97% 续跌、通信/电子两日累计跌幅巨大(通信 5 日 -16.70%、电子 5 日 -12.55%)，技术破位后杀跌动能或延续，左侧抄底科技风险极高；双创 PE(创业板 55.9x / 深成指 43.2x)虽经回调仍处高位，估值消化或未结束。上涨占比 31% 逼近全面下跌临界，宽度与指数背离未修复，后续演化路径不确定性大；防御方向连续大涨后追高同样有回撤风险(银行 PB 0.52 股息防御属性强但短期已累积涨幅)。「放量 + 普跌」组合显示主力派发，板块涨跌为单日观察，新闻定性须每日人工核对。"
+}
