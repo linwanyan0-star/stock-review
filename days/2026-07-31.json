@@ -1,0 +1,121 @@
+{
+  "date": "2026-07-31",
+  "weekday": "周五",
+  "conclusion": "周五「放量普涨式」暴力反弹，但全线冲高回落、收在全天最低点：科技主线彻底翻身（传媒 +6.00%、计算机 +5.56%、通信 +4.26%、电子 +3.53%），半导体/元件/通信设备主力由昨日净流出 320 亿转为净流入 270 亿；上涨占比跃升至 84%、涨停 103 只、跌停 0 只，成交放量至 2.54 万亿（+1,991 亿）。但深成指、创业板指、沪深300 均以全天最低价收盘（创业板指盘中一度 +6.79%、收 +3.06%，电子盘中 +9.55%、收 +3.53%），留下巨大上影——抛压确已衰竭、修复成立，但承接力不足，追高风险同步积累。",
+  "summary": "五大指数全线上涨(上证 +0.72% ~ 创业板 +3.06%)，科技暴力反弹(传媒 +6.00%/计算机 +5.56%/通信 +4.26%)、防御回落(银行 -1.38%/食品饮料 -0.55%)；上涨占比 84%、涨停 103/跌停 0；科技三行业主力净流入 270 亿(5 日仍 -761 亿)；成交 2.54 万亿放量 +1991 亿。三大指数收于全天最低点，大阳带长上影。",
+  "indices": [
+    {"name": "上证指数", "code": "sh000001", "price": 3832.26, "change_percent": 0.72, "pe_ttm": 17.73, "high": 3847.09, "low": 3822.37},
+    {"name": "深证成指", "code": "sz399001", "price": 13578.93, "change_percent": 2.21, "pe_ttm": 44.22, "high": 13841.96, "low": 13578.93},
+    {"name": "创业板指", "code": "sz399006", "price": 3343.96, "change_percent": 3.06, "pe_ttm": 57.88, "high": 3464.90, "low": 3343.96},
+    {"name": "沪深300", "code": "sh000300", "price": 4588.20, "change_percent": 0.85, "pe_ttm": 14.38, "high": 4635.59, "low": 4588.20},
+    {"name": "中证500", "code": "sh000905", "price": 7493.99, "change_percent": 2.52, "pe_ttm": 35.24, "high": 7638.78, "low": 7487.43}
+  ],
+  "sentiment": {
+    "upCount": 4691,
+    "downCount": 728,
+    "flatCount": 115,
+    "suspensionCount": 4,
+    "upLimit": 103,
+    "downLimit": 0,
+    "upRatio": 84,
+    "upRatioComment": "当前市场上涨家数占比全市场 84%，市场情绪高。过去一年有 16% 交易日处于该热度区间。",
+    "totalAmount": 25419.48,
+    "totalAmountUnit": "亿元",
+    "amountChange": 1991.39,
+    "gaugeLabel": "高",
+    "distribution": {
+      "limit_up": 103,
+      "up_gt7": 338,
+      "up_7_5": 439,
+      "up_5_2": 1914,
+      "up_2_0": 1897,
+      "flat": 115,
+      "down_0_2": 575,
+      "down_2_5": 140,
+      "down_5_7": 12,
+      "down_gt7": 1,
+      "limit_down": 0
+    }
+  },
+  "sectors": {
+    "sw1_top5": [
+      {"name": "传媒", "change_percent": 6.00},
+      {"name": "计算机", "change_percent": 5.56},
+      {"name": "综合", "change_percent": 5.04},
+      {"name": "通信", "change_percent": 4.26},
+      {"name": "机械设备", "change_percent": 3.56}
+    ],
+    "sw1_bottom5": [
+      {"name": "银行", "change_percent": -1.38},
+      {"name": "食品饮料", "change_percent": -0.55},
+      {"name": "非银金融", "change_percent": -0.44},
+      {"name": "石油石化", "change_percent": -0.41},
+      {"name": "交通运输", "change_percent": 0.12}
+    ],
+    "sw2_top6": [
+      {"name": "广告营销", "change_percent": 9.02},
+      {"name": "IT服务Ⅱ", "change_percent": 6.31},
+      {"name": "数字媒体", "change_percent": 6.15},
+      {"name": "自动化设备", "change_percent": 6.05},
+      {"name": "软件开发", "change_percent": 6.01},
+      {"name": "元件", "change_percent": 5.63}
+    ],
+    "hot_concepts_top": [
+      {"name": "词元概念", "change_percent": 11.45},
+      {"name": "Kimi概念", "change_percent": 10.21},
+      {"name": "物理AI", "change_percent": 9.26},
+      {"name": "谷歌概念", "change_percent": 8.86},
+      {"name": "AI营销", "change_percent": 8.67},
+      {"name": "电子签名", "change_percent": 8.51}
+    ]
+  },
+  "stocks": {
+    "note": "以下为市场公开异动个股，非个人持仓",
+    "movers": [
+      {"name": "中文在线", "code": "sz300364", "change_percent": 20.01, "reason": "词元概念/出版 AI"},
+      {"name": "海川智能", "code": "sz300720", "change_percent": 20.01, "reason": "昨日高振幅"},
+      {"name": "昆仑万维", "code": "sz300418", "change_percent": 20.00, "reason": "游戏/AI营销"},
+      {"name": "福昕软件", "code": "sh688095", "change_percent": 20.00, "reason": "电子签名/Kimi概念"},
+      {"name": "宏景科技", "code": "sz301396", "change_percent": 20.00, "reason": "IT服务"},
+      {"name": "米奥会展", "code": "sz300795", "change_percent": 20.00, "reason": "商贸零售"},
+      {"name": "易点天下", "code": "sz301171", "change_percent": 19.99, "reason": "广告营销"},
+      {"name": "蓝色光标", "code": "sz300058", "change_percent": 19.98, "reason": "AI营销/小红书概念"},
+      {"name": "普联软件", "code": "sz300996", "change_percent": 19.97, "reason": "财税改革/连板"},
+      {"name": "和林微纳", "code": "sh688661", "change_percent": 18.74, "reason": "半导体"},
+      {"name": "绿的谐波", "code": "sh688017", "change_percent": 16.34, "reason": "自动化设备/机器人"},
+      {"name": "罗博特科", "code": "sz300757", "change_percent": 16.07, "reason": "CPO"},
+      {"name": "锐捷网络", "code": "sz301165", "change_percent": 15.69, "reason": "通信设备"},
+      {"name": "生益电子", "code": "sh688183", "change_percent": 14.68, "reason": "PCB/元件"},
+      {"name": "中际旭创", "code": "sz300308", "change_percent": 4.40, "reason": "光模块（热股榜）"}
+    ]
+  },
+  "fundFlow": {
+    "inflow_top": [
+      {"sector": "半导体", "net_inflow": 109.84, "net_inflow_d5": -453.55, "net_inflow_d20": -2001.25, "unit": "亿元"},
+      {"sector": "元件", "net_inflow": 99.31, "net_inflow_d5": -43.60, "net_inflow_d20": -449.38, "unit": "亿元"},
+      {"sector": "通信设备", "net_inflow": 61.34, "net_inflow_d5": -264.01, "net_inflow_d20": -982.95, "unit": "亿元"}
+    ],
+    "outflow_top": [
+      {"sector": "化学制药", "net_inflow": -12.92, "net_inflow_d5": -34.88, "unit": "亿元"},
+      {"sector": "电池", "net_inflow": -8.14, "net_inflow_d5": 0.17, "unit": "亿元"},
+      {"sector": "国有大型银行Ⅱ", "net_inflow": -4.97, "net_inflow_d5": 10.79, "unit": "亿元"}
+    ],
+    "concept_inflow_top": [
+      {"concept": "转融券标的", "net_inflow": 644.46, "unit": "亿元"},
+      {"concept": "TMT", "net_inflow": 513.24, "unit": "亿元"},
+      {"concept": "昨日高振幅", "net_inflow": 512.66, "unit": "亿元"}
+    ],
+    "tech_inflow_total": 270.49,
+    "tech_inflow_d5": -761.16,
+    "tech_inflow_d20": -3433.58,
+    "tech_inflow_unit": "亿元"
+  },
+  "nextWatch": [
+    "长上影能否被消化：深成指/创业板指/沪深300 均收于全天最低，创业板指自 3,464.90 回落 3.49%；下一交易日若低开低走吞没今日大阳(跌破创业板指 3,244)，则今日属诱多反抽；若高开站上 3,465 则确认修复延续。",
+    "科技资金能否连续净流入：今日半导体 +109.84 亿 / 元件 +99.31 亿 / 通信设备 +61.34 亿，但 5 日仍 -761 亿、20 日 -3,433 亿；观察下一交易日三行业能否维持净流入(连续 3 日为趋势资金回归的最低门槛)，单日回补不算数。",
+    "AI 应用 vs AI 硬件谁是主线：今日应用端(传媒 +6.00%、计算机 +5.56%、广告营销 +9.02%)显著强于硬件端(半导体 +3.28%)；观察这是超跌弹性差异还是真实主线切换，看词元/Kimi/AI营销概念次日能否继续溢价、20cm 涨停股次日是否炸板。",
+    "上证 3,850 缺口：今日高点 3,847.09 差 3 点未补，收盘低于均价 3,836；补缺是反弹继续的第一确认信号，反复冲关不过则视为上方压力有效。",
+    "情绪与量能：上涨占比 31%→84% 单日跳变、涨停 103 / 跌停 0，成交 2.54 万亿创近期新高；若次日情绪与量能无法维持(占比回落至 50% 以下或成交缩至 2.2 万亿以下)，说明本次为一日情绪脉冲，与 7-27 放量普涨后次日崩塌的剧本高度相似，务必对照。"
+  ],
+  "risk": "今日虽为普涨大阳，但三大指数收于全天最低点、大阳带长上影，顶部承接明显不足，属典型「情绪修复 + 获利了结并存」形态。7-27 曾出现完全同构的场景——放量普涨、涨停 121 只、上涨占比 93%，次一交易日(7-28)即以创业板指 -7.35% 崩塌收场；本次上涨占比 84%、涨停 103 只，情绪位置同样偏高，须警惕重演。资金层面科技三行业 5 日仍净流出 761 亿、20 日 3,433 亿，单日 270 亿回补不足以定性趋势反转。估值层面创业板指 PE 57.9x、深成指 44.2x 仍处高位。风格摆动过快(两日之内防御→科技完成回切)意味着单边押注胜率低。板块涨跌为单日观察，新闻定性须每日人工核对。"
+}
