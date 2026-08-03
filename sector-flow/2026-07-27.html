@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>板块资金流向追踪 · 2026-07-27</title>
+<style>:root{--bg:#f5f6f8;--card:#fff;--ink:#1f2329;--sub:#6b7280;--line:#eceef1;--up:#e03b3b;--down:#1aa260;--brand:#2b5cff;--brand-soft:#eef2ff;--amber:#c88217;}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;}
+.wrap{max-width:680px;margin:0 auto;padding:16px 14px 48px;}
+.back{display:inline-block;color:var(--brand);font-size:13px;text-decoration:none;margin:6px 0 10px;}
+header{padding:4px 0 10px;border-bottom:1px solid var(--line);}
+.date{font-size:13px;color:var(--sub);}
+.title{font-size:20px;font-weight:700;margin:2px 0 0;}
+.note{font-size:12px;color:var(--sub);margin:8px 0;background:#f8f9fb;border:1px solid var(--line);border-radius:10px;padding:8px 12px;}
+h2{font-size:16px;margin:22px 0 10px;}
+.sec{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px;box-shadow:0 1px 2px rgba(0,0,0,.03);}
+.sec h3{font-size:15px;margin:0 0 8px;}
+.sec p{margin:6px 0;font-size:14px;}
+.kv{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;padding:5px 0;border-bottom:1px dashed var(--line);}
+.kv:last-child{border-bottom:none;}
+.kv .r{text-align:right;color:var(--sub);}
+.kv .r b{color:var(--ink);}
+.up{color:var(--up);font-weight:600;}
+.down{color:var(--down);font-weight:600;}
+.amber{color:var(--amber);font-weight:600;}
+.muted{font-size:12px;color:var(--sub);}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px;box-shadow:0 1px 2px rgba(0,0,0,.03);display:block;text-decoration:none;color:inherit;}
+.card .date{font-size:13px;color:var(--sub);}
+.card .day{font-weight:700;font-size:15px;margin:2px 0 0;}
+footer{color:var(--sub);font-size:12px;text-align:center;margin-top:24px;}
+table{width:100%;border-collapse:collapse;font-size:13px;}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);white-space:nowrap;}
+th{color:var(--sub);font-weight:600;font-size:12px;}
+.table-wrap{overflow-x:auto;}
+.tag{display:inline-block;font-size:11px;padding:1px 8px;border-radius:999px;background:var(--brand-soft);color:var(--brand);margin-left:6px;}
+.tag-hot{background:#ffeaea;color:#b3261e;}
+.tag-cold{background:#e6f7ec;color:#1a8a3c;}
+.bar{height:8px;border-radius:999px;background:#eef0f3;overflow:hidden;margin:4px 0;}
+.bar>i{display:block;height:100%;background:var(--brand);}
+.gauge{height:10px;border-radius:999px;background:#eef0f3;overflow:hidden;margin:8px 0 4px;}
+.gauge>i{display:block;height:100%;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">← 返回板块资金流向归档</a>
+  <header>
+    <div class="date">2026-07-27 · 周一</div>
+    <h1 class="title">板块资金流向追踪</h1>
+  </header>
+  <div class="note"><b>口径说明：</b>亏钱/赚钱效应双榜（主力净流入 Top3/流出 Top3，申万二级，data_sector ranking）；成交前50（全市场成交额排序，push2）；top5 板块 = 成交前50 个股按申万二级聚类代表度（B 口径），A 口径（板块单码成交额排名）见卡片备注；拥挤度 = 主力净流入 + 融资融券合成（估算非官方）。（历史回填：双榜/成交前50/拥挤度接口仅返回最新快照、无法回取历史日，标「待更新」；top5 板块为最新交易日聚类，量价按该日 K 线截断回填）</div>
+
+  <h2>① 亏钱 / 赚钱效应双榜（主力净流入）</h2>
+  <div class="sec"><h3>🟢 吸金榜（净流入 Top3）</h3><div class="kv"><span class="amber">待更新 · 接口仅返回最新快照</span></div></div>
+  <div class="sec"><h3>🔴 失血榜（净流出 Top3）</h3><div class="kv"><span class="amber">待更新 · 接口仅返回最新快照</span></div></div>
+
+  <h2>② 成交前50 → 板块聚类 Top5（钱去了哪）</h2>
+  <div class="sec"><h3>#1 半导体 <span class="tag ">价升量缩</span><span class="tag">前50代表 20只</span></h3><p class="muted">代表个股： 等20只</p><div class="kv"><span>板块单码成交额（A 参考）</span><span class="r">3,479.44亿</span></div><div class="kv"><span>量比（当日/5日均量）</span><span class="r"><b class="down">0.79</b></span></div><div class="kv"><span>5 日 / 20 日涨幅</span><span class="r"><b class="up">+7.35%</b> / <b class="down">-23.50%</b></span></div><div class="kv"><span>板块当日 <b class="up">+1.10%</b></span><span class="r muted">量价判定：价升量缩</span></div><div class="kv"><span>拥挤度（主力+融资合成）</span><span class="r amber">待更新 · 无 MCP 数据</span></div><p class="muted" style="margin:8px 0 0">💬 板块逻辑摘要（人工补充）：</p></div>
+<div class="sec"><h3>#2 元件 <span class="tag ">价升量缩</span><span class="tag">前50代表 5只</span></h3><p class="muted">代表个股：</p><div class="kv"><span>板块单码成交额（A 参考）</span><span class="r">947.58亿</span></div><div class="kv"><span>量比（当日/5日均量）</span><span class="r"><b class="down">0.75</b></span></div><div class="kv"><span>5 日 / 20 日涨幅</span><span class="r"><b class="up">+5.37%</b> / <b class="down">-25.01%</b></span></div><div class="kv"><span>板块当日 <b class="up">+6.25%</b></span><span class="r muted">量价判定：价升量缩</span></div><div class="kv"><span>拥挤度（主力+融资合成）</span><span class="r amber">待更新 · 无 MCP 数据</span></div><p class="muted" style="margin:8px 0 0">💬 板块逻辑摘要（人工补充）：</p></div>
+<div class="sec"><h3>#3 通信设备 <span class="tag ">价升量缩</span><span class="tag">前50代表 4只</span></h3><p class="muted">代表个股：</p><div class="kv"><span>板块单码成交额（A 参考）</span><span class="r">1,253.31亿</span></div><div class="kv"><span>量比（当日/5日均量）</span><span class="r"><b class="down">0.66</b></span></div><div class="kv"><span>5 日 / 20 日涨幅</span><span class="r"><b class="up">+2.85%</b> / <b class="down">-20.12%</b></span></div><div class="kv"><span>板块当日 <b class="up">+3.09%</b></span><span class="r muted">量价判定：价升量缩</span></div><div class="kv"><span>拥挤度（主力+融资合成）</span><span class="r amber">待更新 · 无 MCP 数据</span></div><p class="muted" style="margin:8px 0 0">💬 板块逻辑摘要（人工补充）：</p></div>
+<div class="sec"><h3>#4 消费电子 <span class="tag ">价升量缩</span><span class="tag">前50代表 3只</span></h3><p class="muted">代表个股：</p><div class="kv"><span>板块单码成交额（A 参考）</span><span class="r">690.31亿</span></div><div class="kv"><span>量比（当日/5日均量）</span><span class="r"><b class="down">0.88</b></span></div><div class="kv"><span>5 日 / 20 日涨幅</span><span class="r"><b class="up">+7.80%</b> / <b class="down">-14.77%</b></span></div><div class="kv"><span>板块当日 <b class="up">+3.42%</b></span><span class="r muted">量价判定：价升量缩</span></div><div class="kv"><span>拥挤度（主力+融资合成）</span><span class="r amber">待更新 · 无 MCP 数据</span></div><p class="muted" style="margin:8px 0 0">💬 板块逻辑摘要（人工补充）：</p></div>
+<div class="sec"><h3>#5 玻璃玻纤 <span class="tag ">待观察</span><span class="tag">前50代表 2只</span></h3><p class="muted">代表个股：</p><div class="kv"><span>板块单码成交额（A 参考）</span><span class="r">236.85亿</span></div><div class="kv"><span>量比（当日/5日均量）</span><span class="r"><b class="down">1.12</b></span></div><div class="kv"><span>5 日 / 20 日涨幅</span><span class="r"><b class="up">+5.93%</b> / <b class="down">-38.99%</b></span></div><div class="kv"><span>板块当日 <b class="up">+9.65%</b></span><span class="r muted">量价判定：待观察</span></div><div class="kv"><span>拥挤度（主力+融资合成）</span><span class="r amber">待更新 · 无 MCP 数据</span></div><p class="muted" style="margin:8px 0 0">💬 板块逻辑摘要（人工补充）：</p></div>
+
+
+  <h2>③ 成交前 50 个股（全市场成交额排序）</h2>
+  <div class="sec">
+    <div class="table-wrap"><table>
+      <thead><tr><th>#</th><th>名称</th><th>二级板块</th><th>当日%</th><th>成交额</th><th>换手%</th><th>主力净流入</th></tr></thead>
+      <tbody><tr><td colspan="7" class="amber" style="text-align:center;padding:14px;">待更新 · 接口仅返回最新快照，无法回取历史日成交前 50</td></tr></tbody>
+    </table></div>
+    <p class="scroll-hint" style="color:var(--sub);font-size:12px;margin:6px 0 0">← 左右滑动 →</p>
+  </div>
+
+  <footer>生成时间 2026-08-03 16:32:31 ｜ 数据来源于公开行情，可能存在延迟 ｜ 仅供家庭内部学习交流，不构成投资建议</footer>
+</div>
+</body>
+</html>

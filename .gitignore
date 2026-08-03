@@ -7,3 +7,6 @@ private/
 *.secret.*
 # WorkBuddy 自动化内部元数据（执行记录等），非站点内容，禁止进入公开仓库
 .workbuddy/
+# sector-flow 生成中间产物（agent MCP 数据与 stage1 聚类，仅本地使用）
+sector-flow/_mcp_*.json
+sector-flow/_stage1_*.json
