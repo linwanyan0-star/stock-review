@@ -1,0 +1,163 @@
+{
+  "date": "2026-08-04",
+  "weekday": "周二",
+  "conclusion": "周二「科技暴力反攻、防御被抽血」，是 8-03 结构的完整镜像：创业板指 +5.64%(跳空高开 3,353.51、上摸 3,510.51、收 3,488.97)一举站上前日设定的 3,465 压力位，深成指 +3.25%，但上证仅 +0.33%——因为国有大行 -3.49%、股份行 -2.48%、白酒Ⅱ -1.97%、乘用车 -3.09% 死死压住权重。昨日跌停出清的硬件链原地翻红：通信设备 +10.74%(主力 +223 亿)、元件 +8.47%(+119 亿)、半导体 +5.39%(+116 亿)，三行业单日吸金 457 亿；跌停从 9 只清到 1 只、>5% 大跌股从 220 只锐减至 8 只、涨停 141 只创近期新高。成交放量至 2.2136 万亿(+2,162 亿)重返 2 万亿上方。但上涨占比反而由 72% 降至 65%、下跌家数增加 281 家——这不是普涨，是钱从防御盘抽出来集中砸科技的结构性行情，触发器是隔夜海外(PLTR +24.76%、AAOI +15.37%、美光 +5.43%)。",
+  "summary": "五大指数全线上涨但极端分化(创业板指 +5.64% / 上证仅 +0.33%)，硬件链原地翻红：通信设备 +10.74%(主力 +223 亿)、元件 +8.47%(+119 亿)、半导体 +5.39%(+116 亿)，三行业单日净流入 457 亿；银行/白酒/乘用车被抽血(国有大行 -3.49%、白酒Ⅱ -1.97%、乘用车 -3.09%)。涨停 141/跌停 1，>5% 大涨 874 只 vs 大跌 8 只，但上涨占比由 72% 降至 65%；成交 2.2136 万亿放量 2,162 亿。触发器为隔夜海外光模块/存储大涨。",
+  "indices": [
+    {"name": "上证指数", "code": "sh000001", "price": 3822.28, "change_percent": 0.33, "pe_ttm": 17.64, "open": 3816.37, "high": 3831.94, "low": 3799.52, "avg_price": 3813.27, "chg_5d": 0.24, "chg_20d": -4.21},
+    {"name": "深证成指", "code": "sz399001", "price": 13885.71, "change_percent": 3.25, "pe_ttm": 45.19, "open": 13572.95, "high": 13936.52, "low": 13537.76, "avg_price": 13745.33, "chg_5d": 2.78, "chg_20d": -8.80},
+    {"name": "创业板指", "code": "sz399006", "price": 3488.97, "change_percent": 5.64, "pe_ttm": 60.17, "open": 3353.51, "high": 3510.51, "low": 3342.41, "avg_price": 3433.71, "chg_5d": 4.87, "chg_20d": -10.81},
+    {"name": "沪深300", "code": "sh000300", "price": 4600.93, "change_percent": 1.27, "pe_ttm": 14.21, "open": 4566.94, "high": 4613.69, "low": 4555.25, "avg_price": 4581.19, "chg_5d": 0.69, "chg_20d": -3.99},
+    {"name": "中证500", "code": "sh000905", "price": 7607.49, "change_percent": 2.60, "pe_ttm": 35.66, "open": 7467.08, "high": 7645.48, "low": 7450.32, "avg_price": 7543.83, "chg_5d": 2.20, "chg_20d": -10.59}
+  ],
+  "sentiment": {
+    "upCount": 3642,
+    "downCount": 1747,
+    "flatCount": 147,
+    "suspensionCount": 7,
+    "upLimit": 141,
+    "downLimit": 1,
+    "upRatio": 65,
+    "upRatioComment": "当前市场上涨家数占比全市场 65%，市场情绪正常。",
+    "totalAmount": 22135.92,
+    "totalAmountUnit": "亿元",
+    "amountChange": 2162.06,
+    "gaugeLabel": "正常",
+    "distribution": {
+      "limit_up": 141,
+      "up_gt7": 369,
+      "up_7_5": 364,
+      "up_5_2": 1153,
+      "up_2_0": 1615,
+      "flat": 147,
+      "down_0_2": 1433,
+      "down_2_5": 306,
+      "down_5_7": 5,
+      "down_gt7": 2,
+      "limit_down": 1
+    }
+  },
+  "sectors": {
+    "note": "本日板块口径为申万二级（data_sector ranking），申万一级本次未单独取数",
+    "sw2_top10": [
+      {"name": "通信设备", "change_percent": 10.74, "turnover_rate": 5.01, "chg_5d": 8.05, "chg_20d": -15.47, "lead_stock": "欣天科技(+20.04%)"},
+      {"name": "元件", "change_percent": 8.47, "turnover_rate": 5.80, "chg_5d": 2.31, "chg_20d": -22.31, "lead_stock": "南亚新材(+14.59%)"},
+      {"name": "医疗服务", "change_percent": 7.44, "turnover_rate": 3.05, "chg_5d": 8.73, "chg_20d": 13.33, "lead_stock": "成都先导(+14.67%)"},
+      {"name": "电子化学品Ⅱ", "change_percent": 7.05, "turnover_rate": 6.18, "chg_5d": -3.97, "chg_20d": -32.53, "lead_stock": "唯特偶(+13.43%)"},
+      {"name": "玻璃玻纤", "change_percent": 6.19, "turnover_rate": 4.70, "chg_5d": -2.67, "chg_20d": -34.16, "lead_stock": "中材科技(+9.99%)"},
+      {"name": "非金属材料Ⅱ", "change_percent": 5.67, "turnover_rate": 2.41, "chg_5d": -1.81, "chg_20d": -31.72, "lead_stock": "联瑞新材(+10.96%)"},
+      {"name": "半导体", "change_percent": 5.39, "turnover_rate": 4.94, "chg_5d": -6.03, "chg_20d": -28.00, "lead_stock": "和林微纳(+20.00%)"},
+      {"name": "广告营销", "change_percent": 4.68, "turnover_rate": 8.06, "chg_5d": 16.17, "chg_20d": 15.89, "lead_stock": "易点天下(+16.26%)"},
+      {"name": "影视院线", "change_percent": 4.33, "turnover_rate": 5.68, "chg_5d": 11.10, "chg_20d": 4.32, "lead_stock": "捷成股份(+11.94%)"},
+      {"name": "小金属", "change_percent": 4.09, "turnover_rate": 3.26, "chg_5d": 5.50, "chg_20d": -18.24, "lead_stock": "东方钽业(+10.01%)"}
+    ],
+    "sw2_bottom9": [
+      {"name": "国有大型银行Ⅱ", "change_percent": -3.49},
+      {"name": "乘用车", "change_percent": -3.09},
+      {"name": "股份制银行Ⅱ", "change_percent": -2.48},
+      {"name": "城商行Ⅱ", "change_percent": -2.25},
+      {"name": "白酒Ⅱ", "change_percent": -1.97},
+      {"name": "饰品", "change_percent": -1.20},
+      {"name": "白色家电", "change_percent": -1.07},
+      {"name": "贵金属", "change_percent": -1.00},
+      {"name": "电力", "change_percent": -0.80}
+    ],
+    "hot_concepts_top": [
+      {"name": "光芯片", "change_percent": 10.26},
+      {"name": "博通概念", "change_percent": 9.60},
+      {"name": "谷歌概念", "change_percent": 9.42},
+      {"name": "靶材", "change_percent": 9.08},
+      {"name": "锗镓概念", "change_percent": 7.34},
+      {"name": "AI-PIN", "change_percent": 7.19},
+      {"name": "光通信", "change_percent": 6.99},
+      {"name": "共封装光模块(CPO)", "change_percent": 6.90},
+      {"name": "昨日连板", "change_percent": 6.66},
+      {"name": "算力租赁", "change_percent": 5.16}
+    ],
+    "hot_concepts_bottom": [
+      {"name": "银行概念", "change_percent": -2.69},
+      {"name": "证金持股", "change_percent": -1.32},
+      {"name": "醋酸", "change_percent": -1.27},
+      {"name": "中特估", "change_percent": -1.16}
+    ]
+  },
+  "stocks": {
+    "note": "以下为市场公开异动个股 / 热股榜，非个人持仓",
+    "movers": [
+      {"name": "欣天科技", "code": "sz300615", "change_percent": 20.04, "reason": "通信设备领涨股/昨日首板"},
+      {"name": "和林微纳", "code": "sh688661", "change_percent": 20.00, "reason": "半导体领涨股"},
+      {"name": "光库科技", "code": "sz300620", "change_percent": 20.00, "reason": "光芯片/谷歌概念双龙头"},
+      {"name": "光智科技", "code": "sz300489", "change_percent": 20.00, "reason": "锗镓概念"},
+      {"name": "中青宝", "code": "sz300052", "change_percent": 20.02, "reason": "游戏Ⅱ"},
+      {"name": "行云科技", "code": "sz300209", "change_percent": 20.01, "reason": "软件开发"},
+      {"name": "汉仪股份", "code": "sz301270", "change_percent": 20.01, "reason": "AI营销"},
+      {"name": "中威电子", "code": "sz300270", "change_percent": 20.00, "reason": "浙江/安防"},
+      {"name": "胜蓝股份", "code": "sz300843", "change_percent": 17.88, "reason": "博通概念"},
+      {"name": "欧莱新材", "code": "sh688530", "change_percent": 17.04, "reason": "靶材"},
+      {"name": "易点天下", "code": "sz301171", "change_percent": 16.26, "reason": "快手/Sora概念"},
+      {"name": "蜂助手", "code": "sz301382", "change_percent": 15.49, "reason": "热股榜"},
+      {"name": "成都先导", "code": "sh688222", "change_percent": 14.67, "reason": "医疗服务领涨股"},
+      {"name": "南亚新材", "code": "sh688519", "change_percent": 14.59, "reason": "元件/CCL"},
+      {"name": "唯特偶", "code": "sz301319", "change_percent": 13.43, "reason": "电子化学品"},
+      {"name": "中际旭创", "code": "sz300308", "change_percent": 13.24, "reason": "光模块，A股热股榜首位"},
+      {"name": "联瑞新材", "code": "sh688300", "change_percent": 10.96, "reason": "非金属材料"},
+      {"name": "药明康德", "code": "sh603259", "change_percent": 10.00, "reason": "CXO/医疗服务"},
+      {"name": "东山精密", "code": "sz002384", "change_percent": 10.00, "reason": "PCB"},
+      {"name": "云南锗业", "code": "sz002428", "change_percent": 10.01, "reason": "锗镓概念"},
+      {"name": "中材科技", "code": "sz002080", "change_percent": 9.99, "reason": "玻纤，昨日跌停今日涨停"},
+      {"name": "邮储银行", "code": "sh601658", "change_percent": -2.33, "reason": "国有大行，抽血侧"},
+      {"name": "杭州银行", "code": "sh600926", "change_percent": -1.65, "reason": "城商行，抽血侧"},
+      {"name": "平安银行", "code": "sz000001", "change_percent": -1.55, "reason": "股份行，抽血侧"},
+      {"name": "长鑫科技", "code": "sh688825", "change_percent": 0.02, "reason": "存储龙头，纹丝不动明显滞涨（关键异常）"},
+      {"name": "N嘉立创", "code": "sz001232", "change_percent": 146.28, "reason": "新股上市首日，PCB"}
+    ],
+    "overseas_overnight": [
+      {"name": "Palantir", "code": "usPLTR.OQ", "change_percent": 24.76},
+      {"name": "应用光电 AAOI", "code": "usAAOI.OQ", "change_percent": 15.37},
+      {"name": "Coherent", "code": "usCOHR.N", "change_percent": 10.77},
+      {"name": "闪迪", "code": "usSNDK.OQ", "change_percent": 6.66},
+      {"name": "美光科技", "code": "usMU.OQ", "change_percent": 5.43},
+      {"name": "Lumentum", "code": "usLITE.OQ", "change_percent": 4.61},
+      {"name": "康宁", "code": "usGLW.N", "change_percent": 3.22},
+      {"name": "SK海力士", "code": "usSKHY.OQ", "change_percent": 3.15},
+      {"name": "英伟达", "code": "usNVDA.OQ", "change_percent": 1.28}
+    ]
+  },
+  "fundFlow": {
+    "inflow_top": [
+      {"sector": "通信设备", "net_inflow": 223.11, "net_inflow_d5": 168.02, "net_inflow_d20": -566.84, "unit": "亿元"},
+      {"sector": "元件", "net_inflow": 118.59, "net_inflow_d5": 118.74, "net_inflow_d20": -208.66, "unit": "亿元"},
+      {"sector": "半导体", "net_inflow": 115.74, "net_inflow_d5": -158.71, "net_inflow_d20": -1971.65, "unit": "亿元"}
+    ],
+    "outflow_top": [
+      {"sector": "乘用车", "net_inflow": -20.18, "net_inflow_d5": -4.35, "net_inflow_d20": 7.18, "unit": "亿元"},
+      {"sector": "电力", "net_inflow": -19.41, "net_inflow_d5": -31.54, "net_inflow_d20": -124.82, "unit": "亿元"},
+      {"sector": "白酒Ⅱ", "net_inflow": -16.29, "net_inflow_d5": 4.65, "net_inflow_d20": 5.39, "unit": "亿元"}
+    ],
+    "concept_inflow_top": [
+      {"concept": "TMT", "net_inflow": 617.55, "net_inflow_d5": 172.91, "net_inflow_d20": -4107.17, "unit": "亿元"},
+      {"concept": "转融券标的", "net_inflow": 549.45, "net_inflow_d5": -36.90, "net_inflow_d20": -7187.90, "unit": "亿元"},
+      {"concept": "芯片概念", "net_inflow": 525.10, "net_inflow_d5": 9.95, "net_inflow_d20": -3663.75, "unit": "亿元"}
+    ],
+    "concept_outflow_top": [
+      {"concept": "证金持股", "net_inflow": -80.49, "net_inflow_d5": -94.98, "net_inflow_d20": -312.87, "unit": "亿元"},
+      {"concept": "中特估", "net_inflow": -64.99, "net_inflow_d5": -71.19, "net_inflow_d20": -293.47, "unit": "亿元"},
+      {"concept": "大消费", "net_inflow": -60.01, "net_inflow_d5": -49.16, "net_inflow_d20": -135.37, "unit": "亿元"}
+    ]
+  },
+  "prevReview": [
+    {"point": "上证 3,800 关口第三次考验（实体跌破下看 3,767／站上 3,830 视为二次确认有效）", "verdict": "已验证", "detail": "关口守住：最低 3,799.52 瞬破后立刻收回、未成实体破位，最高 3,831.94 盘中上摸 3,830，收 3,822.28(+0.33%)。收盘高于均价 3,813.27，尾盘走强，与 8-03 反转。3,830 仅盘中触及、收盘未站稳，确认级别打折。"},
+    {"point": "存储/封测链是否出清完毕（跌幅收敛 2% 内 + 跌停清零 + 龙头长鑫是否补跌）", "verdict": "已验证", "detail": "前两判据远超式满足：半导体 +5.39%(主力由 -197.34 亿转 +115.74 亿)、玻璃玻纤 +6.19%、电子化学品Ⅱ +7.05%、元件 +8.47%；全市场跌停仅 1 只(昨 9 只)，>7% 跌幅股由 103 降至 2；中材科技昨跌停今涨停。但第三判据意外：长鑫科技 +0.02% 既未补跌也未领涨，明显滞涨，旗手换成通信设备/光模块。"},
+    {"point": "电力/核电/军工航天能否延续（连续净流入 + 2 板以上高度股）", "verdict": "未验证", "detail": "一日游如期兑现：电力 -0.80%，主力由 +14.20 亿翻为 -19.41 亿(全市场流出第二)；电网设备由 +2.68% 收窄至 +1.36%、电机Ⅱ 由 +4.63% 收窄至 +1.46%，无连板承接。与 7-23→7-24 完全同构。"},
+    {"point": "指数与宽度背离如何收敛（占比破 50% 转全跌／回升 80% 转普涨）", "verdict": "已验证", "detail": "走「权重止跌→个股带动指数普涨」这一侧，但预设指标失灵：上涨占比未破 50% 也未回升 80%，反而由 72% 降至 65%、下跌家数增至 1,747(+281)。修正认知：宽度占比须配合涨幅分布看——>5% 大涨股由 388 增至 874、>5% 大跌股由 220 锐减至 8，「少而强」优于 8-03 的「多而弱」。判据下次需改写。"},
+    {"point": "量能（缩至 1.8 万亿＝地量企稳／放量下跌＝二次派发）", "verdict": "未验证", "detail": "两个预设方向都没走，实际是放量上涨：2.2136 万亿、+2,162 亿，重返 2 万亿上方(仍低于 7-31 的 2.54 万亿)。配合占比降至 65%，准确描述为「局部放量」：钱集中砸进科技(通信设备换手 5.01%、电子化学品 6.18%)，其余方向缩量失血(白色家电 0.91%、国有大行 0.24%)。"}
+  ],
+  "nextWatch": [
+    "科技资金能否连续净流入(第二次尝试)：7-31 单日回补 270 亿次日即吐回；今日通信设备 +223.11 亿、元件 +118.59 亿、半导体 +115.74 亿。判据是次日三行业能否维持净流入，重点看半导体 5 日累计能否由 -158.71 亿转正(通信设备与元件 5 日已转正)。若半导体次日重新净流出，本轮定性为外因驱动的一日反弹。",
+    "长鑫科技滞涨之谜：今日 +0.02%，在半导体 +5.39%、和林微纳 20cm 涨停背景下纹丝不动。观察次日是补涨(主线健康、龙头慢半拍)还是补跌(资金已放弃存储龙头、本轮仅为超跌反弹)。这是判断「主线重启 vs 反弹」最干净的单一指标。",
+    "上证 3,830 / 3,850 双压力：今日最高 3,831.94 触及 3,830 未站稳、收 3,822.28。若次日收盘站上 3,830 则打开 3,850 缺口回补空间；若再度受阻回落至 3,800 下方，则 3,830 确认为双顶压制，须防「科技涨、指数不涨」的假修复。",
+    "银行/白酒杀跌是短期抽血还是风格切换：国有大行 -3.49%、股份行 -2.48%、白酒Ⅱ -1.97%、乘用车 -3.09%。判据：次日科技继续涨而银行同步企稳＝有增量资金入场(最健康)；科技涨、银行继续跌＝仍是存量抽血(持续性打折)；两者同跌＝今日为一日反弹。",
+    "量能与涨停高度：成交 2.2136 万亿(+2,162 亿)、涨停 141 只创 7-27 以来新高、「昨日连板」+6.66% 显示接力顺畅。判据：次日成交能否守住 2.2 万亿、涨停能否维持 100 只以上、连板高度股能否走出 3 板。若涨停骤降至 60 只以下并缩量，按一日情绪脉冲处理(7-27、7-31 已演过两次)。"
+  ],
+  "risk": "今日反弹质量客观很高(跌停仅 1 只、>5% 大跌股仅 8 只、放量 2,162 亿、涨停 141 只、三大科技行业净流入 457 亿)，但有四处必须警惕。第一，上涨占比反而由 72% 降至 65%、下跌家数增加 281 家——不是全面普涨，而是资金从银行/白酒/乘用车/电力抽出来集中砸科技的结构性行情，科技一旦回调，被抽血的防御方向未必接得住指数。第二，20 日维度硬件链仍在深坑：半导体 -28.00%、电子化学品Ⅱ -32.53%、玻璃玻纤 -34.16%、元件 -22.31%，半导体 20 日累计净流出 1,971 亿，今日 115.74 亿只填回 5.9%，定义为「超跌反弹第一天」比「趋势反转」更准确——7-31 那次也是这样开始，第二天即连本带利吐回。第三，龙头长鑫科技 +0.02% 滞涨，主线由存储换旗到光学/通信，旗手更换期波动放大、分歧加剧，且 8-03 设定的「龙头补跌才是退潮结束」信号并未出现，意味着退潮是被外围强行打断而非自然完成。第四，行情直接触发器是隔夜海外(PLTR +24.76%、AAOI +15.37%、Coherent +10.77%、美光 +5.43%)，外因驱动对次日海外走势高度敏感，隔夜一旦回落 A 股缺乏内生支撑。估值层面创业板指 PE 一天之内由 57.6x 回到 60.2x、深成指 45.2x，估值消化不进反退。板块涨跌为单日观察，新闻定性须每日人工核对。"
+}
