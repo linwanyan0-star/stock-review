@@ -173,10 +173,12 @@
   var MAX_ROWS = 400;
   var BATCH = 320;            // 腾讯每批代码数
   var EM_TIMEOUT = 8000;      // 东方财富超时时间（ms）
+  var EM_PAGE = 100;          // 东方财富 clist 每页硬上限 100 只（pz 设多大都只回 100）
 
   var universe = null;        // {meta, stocks:{code:{name,sector,sectorCode}}}
   var yesterdayAmounts = null; // {date, count, stocks:{code:{amount,volume}}}
   var boards = [];            // [{code,name}]
+  var emCache = null;         // 东方财富全量缓存 {fs, data:[diff...]}
   var selected = new Set();   // sectorCode
   var sortKey = "chg", sortDir = -1;
   var autoTimer = null;
@@ -282,19 +284,48 @@
     selected.forEach(function(c){ arr.push("b:"+c); });
     return arr.join("+");
   }
-  function fetchEm(){
-    var fs = buildEmFs();
-    var out = [], page = 1;
-    function one(){
-      var url = EM_API + "?pn="+page+"&pz=5000&po=1&np=1&fltt=2&invt=2&fid=f3&fs="+encodeURIComponent(fs)+"&fields=f12,f13,f14,f2,f3,f8,f20,f21,f62,f6";
+  // 单页拉取（带 1 次重试，对抗瞬时 429/超时）
+  function fetchEmPage(pn, fs){
+    var url = EM_API + "?pn="+pn+"&pz="+EM_PAGE+"&po=1&np=1&fltt=2&invt=2&fid=f3&fs="+encodeURIComponent(fs)+"&fields=f12,f13,f14,f2,f3,f8,f20,f21,f62,f6";
+    function attempt(n){
       return fetchWithTimeout(url, EM_TIMEOUT).then(function(r){ return r.json(); }).then(function(j){
-        if(!j || !j.data || !j.data.diff) throw new Error("接口返回异常");
-        out = out.concat(j.data.diff);
-        if(j.data.diff.length < 5000 || out.length >= (j.data.total||0) || page >= 6) return out;
-        page++; return one();
+        if(!j || !j.data || !j.data.diff) throw new Error("接口返回异常(第"+pn+"页)");
+        return { total: j.data.total||0, diff: j.data.diff };
+      }).catch(function(err){
+        if(n > 0) return attempt(n-1);
+        throw err;
       });
     }
-    return one();
+    return attempt(1);
+  }
+  // 并发池：limit 个 worker 同时跑，避免瞬时打满触发 429
+  function pool(tasks, limit){
+    var idx = 0, results = new Array(tasks.length);
+    function worker(){
+      if(idx >= tasks.length) return Promise.resolve();
+      var i = idx++;
+      return Promise.resolve(tasks[i]()).then(function(r){ results[i] = r; return worker(); });
+    }
+    var runners = [];
+    for(var k=0;k<Math.min(limit, tasks.length);k++) runners.push(worker());
+    return Promise.all(runners).then(function(){ return results; });
+  }
+  // 拉取全市场（东方财富 clist 每页上限 100，需翻完全部页），按 fs 缓存
+  function fetchEm(){
+    var fs = buildEmFs();
+    if(emCache && emCache.fs === fs) return Promise.resolve(emCache.data); // 命中缓存，秒回
+    return fetchEmPage(1, fs).then(function(first){
+      var total = first.total || 0;
+      var pages = Math.min(Math.ceil(total / EM_PAGE), 80); // 安全阀，最多 80 页
+      var tasks = [];
+      for(var p=2; p<=pages; p++) (function(pp){ tasks.push(function(){ return fetchEmPage(pp, fs); }); })(p);
+      return pool(tasks, 4).then(function(rest){
+        var all = first.diff.slice();
+        rest.forEach(function(r){ if(r && r.diff) all = all.concat(r.diff); });
+        emCache = { fs: fs, data: all };
+        return all;
+      });
+    });
   }
   function normalizeEm(rows){
     return rows.map(function(d){
@@ -394,7 +425,8 @@
   function num(v){ return (v === undefined || v === null || v === "") ? NaN : parseFloat(v); }
 
   // ---------- 查询主流程 ----------
-  function run(){
+  function run(force){
+    if(force) emCache = null; // 强制刷新：丢弃东方财富缓存，重新拉全市场
     hideErr(); hideWarn();
     if(!universe){
       showErr("股票代码池仍在加载中，请稍候再点查询。");
@@ -410,7 +442,7 @@
     var vrMin = num($("vrMin").value), vrMax = num($("vrMax").value);
 
     fetchEm().then(function(raw){
-      lastProvider = "东方财富";
+      lastProvider = "东方财富(全量 "+raw.length+" 只)";
       return normalizeEm(raw);
     }).catch(function(err){
       // 东方财富失败 → 腾讯兜底
@@ -497,7 +529,7 @@
   $("autoChk").addEventListener("change", function(){
     if(this.checked){
       if(autoTimer) clearInterval(autoTimer);
-      autoTimer = setInterval(run, 30000);
+      autoTimer = setInterval(function(){ run(true); }, 30000);
       run();
     } else { if(autoTimer) clearInterval(autoTimer); autoTimer = null; }
   });
