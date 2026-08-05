@@ -105,7 +105,17 @@
       </div>
 
       <div class="fitem">
-        <label>④ 板块关键词（可选 · 可多选）</label>
+        <label>④ 量能比上下限（成交额口径）</label>
+        <div class="range">
+          <input id="vrMin" type="number" step="0.1" placeholder="最小 如 0.5">
+          <span>~</span>
+          <input id="vrMax" type="number" step="0.1" placeholder="最大 如 3">
+        </div>
+        <div class="hint">今日成交额 ÷ 昨日成交额；数值越大越放量</div>
+      </div>
+
+      <div class="fitem">
+        <label>⑤ 板块关键词（可选 · 可多选）</label>
         <div class="ms">
           <button type="button" class="ms-btn" id="msBtn"><span class="ph" id="msPh">全部市场（点此选择板块）</span></button>
           <div class="ms-pop" id="msPop">
@@ -137,6 +147,7 @@
             <th data-k="price">现价</th>
             <th data-k="chg">涨跌幅<span class="ar"></span></th>
             <th data-k="turn">换手率<span class="ar"></span></th>
+            <th data-k="vr">量能比<span class="ar"></span></th>
             <th data-k="cap">总市值(亿)<span class="ar"></span></th>
             <th data-k="fcap">流通市值(亿)<span class="ar"></span></th>
             <th data-k="main">主力净流入(亿)<span class="ar"></span></th>
@@ -164,6 +175,7 @@
   var EM_TIMEOUT = 8000;      // 东方财富超时时间（ms）
 
   var universe = null;        // {meta, stocks:{code:{name,sector,sectorCode}}}
+  var yesterdayAmounts = null; // {date, count, stocks:{code:{amount,volume}}}
   var boards = [];            // [{code,name}]
   var selected = new Set();   // sectorCode
   var sortKey = "chg", sortDir = -1;
@@ -192,6 +204,16 @@
       $("msBtn").disabled = false;
     }).catch(function(err){
       disableBoard("板块映射加载失败："+err.message);
+    });
+  }
+  function loadYesterdayAmount(){
+    return fetch("screener/yesterday_amount.json", {cache:"no-store"}).then(function(r){
+      if(!r.ok) throw new Error("yesterday_amount.json "+r.status);
+      return r.json();
+    }).then(function(j){
+      yesterdayAmounts = j;
+    }).catch(function(err){
+      console.log("昨日成交额加载失败："+err.message);
     });
   }
   function disableBoard(msg){
@@ -284,9 +306,11 @@
         price: num(d.f2),
         chg: num(d.f3),
         turn: num(d.f8),
+        amount: num(d.f6),
         cap: num(d.f20)/1e8,
         fcap: num(d.f21)/1e8,
         main: num(d.f62)/1e8,
+        vr: calcVr(mkt + d.f12, num(d.f6)),
         sector: sectorName(mkt + d.f12)
       };
     });
@@ -326,6 +350,7 @@
       var price = num(parts[3]);
       var chg = num(parts[32]);
       var turn = num(parts[38]);
+      var amount = num(parts[37]) * 10000; // 万元 -> 元
       var cap = num(parts[45]);
       var fcap = num(parts[44]);
       if(isNaN(price) && isNaN(chg)) return; // 无效/停牌
@@ -336,9 +361,11 @@
         price: price,
         chg: chg,
         turn: turn,
+        amount: amount,
         cap: cap,
         fcap: fcap,
         main: NaN,
+        vr: calcVr(code, amount),
         sector: sectorName(code)
       });
     });
@@ -349,6 +376,13 @@
     if(!universe) return "";
     var c = universe.stocks[code];
     return c ? c.sector : "";
+  }
+
+  function calcVr(code, amount){
+    if(!yesterdayAmounts || !yesterdayAmounts.stocks || !yesterdayAmounts.stocks[code]) return NaN;
+    var y = yesterdayAmounts.stocks[code].amount;
+    if(!y || y <= 0) return NaN;
+    return amount / y;
   }
 
   function fetchWithTimeout(url, ms){
@@ -373,6 +407,7 @@
     var chgMin = num($("chgMin").value), chgMax = num($("chgMax").value);
     var turnMin = num($("turnMin").value), turnMax = num($("turnMax").value);
     var capMin = num($("capMin").value), capMax = num($("capMax").value);
+    var vrMin = num($("vrMin").value), vrMax = num($("vrMax").value);
 
     fetchEm().then(function(raw){
       lastProvider = "东方财富";
@@ -394,6 +429,8 @@
         if(!isNaN(turnMax) && d.turn > turnMax) return false;
         if(!isNaN(capMin) && d.cap < capMin) return false;
         if(!isNaN(capMax) && d.cap > capMax) return false;
+        if(!isNaN(vrMin) && (isNaN(d.vr) || d.vr < vrMin)) return false;
+        if(!isNaN(vrMax) && (isNaN(d.vr) || d.vr > vrMax)) return false;
         return true;
       });
       res.sort(function(a,b){
@@ -414,7 +451,7 @@
 
   function render(rows){
     var tb = $("tbody");
-    if(!rows.length){ tb.innerHTML = '<tr><td colspan="8" class="empty">没有符合条件的股票，试着放宽条件</td></tr>'; return; }
+    if(!rows.length){ tb.innerHTML = '<tr><td colspan="9" class="empty">没有符合条件的股票，试着放宽条件</td></tr>'; return; }
     var html = "";
     var lim = Math.min(rows.length, MAX_ROWS);
     for(var i=0;i<lim;i++){
@@ -428,6 +465,7 @@
         + '<td>'+fmt(d.price)+'</td>'
         + '<td class="'+chgCls+'">'+fmtPct(d.chg)+'</td>'
         + '<td>'+fmt(d.turn)+'%</td>'
+        + '<td>'+fmtVr(d.vr)+'</td>'
         + '<td>'+fmt(d.cap)+'</td>'
         + '<td>'+fmt(d.fcap)+'</td>'
         + '<td class="'+mainCls+'">'+(isNaN(d.main)?"—":fmtSigned(d.main))+'</td>'
@@ -436,6 +474,7 @@
     tb.innerHTML = html;
   }
   function fmt(v){ if(isNaN(num(v))) return "—"; return (Math.round(num(v)*100)/100).toLocaleString("zh-CN"); }
+  function fmtVr(v){ if(isNaN(num(v))) return "—"; return (Math.round(num(v)*100)/100).toFixed(2); }
   function fmtPct(v){ if(isNaN(num(v))) return "—"; return (num(v)>0?"+":"")+(Math.round(num(v)*100)/100)+"%"; }
   function fmtSigned(v){ if(isNaN(num(v))) return "—"; return (num(v)>0?"+":"")+(Math.round(num(v)*100)/100).toLocaleString("zh-CN"); }
 
@@ -452,7 +491,7 @@
 
   $("runBtn").addEventListener("click", run);
   $("resetBtn").addEventListener("click", function(){
-    ["chgMin","chgMax","turnMin","turnMax","capMin","capMax"].forEach(function(id){ $(id).value=""; });
+    ["chgMin","chgMax","turnMin","turnMax","capMin","capMax","vrMin","vrMax"].forEach(function(id){ $(id).value=""; });
     selected.clear(); updateMsUI(); renderMsList(""); hideErr(); hideWarn(); $("meta").textContent=""; $("tbody").innerHTML="";
   });
   $("autoChk").addEventListener("change", function(){
@@ -464,7 +503,7 @@
   });
 
   // 初始化
-  loadUniverse().then(function(){ updateMsUI(); });
+  Promise.allSettled([loadUniverse(), loadYesterdayAmount()]).then(function(){ updateMsUI(); });
 })();
 </script>
 </body>
