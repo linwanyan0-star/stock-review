@@ -1,0 +1,140 @@
+{
+  "date": "2026-08-07",
+  "weekday": "周五",
+  "conclusion": "周五「医药爆发 · 电子硬件续强 · 五指齐涨放量」——昨日（8-06）设的 5 条观察点 4 绿 1 橙全部落地，8-06 的「缩量退潮预警」被证伪、反弹以放量普涨延续。上证收 3,940.04（+1.02%）守住 3,900 确认真突破，五指全线收涨（与 8-06 三跌两涨分化相反）；创业板指 3,563.12（+1.35%）收复 3,535.14 并创 8-03 反弹以来新高 3,613.87。新主线浮现：医药（CRO +10.63%、医疗服务 +8.40%、医药生物 +4.77%），电子硬件续强（元件 +6.74%、半导体 +3.29%、玻璃玻纤 +7.11%）。资金强度彻底止跌：行业 TOP1 元件 +118.54 亿（>50 亿），宽基「转融券标的」由 8-06 的 -371.59 亿翻正至 +382.39 亿。成交 2.6644 万亿放量 1,356 亿。但隐忧仍在：计算机/软件（-0.60%/-0.96%）与金融（银行 -0.65%）逆势，涨停 75 只（<80）偏少、跌停 4 只（>昨日 1），情绪属「正常」而非亢奋。",
+  "summary": "五大指数全线上涨（上证 +1.02% ~ 中证500 +1.93%），创业板指 3,563.12 收复 3,535.14 并创反弹新高 3,613.87；医药成新主线（CRO +10.63%、医药生物 +4.77%），电子硬件续强（元件 +6.74%、玻璃玻纤 +7.11%），资源助攻（有色 +3.19%、小金属 +4.30%）。上涨占比 51%、涨停 75/跌停 4、成交 2.6644 万亿(+1,356 亿)放量普涨；但计算机/软件(-0.60%/-0.96%)与金融(银行-0.65%)逆势，涨停数<80、跌停增至 4，情绪「正常非亢奋」。资金：元件 +118.54 亿、半导体 +106.65 亿居 TOP2，宽基转融券标的由 -371.59 亿翻正至 +382.39 亿。",
+  "indices": [
+    {"name": "上证指数", "code": "sh000001", "close": 3940.04, "change_percent": 1.02, "pe_ttm": 18.08, "open": 3896.49, "high": 3940.93, "low": 3885.62, "avg": 3913.54, "chg_5d": 2.81, "chg_20d": -1.40, "chg_60d": -5.69, "chg_ytd": -0.73},
+    {"name": "深证成指", "code": "sz399001", "close": 14311.01, "change_percent": 1.42, "pe_ttm": 46.72, "open": 14152.78, "high": 14396.07, "low": 14049.34, "avg": 14245.98, "chg_5d": 5.39, "chg_20d": -4.89, "chg_60d": -9.11, "chg_ytd": 5.81},
+    {"name": "创业板指", "code": "sz399006", "close": 3563.12, "change_percent": 1.35, "pe_ttm": 62.64, "open": 3537.44, "high": 3613.87, "low": 3507.62, "avg": 3561.84, "chg_5d": 6.55, "chg_20d": -7.28, "chg_60d": -9.82, "chg_ytd": 11.24},
+    {"name": "沪深300", "code": "sh000300", "close": 4694.44, "change_percent": 0.93, "pe_ttm": 14.41, "open": 4656.10, "high": 4706.73, "low": 4649.58, "avg": 4683.08, "chg_5d": 2.32, "chg_20d": -1.81, "chg_60d": -4.48, "chg_ytd": 1.39},
+    {"name": "中证500", "code": "sh000905", "close": 7980.12, "change_percent": 1.93, "pe_ttm": 37.24, "open": 7828.79, "high": 7983.17, "low": 7763.53, "avg": 7895.74, "chg_5d": 6.49, "chg_20d": -6.16, "chg_60d": -7.96, "chg_ytd": 6.89}
+  ],
+  "sentiment": {
+    "up": 2856,
+    "down": 2536,
+    "flat": 147,
+    "suspension": 4,
+    "upLimit": 75,
+    "downLimit": 4,
+    "upRatio": 51,
+    "upRatioComment": "当前市场上涨家数占比全市场51%，市场情绪正常",
+    "totalAmount_yi": 26644.20,
+    "amountChange_yi": 1356.38,
+    "ranges": {"涨停": 75, ">7%": 206, "7~5%": 213, "5~2%": 807, "2~0%": 1555, "平": 147, "0~2%": 2119, "2~5%": 365, "5~7%": 26, "7%<": 22, "跌停": 4}
+  },
+  "sectors": {
+    "sw1_top5": [
+      {"name": "医药生物", "change_percent": 4.77},
+      {"name": "电子", "change_percent": 3.53},
+      {"name": "建筑材料", "change_percent": 3.33},
+      {"name": "有色金属", "change_percent": 3.19},
+      {"name": "机械设备", "change_percent": 2.08}
+    ],
+    "sw1_bottom5": [
+      {"name": "家用电器", "change_percent": -0.86},
+      {"name": "银行", "change_percent": -0.65},
+      {"name": "交通运输", "change_percent": -0.64},
+      {"name": "计算机", "change_percent": -0.60},
+      {"name": "房地产", "change_percent": -0.51}
+    ],
+    "sw1_all": [
+      {"name": "医药生物", "change_percent": 4.77}, {"name": "电子", "change_percent": 3.53}, {"name": "建筑材料", "change_percent": 3.33}, {"name": "有色金属", "change_percent": 3.19}, {"name": "机械设备", "change_percent": 2.08}, {"name": "国防军工", "change_percent": 1.47}, {"name": "基础化工", "change_percent": 1.23}, {"name": "电力设备", "change_percent": 1.19}, {"name": "综合", "change_percent": 0.77}, {"name": "美容护理", "change_percent": 0.72}, {"name": "石油石化", "change_percent": 0.64}, {"name": "环保", "change_percent": 0.49}, {"name": "汽车", "change_percent": 0.28}, {"name": "食品饮料", "change_percent": 0.21}, {"name": "通信", "change_percent": 0.13}, {"name": "社会服务", "change_percent": 0.11}, {"name": "传媒", "change_percent": 0.05}, {"name": "建筑装饰", "change_percent": -0.06}, {"name": "公用事业", "change_percent": -0.10}, {"name": "农林牧渔", "change_percent": -0.21}, {"name": "钢铁", "change_percent": -0.21}, {"name": "轻工制造", "change_percent": -0.16}, {"name": "非银金融", "change_percent": -0.26}, {"name": "纺织服饰", "change_percent": -0.27}, {"name": "煤炭", "change_percent": -0.34}, {"name": "商贸零售", "change_percent": -0.42}, {"name": "房地产", "change_percent": -0.51}, {"name": "计算机", "change_percent": -0.60}, {"name": "交通运输", "change_percent": -0.64}, {"name": "银行", "change_percent": -0.65}, {"name": "家用电器", "change_percent": -0.86}
+    ],
+    "concept_top": [
+      {"name": "CRO", "change_percent": 10.63},
+      {"name": "医疗服务", "change_percent": 8.40},
+      {"name": "玻璃玻纤", "change_percent": 7.11},
+      {"name": "元件", "change_percent": 6.74},
+      {"name": "生物制品", "change_percent": 6.06},
+      {"name": "化学制药", "change_percent": 5.21},
+      {"name": "创新药", "change_percent": 5.00},
+      {"name": "医药生物", "change_percent": 4.77},
+      {"name": "PCB概念", "change_percent": 4.88},
+      {"name": "小金属", "change_percent": 4.30},
+      {"name": "共封装光模块(CPO)", "change_percent": 4.02},
+      {"name": "半导体", "change_percent": 3.29},
+      {"name": "贵金属", "change_percent": 3.21},
+      {"name": "航天装备Ⅱ", "change_percent": 3.09},
+      {"name": "光伏设备", "change_percent": 2.97},
+      {"name": "工业金属", "change_percent": 2.86}
+    ],
+    "concept_weak": [
+      {"name": "稳定币概念", "change_percent": -3.04},
+      {"name": "软件开发", "change_percent": -0.96},
+      {"name": "IT服务Ⅱ", "change_percent": -0.61},
+      {"name": "计算机", "change_percent": -0.60},
+      {"name": "证券Ⅱ", "change_percent": -0.16},
+      {"name": "电力", "change_percent": -0.11}
+    ]
+  },
+  "stocks": {
+    "limitUp_strong": [
+      {"name": "一博科技", "change_percent": 20.00, "note": "元件/PCB 领涨"},
+      {"name": "耐科装备", "change_percent": 20.00, "note": "半导体设备"},
+      {"name": "博腾股份", "change_percent": 20.02, "note": "CRO/CXO"},
+      {"name": "近岸蛋白", "change_percent": 20.01, "note": "生物制品"},
+      {"name": "五洲医疗", "change_percent": 20.01, "note": ""},
+      {"name": "志特新材", "change_percent": 20.03, "note": ""},
+      {"name": "朗特智能", "change_percent": 20.00, "note": ""},
+      {"name": "铜冠铜箔", "change_percent": 16.98, "note": "铜箔"},
+      {"name": "贝达药业", "change_percent": 14.37, "note": "化学制药"},
+      {"name": "联瑞新材", "change_percent": 11.48, "note": "非金属材料"},
+      {"name": "胜宏科技", "change_percent": 12.01, "note": "PCB/CPO"},
+      {"name": "华银电力", "change_percent": 10.06, "note": "电力"},
+      {"name": "云南锗业", "change_percent": 10.00, "note": "锗镓/小金属"},
+      {"name": "盛达资源", "change_percent": 10.00, "note": "白银"},
+      {"name": "有研新材", "change_percent": 10.00, "note": "靶材"},
+      {"name": "光迅科技", "change_percent": 10.00, "note": "光芯片"}
+    ],
+    "notable": [
+      {"name": "药明康德", "change_percent": 8.49, "note": "CXO"},
+      {"name": "中国巨石", "change_percent": 8.83, "note": "玻璃玻纤"},
+      {"name": "兆易创新", "change_percent": 8.32, "note": "存储"},
+      {"name": "哈药股份", "change_percent": 9.97, "note": "反弹（8-06 最弱 -8.12%）"},
+      {"name": "中钨高新", "change_percent": 7.22, "note": ""},
+      {"name": "金风科技", "change_percent": 6.03, "note": "风电"},
+      {"name": "恒瑞医药", "change_percent": 4.82, "note": ""}
+    ],
+    "weak": [
+      {"name": "中际旭创", "change_percent": -3.68, "note": "光模块龙头，8-06 +0.77% 后转跌"},
+      {"name": "长鑫科技", "change_percent": 1.00, "note": "8-06 -4.31% 后止跌微弹"},
+      {"name": "新易盛", "change_percent": -0.22, "note": "CPO 平盘"}
+    ]
+  },
+  "fundFlow": {
+    "plate_top3": [
+      {"name": "元件", "zljlr_yi": 118.54, "zdf": 6.74, "d5_yi": 297.96, "d20_yi": 21.06},
+      {"name": "半导体", "zljlr_yi": 106.65, "zdf": 3.29, "d5_yi": 139.96, "d20_yi": -1691.39},
+      {"name": "化学制药", "zljlr_yi": 40.81, "zdf": 5.21, "d5_yi": 19.29, "d20_yi": -98.53}
+    ],
+    "plate_bottom3": [
+      {"name": "软件开发", "zljlr_yi": -39.37, "zdf": -0.96, "d5_yi": -81.61, "d20_yi": -110.74},
+      {"name": "IT服务Ⅱ", "zljlr_yi": -20.07, "zdf": -0.61, "d5_yi": -14.59, "d20_yi": -170.52},
+      {"name": "通信设备", "zljlr_yi": -19.72, "zdf": 0.31, "d5_yi": 244.81, "d20_yi": -623.88}
+    ],
+    "broad": [
+      {"name": "转融券标的", "zljlr_yi": 382.39, "d5_yi": 660.73, "d20_yi": -5825.22, "note": "由 8-06 的 -371.59 亿翻正"},
+      {"name": "PCB概念", "zljlr_yi": 257.52, "d5_yi": 583.73, "d20_yi": null}
+    ],
+    "concept_outflow": [
+      {"name": "DeepSeek概念股", "zljlr_yi": -68.59},
+      {"name": "云计算", "zljlr_yi": -66.83},
+      {"name": "人工智能", "zljlr_yi": -57.12}
+    ]
+  },
+  "nextWatch": [
+    "医药新主线能否延续：判据——医药生物次日能否连续第二日居一级涨幅前5 + CRO能否维持+5%以上 + 化学制药主力净流入维持TOP3；若次日医药翻绿、CRO回落至+3%以下，定性为单日事件/业绩驱动，非新主线。",
+    "电子硬件能否接棒持续主线：判据——元件/半导体次日能否再进资金TOP3 + 创业板守住3,613.87 + 中证500站稳8,000；若硬件链次日分化（元件强但半导体/通信回落），警惕一日轮动。",
+    "宽基资金净流入能否延续：判据——转融券标的次日能否继续净流入 + 行业TOP1维持>80亿；若次日宽基再转净流出、TOP1<50亿，则今日+382亿仅单日回补，反弹仍属回补非反转。",
+    "上证3,940与3,900支撑：判据——次日守住3,940；跌破3,900收回则真突破转震荡，跌破3,864.27（8-06开盘=破位线）则结构破位。",
+    "情绪真实温度：判据——涨停回升至85+且占比>50%=普涨健康延续；若涨停<70且跌停>5，警惕反弹末端派发。今日涨停75/跌停4，处正常非亢奋，看能否放量补涨停。"
+  ],
+  "risk": [
+    "涨停数偏低、赚钱效应未全面扩散：五指齐涨、成交2.66万亿，但涨停仅75只(<80)、>7%大涨股281只较8-06的308减少，涨的是权重/机构票，题材高度股分歧加大。",
+    "结构主线共识仍弱、内部分化加剧：医药+电子硬件+资源涨，但计算机(-0.60%)/软件(-0.96%)/AI应用(DeepSeek概念资金-68.59亿、人工智能-57.12亿)/金融(银行-0.65%、证券-0.16%)逆势，多点开花、无单点凝聚。",
+    "通信反复、硬件链内部已裂：8-06判定通信「一日回调」，今日中际旭创即-3.68%转跌、通信设备主力由+25.93亿翻为-19.72亿，光模块龙头掉队，硬件链仅靠元件/半导体材料撑场。",
+    "中期资金坑未填、今日属回补非反转：半导体20日-1,691.39亿、通信设备20日-623.88亿、转融券标的20日-5,825.22亿；20日维度五指仍偏空(创业板-7.28%、中证500-6.16%)。",
+    "煤炭一日游确认、资源线旗子再换：8-06观察①判「煤炭新主线」今日被否定(煤炭-0.34%、煤炭开采-0.22%、焦炭Ⅱ-2.35%，掉出资金TOP3)，资源线旗子由煤炭换回有色(有色+3.19%、小金属+4.30%、贵金属+3.21%)。"
+  ]
+}

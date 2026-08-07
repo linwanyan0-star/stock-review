@@ -10,3 +10,4 @@ private/
 # sector-flow 生成中间产物（agent MCP 数据与 stage1 聚类，仅本地使用）
 sector-flow/_mcp_*.json
 sector-flow/_stage1_*.json
+sector-flow/_build_*.py
