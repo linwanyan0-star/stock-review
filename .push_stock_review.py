@@ -45,23 +45,29 @@ def main():
     os.chdir(REPO)
 
     # 1. 拉平远程已知历史（避免非快进被拒）
-    run(["git", "fetch", auth_remote], check=False)
+    run(["git", "fetch", auth_remote, "main"], check=False)
 
     # 2. 暂存所有公开内容（.gitignore 已拦截私密/中间产物）
     run(["git", "add", "-A"], check=False)
 
-    # 3. 无变更则跳过
+    # 3. 有暂存改动则提交
     r = run(["git", "diff", "--cached", "--quiet"])
-    if r.returncode == 0:
-        print("[push] 无变更，跳过提交")
+    if r.returncode != 0:
+        run(["git", "-c", f"user.name={USER}", "-c", f"user.email={EMAIL}",
+             "commit", "-m", f"daily sync {today}"], check=False)
+
+    # 4. 本地是否领先远程（含已提交未推送的情况）
+    cnt = run(["git", "rev-list", "--count", "FETCH_HEAD..HEAD"])
+    try:
+        ahead = int((cnt.stdout or "0").strip())
+    except ValueError:
+        ahead = 0
+    if ahead <= 0:
+        print("[push] 无变更，跳过推送")
         return
 
-    # 4. 提交
-    run(["git", "-c", f"user.name={USER}", "-c", f"user.email={EMAIL}",
-         "commit", "-m", f"daily sync {today}"], check=False)
-
     # 5. 推送（token 不回显）
-    pr = run(["git", "push", auth_remote])
+    pr = run(["git", "push", auth_remote, "main"])
     if pr.returncode != 0:
         # 推送失败：输出非敏感部分
         out = (pr.stderr or pr.stdout or "")
