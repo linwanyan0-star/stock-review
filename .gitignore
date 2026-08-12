@@ -11,3 +11,5 @@ private/
 sector-flow/_mcp_*.json
 sector-flow/_stage1_*.json
 sector-flow/_build_*.py
+# market-cycle 生成运行日志（仅本地诊断，非站点内容）
+market-cycle/_*.log
