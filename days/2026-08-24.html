@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026-08-24 A 股盘面复盘</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#ffffff; --ink:#1f2329; --sub:#6b7280; --line:#eceef1;
+    --up:#e03b3b; --down:#1aa260; --brand:#2b5cff; --brand-soft:#eef2ff; --amber:#c88217;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;}
+  .wrap{max-width:680px;margin:0 auto;padding:16px 14px 48px;}
+  .back{display:inline-block;color:var(--brand);font-size:13px;text-decoration:none;margin:6px 0 10px;}
+  header{padding:4px 0 10px;border-bottom:1px solid var(--line);}
+  .date{font-size:13px;color:var(--sub);}
+  .title{font-size:20px;font-weight:700;margin:2px 0 0;}
+  .conclusion{background:var(--brand-soft);border-radius:14px;padding:14px;margin:16px 0;}
+  .conclusion .label{font-size:12px;color:#2742c4;font-weight:700;letter-spacing:1px;}
+  .conclusion .text{font-size:16px;font-weight:600;margin-top:6px;color:#1a2a6b;}
+  .src{font-size:12px;color:var(--sub);background:#eef6ee;border:1px solid #cfe9d4;border-radius:10px;padding:8px 12px;margin:14px 0;}
+  h2{font-size:16px;margin:22px 0 10px;}
+  .sec{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px;box-shadow:0 1px 2px rgba(0,0,0,.03);}
+  .sec h3{font-size:15px;margin:0 0 8px;}
+  .sec p{margin:6px 0;font-size:14px;}
+  .note{font-size:12px;color:var(--sub);margin:4px 0 8px;}
+  .kv{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;padding:5px 0;border-bottom:1px dashed var(--line);}
+  .kv:last-child{border-bottom:none;}
+  .kv .r{text-align:right;color:var(--sub);}
+  .kv .r b{color:var(--ink);}
+  .up{color:var(--up);font-weight:600;}
+  .down{color:var(--down);font-weight:600;}
+  ul{margin:6px 0;padding-left:18px;font-size:14px;}
+  li{margin:3px 0;}
+  .pill{display:inline-block;font-size:11px;padding:1px 8px;border-radius:999px;background:#fff3e0;color:#b26a00;margin-left:6px;}
+  .v-yes{color:#1a8a3c;font-weight:600;}
+  .v-no{color:#b3261e;font-weight:600;}
+  .v-watch{color:#b26a00;font-weight:600;}
+  .review{list-style:none;margin:8px 0;padding-left:0;}
+  .review li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px;}
+  .r-head{display:flex;align-items:flex-start;gap:10px;margin-bottom:4px;font-size:14px;line-height:1.5;}
+  .r-tag{flex-shrink:0;white-space:nowrap;font-size:12px;padding:2px 8px;border-radius:6px;font-weight:600;}
+  .r-yes{background:#e6f7ec;color:#1a8a3c;}
+  .r-no{background:#ffeaea;color:#b3261e;}
+  .r-watch{background:#fff3e0;color:#b26a00;}
+  .r-body{font-size:13px;color:var(--sub);margin:6px 0 0;line-height:1.6;}
+  .gauge{height:10px;border-radius:999px;background:#eef0f3;overflow:hidden;margin:8px 0 4px;}
+  .gauge > i{display:block;height:100%;background:var(--up);}
+  .gval{font-size:13px;color:var(--sub);}
+  a.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;text-decoration:none;color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.03);}
+  a.card .day{font-size:14px;margin-top:4px;color:var(--brand);}
+  footer{color:var(--sub);font-size:12px;text-align:center;margin-top:24px;line-height:1.6;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← 返回归档</a>
+  <header>
+    <div class="date">2026-08-24 · 周一 · 交易日收盘</div>
+    <div class="conclusion">
+      <div class="label">一句话结论</div>
+      <div class="text">周一「risk-off · 科技医药双杀 · 避险资源独撑」——上一交易日（8-21）设的 5 条观察点 <b>1 绿 3 红 1 橙</b>，8-21「缩量轮动转温和反弹」的乐观分支被全盘否定：五指全线下跌（上证 <b class="down">-0.59%</b> / 沪深300 <b class="down">-1.21%</b> / 中证500 <b class="down">-1.75%</b> / 深成指 <b class="down">-2.13%</b> / 创业板 <b class="down">-3.21%</b>，越成长越惨），上证收 <b>3,882.01 跌破 3,900</b> 并击穿 8-21 低点 3,883.79、盘中探 3,855.35 逼近 3,850 防守线。申万一级 <b>10 红 21 绿</b>（8-21 为 16 红 15 绿），领涨全为避险/资源（煤炭 <b class="up">+2.35%</b> / 银行 <b class="up">+1.32%</b> / 食品饮料 <b class="up">+1.00%</b> / 非银金融 <b class="up">+0.97%</b> / 钢铁 <b class="up">+0.91%</b>），领跌全为科技硬件+医药（通信 <b class="down">-4.62%</b> / 医药生物 <b class="down">-3.24%</b> / 电子 <b class="down">-3.14%</b> / 建筑材料 <b class="down">-2.51%</b> / 综合 <b class="down">-2.26%</b>）。宽度回落至 <b>26%</b>（官方「情绪偏低」）、涨停 48、跌停 14、成交 <b>2.0075 万亿（较昨 +1,281.92 亿 → 放量下跌）</b>。</div>
+    </div>
+  </header>
+
+  <div class="src">✅ 本篇由真实数据聚合生成（2026-08-24 收盘）：指数行情（data_quote）、涨跌宽度（data_changedist）、申万一级 31 行业涨跌与 TTM PE（data_quote 批量板块码）、申万二级涨跌与主力资金（data_sector ranking）、热门概念与热股（data_hot board/stock）、交易日确认（data_trade_calendar）。个人持仓/自选股未纳入。估值采用 TTM PE。</div>
+
+  <div class="sec">
+    <h3>💰 板块资金流向追踪（当日模块）</h3>
+    <p class="note">亏钱/赚钱效应双榜 + 成交前50聚类 + 量价 + 拥挤度，详见独立页面：</p>
+    <a class="card" href="../sector-flow/2026-08-24.html" style="display:inline-block;margin-top:4px;">
+      <div class="day">板块资金流向追踪（2026-08-24 当日页）→</div>
+    </a>
+  </div>
+
+  <h2>详细版</h2>
+
+  <div class="sec">
+    <h3>⏮ 前日观察回顾 · 核对 8-21 提出的 5 个观察点</h3>
+    <p class="note">把上一交易日（8-21，周五）「七、次日观察」的推测逐条对照今日盘面，标注验证结论，使观察链条可延续。下一日（8-25 周二）复盘将回看本页「七、次日观察」。</p>
+    <ul class="review">
+      <li>
+        <div class="r-head"><span class="r-tag r-no">未验证</span><b>① 缩量轮动是否延续/破局（8-21 判据：下周一成交回 2 万亿上方 + 上证站稳 3,900 并攻 3,925 + 深成/创业守 14,000/3,500＝转温和反弹；若成交 &lt;1.9 万亿 或 上证跌破 3,883/回踩 3,850＝弱势延续）</b></div>
+        <div class="r-body"><b>乐观「反弹」分支彻底证伪，破位预警触发、向下破局。</b>①<b>上证收 3,882.01（-0.59%）跌破 3,900，且跌破 8-21 低点 3,883.79（收 3,883.79），盘中最低 3,855.35 逼近 3,850 防守线</b>（触发预警）；②<b>深成指 13,794.29 跌破 14,000、创业板 3,431.89 跌破 3,500</b>（触发预警）；③<b>成交 2.0075 万亿，微超 2 万亿、未跌破 1.9 万亿</b>（唯一未触发项，量能未塌）。结论：<b>缩量轮动结束、转向下破位弱势调整，8-21 的「反弹」假设被否，但成交未崩、非恐慌量杀</b>，需周二确认是否补跌。</div>
+      </li>
+      <li>
+        <div class="r-head"><span class="r-tag r-no">未验证</span><b>② 资源/通信接力能否成新主线（8-21 判据：资源+通信连续第二日收红 + 有色 5 日延续 + 成交配合＝新主线确认）</b></div>
+        <div class="r-body"><b>资源+通信「共振」未成立，科技硬件反成领跌，市场无新主线。</b>①<b>通信（申万一级）今日 <b class="down">-4.62%</b>、通信设备（二级） <b class="down">-5.21%</b> 大幅领跌</b>，与「连续第二日收红」完全相反；②有色金属 <b class="up">+0.13%</b> 仅微红、石油石化 <b class="down">-0.27%</b> 微绿，资源里仅煤炭 <b class="up">+2.35%</b> / 钢铁 <b class="up">+0.91%</b> 逆势；③<b>「资源+通信共振成主线」假设被否</b>，今日是「避险资源独撑 + 科技医药双杀」的 risk-off 结构，无持续主线。结论：<b>8-21 寄望的接力主线未成型</b>。</div>
+      </li>
+      <li>
+        <div class="r-head"><span class="r-tag r-no">未验证</span><b>③ 科技硬件反抽高度（半导体能否回 10,000；8-21 判据：半导体收复 10,000 + 通信设备主力不重新净撤 + 中际旭创守 900＝反抽升级）</b></div>
+        <div class="r-body"><b>科技反抽彻底证伪、转中期调整，三大判据全破。</b>①<b>半导体（二级）9,627.16（<b class="down">-3.13%</b>），距 10,000 不降反远</b>；②<b>通信设备主力净撤 <b class="down">-139.55 亿</b></b>（fundflow 榜单首位净流出）；③<b>中际旭创 870.22（<b class="down">-7.72%</b>）跌破 900</b>。半导体 20 日 <b class="down">-8.92%</b> 已转负、YTD 仍 <b class="up">+38.51%</b> 获利盘厚。结论：<b>8-21「反抽升级为反弹」假设被否，科技硬件确认中期调整</b>，不接飞刀。</div>
+      </li>
+      <li>
+        <div class="r-head"><span class="r-tag r-watch">延续观察</span><b>④ 医药证伪后的去向（8-21 判据：医药周一缩量企稳＝仅轮动非减仓；若继续大跌扩散至防御＝减仓信号）</b></div>
+        <div class="r-body"><b>医药未企稳但防御走强，属结构性而非趋势性减仓。</b>①<b>医药生物 <b class="down">-3.24%</b>（8-21 为 -3.48%，跌幅略收窄仍深跌）、化学制药 <b class="down">-3.66%</b>、医疗服务 <b class="down">-4.31%</b></b> 继续下挫；②但<b>防御方向逆势走强</b>——食品饮料 <b class="up">+1.00%</b>（白酒Ⅱ +1.73%、茅台 +2.50%）、银行 <b class="up">+1.32%</b>、煤炭 <b class="up">+2.35%</b>，<b>医药的弱势未扩散至其他防御</b>。结论：<b>医药仍是独立弱势、非系统性减仓，但需继续观察是否止跌</b>，记橙延续观察。</div>
+      </li>
+      <li>
+        <div class="r-head"><span class="r-tag r-yes">已验证</span><b>⑤ 银行与避险线（8-21 判据：银行周一续红 + 石油煤炭红＝稳健；若银行续跌且三杰全绿＝去杠杆）</b></div>
+        <div class="r-body"><b>避险线稳健，无系统性去杠杆风险。</b>今日<b>银行 <b class="up">+1.32%</b> 续红（5 日 <b class="up">+3.96%</b>）、煤炭 <b class="up">+2.35%</b> 红、石油石化 <b class="down">-0.27%</b> 仅微绿近乎平</b>——「三杰全绿」的系统性去杠杆判据<b>未触发</b>。贵金属（二级） <b class="up">+1.38%</b>、保险Ⅱ <b class="up">+2.58%</b>、白酒Ⅱ <b class="up">+1.73%</b> 同属防御逆势。结论：<b>权重避险线稳健、护盘有效，8-21 该观察点兑现为「绿」</b>。</div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>一、大盘概览（指数涨跌 + TTM PE）</h3>
+    <p class="note">五指<b>全线下跌、越成长越惨，且收盘全部低于均价（标准派发日、卖方占优）</b>。涨幅排序（由轻到重）：上证 <b class="down">-0.59%</b> ＞ 沪深300 <b class="down">-1.21%</b> ＞ 中证500 <b class="down">-1.75%</b> ＞ 深成指 <b class="down">-2.13%</b> ＞ 创业板 <b class="down">-3.21%</b>——与 8-21「权重平盘、成长相对强」镜像反转，今日权重与成长齐跌、成长最惨。</p>
+    <div class="kv"><span>上证指数</span><span class="r"><b>3,882.01</b> <span class="down">-0.59%</span> ｜ PE 17.7x</span></div>
+    <div class="kv"><span>深证成指</span><span class="r"><b>13,794.29</b> <span class="down">-2.13%</span> ｜ PE 43.6x</span></div>
+    <div class="kv"><span>创业板指</span><span class="r"><b>3,431.89</b> <span class="down">-3.21%</span> ｜ PE 56.0x</span></div>
+    <div class="kv"><span>沪深300</span><span class="r"><b>4,563.13</b> <span class="down">-1.21%</span> ｜ PE 14.1x</span></div>
+    <div class="kv"><span>中证500</span><span class="r"><b>7,717.09</b> <span class="down">-1.75%</span> ｜ PE 34.7x</span></div>
+    <p class="note">⚠️ 形态要点：五指<b>低开后震荡走低、收盘全部低于均价</b>（派发日）。①<b>上证</b>：开 3,902.70（低于昨收 3,905.20）＜ 收 3,882.01 ＜ 均价 3,885.29（收在均价下方），最高 3,910.24、最低 3,855.35；②<b>深成指</b>：收 13,794.29 vs 均价 13,856.05（下方），最低 13,616.75 破 13,700；③<b>创业板</b>：收 3,431.89 vs 均价 3,454.50（下方），最低 3,376.64；④<b>沪深300</b>：收 4,563.13 vs 均价 4,574.13（下方）；⑤<b>中证500</b>：收 7,717.09 vs 均价 7,739.34（下方）、盘中最低 7,615.45 破 7,700。<b>多周期维度</b>：5 日全负（上证 <b class="down">-2.53%</b>、沪深300 -3.75%、中证500 -5.71%、深成 -6.19%、创业板 -8.24%，成长最惨）；20 日上证 <b class="up">+0.62%</b>（微正临界）、中证500 <b class="down">-0.05%</b> 转负、沪深300 -2.96%、深成 -2.51%、创业板 -4.43%；60 日全负（创业板 -15.01%、深成 -11.43%、中证500 -7.69%、沪深300 -6.72%、上证 -4.59%）；年内（YTD）上证 <b class="down">-2.19%</b>、沪深300 <b class="down">-1.44%</b> 仍负，中证500 <b class="up">+3.37%</b>、深成 <b class="up">+1.99%</b>、创业板 <b class="up">+7.14%</b> 正。<b>量比</b>：上证 0.96、沪深300 1.02、深成 0.89、创业板 0.90、中证500 0.91——约 1，量能中性偏缩、但绝对额 2 万亿量级。</p>
+  </div>
+
+  <div class="sec">
+    <h3>二、市场情绪与宽度 <span class="pill">情绪偏低·放量下跌</span></h3>
+    <div class="gauge"><i style="width:26%"></i></div>
+    <div class="gval">情绪温度计：<b class="v-no">偏低（risk-off）</b>（上涨占比 <b>26%</b>，上一交易日 45%；官方口径原文：「当前市场上涨家数占比全市场 26%，市场情绪偏低。」）</div>
+    <div class="kv"><span>涨跌家数</span><span class="r">上涨 <b>1,460</b> ／ 下跌 <b>3,965</b> ／ 平 124 ／ 停牌 3</span></div>
+    <div class="kv"><span>涨停 / 跌停</span><span class="r"><b>48</b> ／ <b>14</b></span></div>
+    <div class="kv"><span>两市成交</span><span class="r">约 <b>2.0075 万亿</b> ／ 较前日 <span class="up">+1,281.92 亿</span>（放量，但指数下跌＝派发）</span></div>
+    <p class="note">涨跌区间：涨停 48 ／ &gt;7% 52 ／ 7~5% 45 ／ 5~2% 285 ／ 2~0% 1,030；平 124；跌 0~2% 2,113 ／ 跌 2~5% 1,472 ／ 跌 5~7% 250 ／ 跌 7%&lt; 116 ／ 跌停 14。特征拆解：<b>今日是「放量下跌、risk-off」日</b>，由 8-21 的缩量轮动（45%）进一步降温至 26% 偏低。①<b>上涨家数 2,505 → 1,460（-1,045 家）</b>，下跌家数 2,862 → 3,965（+1,103 家），多空比约 <b>1:2.7</b>（8-21 为 1:1.14，8-20 为 3:1）；②<b>涨幅 &gt;5% 个股 430 只</b>（48+52+45+285），<b>跌幅 &gt;5% 仅 380 只</b>（250+116+14）——两端接近，非极端恐慌但卖方压倒性占优；③<b>涨停 48 vs 跌停 14</b>，涨停是跌停 3.4 倍（8-21 为 3.9 倍）——连板接力继续降温；④<b>成交 2.0075 万亿较昨 1.8793 万亿放量 +1,281.92 亿</b>，<b>价跌量增＝派发而非增量进攻</b>，配合 26% 宽度，属<b>存量避险、资金撤离成长</b>。<b>缺口标注</b>：两融余额、ETF 申赎、融资买入占比、封板率无全市场汇总口径（<b>待更新</b>），不做推测。</p>
+  </div>
+
+  <div class="sec">
+    <h3>三、板块结构（申万一级 + 申万二级 + 热门概念）</h3>
+    <p class="note">申万一级 <b>10 红 21 绿</b>（8-21 为 16 红 15 绿、8-17 为 26 红 5 绿）——由「缩量轮动」切换为「risk-off 普跌」，与宽度 26% 互相印证。</p>
+    <p><b>领涨 TOP5</b></p>
+    <div class="kv"><span>1. 煤炭</span><span class="r"><span class="up">+2.35%</span> ｜ PE 21.7x ｜ 5 日 <span class="up">+4.63%</span>（避险+资源，最强一级）</span></div>
+    <div class="kv"><span>2. 银行</span><span class="r"><span class="up">+1.32%</span> ｜ PE 6.2x ｜ 5 日 <span class="up">+3.96%</span>（权重护盘）</span></div>
+    <div class="kv"><span>3. 食品饮料</span><span class="r"><span class="up">+1.00%</span> ｜ PE 19.8x ｜ 白酒Ⅱ +1.73%（防御反抽）</span></div>
+    <div class="kv"><span>4. 非银金融</span><span class="r"><span class="up">+0.97%</span> ｜ PE 11.1x ｜ 保险Ⅱ +2.58%</span></div>
+    <div class="kv"><span>5. 钢铁</span><span class="r"><span class="up">+0.91%</span> ｜ PE 29.0x ｜ 5 日 <span class="down">-0.10%</span>（资源跟涨）</span></div>
+    <p><b>领跌 BOTTOM5</b></p>
+    <div class="kv"><span>1. 通信</span><span class="r"><span class="down">-4.62%</span> ｜ PE 58.9x ｜ 5 日 <span class="down">-9.72%</span>（科技硬件领跌）</span></div>
+    <div class="kv"><span>2. 医药生物</span><span class="r"><span class="down">-3.24%</span> ｜ PE 34.2x ｜ 5 日 <span class="down">-6.18%</span>（连续第二日深跌）</span></div>
+    <div class="kv"><span>3. 电子</span><span class="r"><span class="down">-3.14%</span> ｜ PE 80.6x ｜ 5 日 <span class="down">-9.96%</span>（半导体拖累）</span></div>
+    <div class="kv"><span>4. 建筑材料</span><span class="r"><span class="down">-2.51%</span> ｜ PE 35.2x ｜ 5 日 <span class="down">-8.26%</span></span></div>
+    <div class="kv"><span>5. 综合</span><span class="r"><span class="down">-2.26%</span> ｜ PE 94.4x ｜ 5 日 <span class="down">-8.20%</span></span></div>
+    <p class="note">📌 结构定性：<b>「避险资源/防御独撑 + 科技硬件/医药双杀」</b>。领涨 5 名：煤炭（+2.35%，5 日 +4.63%）、银行（+1.32%，5 日 +3.96%）、食品饮料（+1.00%）、非银金融（+0.97%，保险Ⅱ +2.58%）、钢铁（+0.91%）——以避险权重 + 低位周期资源为主；领跌 5 名：通信（-4.62%，5 日 -9.72%）、医药生物（-3.24%）、电子（-3.14%，5 日 -9.96%）、建筑材料（-2.51%）、综合（-2.26%）——以 8 月主线科技硬件 + 医药为主。这是<b>典型的高低切换 risk-off 日</b>：8 月领涨的科技（通信/电子/半导体/CPO）与医药同步退潮，资金切回银行/煤炭/食品/钢铁等低估值避险与资源。有色金属 +0.13% / 公用事业 +0.58% / 交通运输 +0.35% / 家用电器 +0.22% / 农林牧渔 +0.10% 小幅红，石油石化 -0.27% 微绿——资源内部也分化（煤炭强、石油弱）。</p>
+    <p><b>申万二级 · 涨幅前排</b></p>
+    <div class="kv"><span>焦炭Ⅱ</span><span class="r"><span class="up">+5.39%</span> ｜ 美锦能源 <span class="up">+9.89%</span>（资源最强二级）</span></div>
+    <div class="kv"><span>煤炭开采</span><span class="r"><span class="up">+2.17%</span> ｜ 上海能源 <span class="up">+10.02%</span>（资金净流入 +5.45 亿）</span></div>
+    <div class="kv"><span>种植业</span><span class="r"><span class="up">+2.06%</span> ｜ 登海种业 <span class="up">+10.04%</span></span></div>
+    <div class="kv"><span>白酒Ⅱ / 农商行Ⅱ</span><span class="r"><span class="up">+1.73%</span> ／ <span class="up">+2.03%</span> ｜ 茅台 <span class="up">+2.50%</span> / 渝农商行 <span class="up">+3.38%</span>（防御）</span></div>
+    <div class="kv"><span>贵金属</span><span class="r"><span class="up">+1.38%</span> ｜ 60 日 <span class="up">+26.88%</span>（湖南白银 <span class="up">+9.98%</span>）</span></div>
+    <p><b>申万二级 · 跌幅深渊</b></p>
+    <div class="kv"><span>通信设备 / 电子布</span><span class="r"><span class="down">-5.21%</span> ／ <span class="down">-5.50%</span> ｜ 光模块链（楚天龙 <span class="up">+10.01%</span> 逆势个股）</span></div>
+    <div class="kv"><span>半导体 / 元件</span><span class="r"><span class="down">-3.13%</span> ／ <span class="down">-4.18%</span> ｜ 耐科装备 <span class="up">+16.28%</span>（板块跌个股强分化）</span></div>
+    <div class="kv"><span>玻璃玻纤</span><span class="r"><span class="down">-5.30%</span> ｜ 5 日 <span class="down">-14.79%</span></span></div>
+    <div class="kv"><span>化学制药 / 医疗服务</span><span class="r"><span class="down">-3.66%</span> ／ <span class="down">-4.31%</span> ｜ 医药二链齐跌</span></div>
+    <p><b>热门概念 · 涨幅前排（资源/有色/防御概念霸屏）</b></p>
+    <div class="kv"><span>白银概念 / 铅锌概念 / 有色(锑)</span><span class="r"><span class="up">+1.58%</span> ／ <span class="up">+1.44%</span> ／ <span class="up">+1.78%</span> ｜ 湖南白银 <span class="up">+9.98%</span> / 白银有色 <span class="up">+10.02%</span></span></div>
+    <div class="kv"><span>黄酒概念 / 中非合作 / 稳定币</span><span class="r"><span class="up">+3.34%</span> ／ <span class="up">+1.41%</span> ／ <span class="up">+1.35%</span> ｜ 会稽山 <span class="up">+8.31%</span>（事件/防御型）</span></div>
+    <div class="kv"><span>银行概念 / 黄金概念</span><span class="r"><span class="up">+1.38%</span> ／ <span class="up">+1.08%</span> ｜ 避险（黄金概念 5 日 <span class="up">+9.96%</span>）</span></div>
+    <p><b>热门概念 · 承压前排（科技/医药概念霸屏跌幅榜）</b></p>
+    <div class="kv"><span>CRO / 光芯片 / 共封装光模块(CPO)</span><span class="r"><span class="down">-4.08%</span> ／ <span class="down">-4.08%</span> ／ <span class="down">-2.63%</span> ｜ 医药+科技硬件（与板块领跌三位一体）</span></div>
+    <div class="kv"><span>芯片概念 / TMT / 肿瘤疫苗</span><span class="r"><span class="down">-1.89%</span> ／ <span class="down">-1.93%</span> ／ <span class="down">-1.08%</span> ｜ 中期仍深负（芯片 20 日 <span class="down">-20.96%</span>）</span></div>
+    <p class="note">🔴 <b>关键信号：资源/有色/白银/铅锌/黄金概念霸屏涨幅榜，CRO/光芯片/CPO/芯片/TMT 霸屏跌幅榜</b>——与板块（煤炭+2.35%/银行+1.32%领涨、通信-4.62%/电子-3.14%领跌）、资金（工业金属+13.14亿居首、半导体-180.62亿居净流出首位）三方印证，<b>risk-off 高低切换成立：资金从科技硬件撤离、切向低位资源与避险防御</b>。</p>
+  </div>
+
+  <div class="sec">
+    <h3>四、个股盘面 · 市场级异动</h3>
+    <p class="note">仅取市场公开涨停/大涨/大跌个股与热度榜，<b>不含任何个人持仓或自选</b>。</p>
+    <p><b>逆势大涨（资源/有色/煤炭/种植 + 避险防御 + 个别事件股）</b></p>
+    <div class="kv"><span>湖南白银（sz002716）/ 白银有色（sh601212）</span><span class="r"><span class="up">+9.98%</span> ／ <span class="up">+10.02%</span> ｜ 白银/铅锌龙头（资源线旗帜涨停）</span></div>
+    <div class="kv"><span>盛达资源（sz000603）/ 大有能源（sh600403）/ 上海能源（sh600508）</span><span class="r"><span class="up">+8.88%</span> ／ <span class="up">+9.94%</span> ／ <span class="up">+10.02%</span> ｜ 有色/煤炭（资源线）</span></div>
+    <div class="kv"><span>登海种业（sz002041）/ 美锦能源（sz000723）</span><span class="r"><span class="up">+10.04%</span> ／ <span class="up">+9.89%</span> ｜ 种植业 / 焦炭（资源扩散）</span></div>
+    <div class="kv"><span>贵州茅台（sh600519）/ 长飞光纤（sh601869）</span><span class="r"><span class="up">+2.50%</span> ／ <span class="up">+4.29%</span> ｜ 白酒防御 / 通信个股分化逆势</span></div>
+    <div class="kv"><span>协鑫能科（sz002015）/ 哈森股份（sh603958）</span><span class="r"><span class="up">+10.04%</span> ／ <span class="up">+10.02%</span> ｜ 热股榜涨停</span></div>
+    <p><b>大跌 / 承压股（科技硬件 + 医药 + 新股）</b></p>
+    <div class="kv"><span>中际旭创（sz300308）</span><span class="r"><span class="down">-7.72%</span> 收 870.22 ｜ 破 900（科技硬件领跌旗帜）</span></div>
+    <div class="kv"><span>新易盛（sz300502）/ 兆易创新（sh603986）/ 长电科技（sh600584）</span><span class="r"><span class="down">-6.79%</span> ／ <span class="down">-6.70%</span> ／ <span class="down">-6.07%</span> ｜ CPO/存储/封测（硬件链同步杀）</span></div>
+    <div class="kv"><span>长鑫科技（sh688825）/ 京东方Ａ（sz000725）/ 士兰微（sh600460）</span><span class="r"><span class="down">-2.41%</span> ／ <span class="down">-4.17%</span> ／ <span class="down">-0.92%</span> ｜ 半导体存储链走弱（长鑫仍守 55、56.60）</span></div>
+    <div class="kv"><span>C宇树-W（sh688836）/ 哈药股份（sh600664）</span><span class="r"><span class="down">-10.31%</span> ／ <span class="up">+0.61%</span> ｜ 新股高波动 / 医药(8-21 为 -10.02%，今日反抽)</span></div>
+    <p class="note">📌 个股层面三点观察：<b>第一，资源/有色是今日唯一旗帜</b>——湖南白银、白银有色双 10cm 涨停，盛达资源、大有能源、上海能源、登海种业、美锦能源等资源股批量涨停，与板块（煤炭+2.35%/有色微红）互为印证；<b>第二，科技硬件全面退潮</b>——中际旭创 -7.72% 破 900、新易盛 -6.79%、兆易创新 -6.70%、长电科技 -6.07%，半导体二级 -3.13% 但部分个股（耐科装备 +16.28%、楚天龙 +10.01%）逆势表现了板块跌个股强的极端分化；<b>第三，防御个股逆势</b>——茅台 +2.50%、银行/保险/煤炭个股走强，资金明确避险。</p>
+  </div>
+
+  <div class="sec">
+    <h3>五、资金面（申万二级主力净流入 · 单位亿元）</h3>
+    <p class="note">接口仅返回 TOP3 / BOTTOM3（原始字段 zljlr 单位万元，÷10000 = 亿元）。d5/d20 为 5 日 / 20 日累计。</p>
+    <p><b>净流入 TOP3（资源/低位周期独撑）</b></p>
+    <div class="kv"><span>工业金属</span><span class="r"><span class="up">+13.14</span> ｜ 5 日 <span class="up">+40.32</span> ｜ 20 日 <span class="down">-42.85</span> ｜ 领涨 白银有色 +10.02%</span></div>
+    <div class="kv"><span>煤炭开采</span><span class="r"><span class="up">+5.45</span> ｜ 5 日 <span class="up">+7.11</span> ｜ 20 日 <span class="up">+5.35</span> ｜ 领涨 上海能源 +10.02%</span></div>
+    <div class="kv"><span>化学原料</span><span class="r"><span class="up">+4.21</span> ｜ 5 日 <span class="up">+15.91</span> ｜ 20 日 <span class="up">+0.45</span> ｜ 领涨 中毅达 +10.04%</span></div>
+    <p><b>净流出 BOTTOM3（科技硬件三链同撤）</b></p>
+    <div class="kv"><span>半导体</span><span class="r"><span class="down">-180.62</span> ｜ 5 日 <span class="down">-708.91</span> ｜ 20 日 <span class="down">-962.26</span> ｜ 领涨 耐科装备 +16.28%</span></div>
+    <div class="kv"><span>通信设备</span><span class="r"><span class="down">-139.55</span> ｜ 5 日 <span class="down">-402.90</span> ｜ 20 日 <span class="down">-265.21</span> ｜ 领涨 楚天龙 +10.01%</span></div>
+    <div class="kv"><span>元件</span><span class="r"><span class="down">-77.21</span> ｜ 5 日 <span class="down">-309.05</span> ｜ 20 日 <span class="down">-196.07</span> ｜ 领涨 宝鼎科技 +4.91%</span></div>
+    <p><b>概念口径资金流（同源接口）</b></p>
+    <div class="kv"><span>小金属概念 / 黄金概念 / 铅锌概念</span><span class="r"><span class="up">+19.04</span> ／ <span class="up">+14.72</span> ／ <span class="up">+10.23</span> ｜ 资源三篮单日回补（黄金 5 日 +99.60 亿）</span></div>
+    <div class="kv"><span>转融券标的 / TMT / 芯片概念</span><span class="r"><span class="down">-751.18</span> ／ <span class="down">-559.39</span> ／ <span class="down">-521.95</span> ｜ 宽基+科技单日净撤（芯片 20 日 -2,096.60 亿）</span></div>
+    <p class="note">💡 资金面定性：<b>①资金从科技硬件单向撤离</b>——半导体 <span class="down">-180.62 亿</span>、通信设备 <span class="down">-139.55 亿</span>、元件 <span class="down">-77.21 亿</span> 合计 <span class="down">-397.38 亿</span>，宽基转融券标的 <span class="down">-751.18 亿</span>、TMT <span class="down">-559.39 亿</span>、芯片概念 <span class="down">-521.95 亿</span>，<b>撤出的钱是离场而非调仓到科技</b>；<b>②资源/低位周期是今日唯一合力方向</b>——工业金属 <span class="up">+13.14 亿</span> 居单日首位，小金属概念 <span class="up">+19.04 亿</span>、黄金概念 <span class="up">+14.72 亿</span>、铅锌概念 <span class="up">+10.23 亿</span>，煤炭开采 <span class="up">+5.45 亿</span>（20 日 +5.35 亿为少数中期正）；<b>③与板块涨跌（煤炭+2.35%/银行+1.32%领涨、通信-4.62%/电子-3.14%领跌）、概念热榜（白银/铅锌/黄金涨、CPO/光芯片/芯片跌）完全对应</b>，risk-off 高低切换获资金三方印证；<b>④北向资金口径</b>：接口 north_hot_plate 返回日期为 2024-08-16 的陈旧快照，<b>不采用</b>（待更新）。</p>
+  </div>
+
+  <div class="sec">
+    <h3>六、技术关键位</h3>
+    <ul>
+      <li><b>上证指数 3,882.01：</b>跌破 3,900（收 3,882.01 ＜ 均价 3,885.29），并击穿 8-21 低点 3,883.79，盘中最低 3,855.35 <b>逼近 3,850 防守线</b>。下方 <b>3,850</b> 为 8-19 设的防守线（破则 8 月反弹结构破坏）；上方阻力 3,900（今日高 3,910.24 未站稳）→ 3,925（8-21 高）→ 3,950。20 日 <span class="up">+0.62%</span> 仅微正、临界。<b>周二关键：能否守住 3,850 不破。</b></li>
+      <li><b>深证成指 13,794.29：</b><b>跌破 14,000 整数关</b>（高 14,118.15、收 13,794.29 失守），盘中最低 13,616.75。下方 13,616（今日低）支撑；60 日 <span class="down">-11.43%</span>，中期弱势。</li>
+      <li><b>创业板指 3,431.89：</b><b>跌破 3,500 整数关</b>（高 3,551.51、收 3,431.89），盘中最低 3,376.64。下方 3,376（今日低）支撑；20 日 -4.43%、60 日 <span class="down">-15.01%</span>，反弹属超跌修复后回落。</li>
+      <li><b>沪深300 4,563.13 / 中证500 7,717.09：</b>沪深300 跌破 4,600（均价 4,574，低 4,527）；中证500 <b>跌破 8,000</b>（低 7,615.45），20 日 <span class="down">-0.05%</span> 转负、为五指最弱中期（与创业板并列）。</li>
+      <li><b>半导体（申万二级）9,627.16：</b><b>距 10,000 不降反远</b>（今日 -3.13%，8-21 为 9,938.26 未回 10,000），20 日 <span class="down">-8.92%</span> 已转负，YTD 仍 <span class="up">+38.51%</span>——获利盘垫子厚，抛压未出尽。</li>
+      <li><b>通信（申万一级）7,052.64：</b><b>跌破 7,200 多空分水岭</b>（收 7,052.64，今日 -4.62%、5 日 -9.72%），8-21 守 7,200 的支撑今日失效，7,200 转为压力。</li>
+      <li><b>中际旭创 870.22：</b><b>跌破 900</b>（今日 -7.72%），下方 850 为下一观察点。</li>
+      <li><b>长鑫 / 长鑫科技 56.60：</b>连续守 55（今日 -2.41% 收 56.60 ＞ 55），存储链相对最稳但仍转弱。</li>
+      <li><b>煤炭（申万一级）3,413.28 / 银行 4,090.35：</b>煤炭 <span class="up">+2.35%</span>（60 日 <span class="up">+3.58%</span>）、银行 <span class="up">+1.32%</span>（60 日 <span class="up">+4.58%</span>），避险双锚稳健；贵金属（二级）30,225.45（<span class="up">+1.38%</span>，60 日 <span class="up">+26.88%</span>）仍为最强中期资源方向，但短线高位。</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>七、次日观察</h3>
+    <ul>
+      <li><b>破位后能否止跌/反抽（最关键）：</b>今日五指破位（上证破 3,900/3,883、深成破 14,000、创业破 3,500、中证破 8,000），收盘全低于均价，成交 2.0075 万亿放量下跌。判据：周二 <b>上证守住 3,850（今日低 3,855） + 成交缩量至 2 万亿下方（缩量止跌） + 跌停不扩至 20+</b>＝短线止跌、弱势修复；若<b>上证跌破 3,850 或 成交继续放大且跌停扩至 20+ 或 创业板破 3,376（今日低）</b>，则二次探底/补跌延续。</li>
+      <li><b>科技硬件能否止跌（半导体/通信/CPO）：</b>今日半导体 9,627（-3.13%）/ 通信 -4.62% / 中际旭创破 900（-7.72%）/ 通信设备主力 -139.55 亿净撤。判据：半导体<b>收复 9,800</b> + 通信<b>收复 7,200</b> + 中际旭创<b>守 850 不破</b> + 通信设备主力<b>净撤收窄</b>＝科技止跌、可博反抽；若半导体<b>再破 9,500</b> 或 中际旭创<b>破 850</b> 或 通信设备净撤<b>重回 -150 亿以上</b>，则中期调整延续、不接飞刀。</li>
+      <li><b>避险资源是否持续（煤炭/银行/钢铁/有色）：</b>今日煤炭 +2.35% / 银行 +1.32% / 钢铁 +0.91% 领涨，工业金属 +13.14 亿居资金首位。判据：避险资源<b>连续第二日收红 + 银行 5 日延续强势（今日 +3.96%） + 成交配合</b>＝防御主线确认（存量避险）；若<b>银行/煤炭翻绿且资源回落</b>，则避险线破裂、需降仓。</li>
+      <li><b>医药是否止跌：</b>今日医药生物 -3.24% / 化学制药 -3.66% / 医疗服务 -4.31% 继续深跌，但防御（食品/银行/煤炭）走强未扩散。判据：医药周二<b>缩量企稳（跌幅收窄或翻红）</b>＝仅结构性非趋势减仓；若<b>医药继续大跌且扩散至食品/公用等防御</b>，则系统性减仓信号。</li>
+      <li><b>量能与宽度：</b>今日成交 2.0075 万亿（放量）/ 宽度 26%（偏低）/ 涨停 48（破 60 健康线）/ 跌停 14。判据：周二 <b>成交回落至 2 万亿下方（缩量） + 宽度回升至 40% 以上 + 涨停回 60+</b>＝情绪修复；若<b>成交继续放量且宽度跌破 20% 或 涨停 &lt;40 / 跌停 &gt;20</b>，则恐慌延续。</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>八、风险提示</h3>
+    <p class="note">今日由 8-21「缩量轮动」转为「risk-off 破位下跌」，前日 5 条观察点录得 <b>1 绿 3 红 1 橙</b>，8-21 的「反弹」假设被全盘否定，转弱势调整。<b>第一，五指全线破位、派发日。</b>上证收 3,882.01 跌破 3,900 且击穿 8-21 低点 3,883.79、盘中探 3,855.35 逼近 3,850；深成破 14,000、创业破 3,500、中证破 8,000；五指收盘全低于均价，成长最惨（创业板 -3.21%）。<b>第二，科技硬件+医药双杀。</b>通信 -4.62% / 电子 -3.14% / 半导体 -3.13%（主力 -180.62 亿）/ 中际旭创 -7.72% 破 900；医药生物 -3.24% / 医疗服务 -4.31%——8 月两条主线同步退潮。<b>第三，放量下跌（成交 2.0075 万亿、较昨 +1,281.92 亿）但指数下跌＝派发，非增量进攻</b>，宽度 26% 偏低（官方「情绪偏低」）。<b>第四，避险资源独撑</b>（煤炭 +2.35% / 银行 +1.32% / 钢铁 +0.91% / 食品 +1.00%），偏防御难撑指数；资源（有色/贵金属）中期仍强（贵金属 60 日 +26.88%）但短线高位，追高风险累积。<b>第五，下方关键支撑</b>：上证 3,850 / 深成 13,616 / 创业 3,376 / 中证 7,615，若放量跌破则补跌延续。<b>诚实标注</b>：两融余额 / ETF 申赎 / 融资买入占比 / 封板率 / 北向资金无全市场汇总口径（<b>待更新</b>），不做推测；北向热门板块接口返回 2024-08-16 陈旧快照，已弃用。</p>
+  </div>
+
+  <a class="card" href="../market-cycle/index.html" style="margin-top:14px;">
+    <div class="date">📈 相关分析</div>
+    <div class="day">查看「市场周期数据观测」：量能 / 资金 / 板块四维度原始数据 + 周期阶段与资金性质判断（当日页未生成，回退总览）→</div>
+  </a>
+  <footer>数据来源于腾讯自选股等公开行情，可能存在延迟 ｜ 仅供家庭内部学习交流，不构成投资建议</footer>
+</div>
+</body>
+</html>
