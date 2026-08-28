@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>市场周期数据观测 · 2026-08-28</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#ffffff; --ink:#1f2329; --sub:#6b7280; --line:#eceef1;
+    --up:#e03b3b; --down:#1aa260; --brand:#2b5cff; --brand-soft:#eef2ff; --amber:#c88217;
+    --amber-soft:#fff3e0; --green-soft:#e6f7ec; --red-soft:#fdecec;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;}
+  .wrap{max-width:960px;margin:0 auto;padding:16px 14px 48px;}
+  .back{display:inline-block;color:var(--brand);font-size:13px;text-decoration:none;margin:6px 0 10px;}
+  header{padding:4px 0 12px;border-bottom:1px solid var(--line);margin-bottom:14px;}
+  .title{font-size:20px;font-weight:700;margin:0;}
+  .sub{color:var(--sub);font-size:13px;margin-top:4px;}
+  .note{background:#fff8e6;border:1px solid #f3e2b3;border-radius:12px;padding:10px 14px;font-size:12.5px;color:#7a5b16;margin:12px 0;line-height:1.6;}
+  .legend{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0;font-size:12px;}
+  .legend span{display:inline-flex;align-items:center;gap:5px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px 10px;}
+  .dot{width:9px;height:9px;border-radius:50%;display:inline-block;}
+  .nav{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;}
+  .nav a{font-size:12.5px;color:var(--brand);text-decoration:none;background:var(--brand-soft);border-radius:999px;padding:4px 12px;}
+  h2{font-size:17px;margin:24px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--line);scroll-margin-top:12px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px;box-shadow:0 1px 2px rgba(0,0,0,.03);}
+  .card h3{font-size:15px;margin:0 0 8px;}
+  .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:4px 0;}
+  table{border-collapse:collapse;width:100%;font-size:13px;min-width:560px;}
+  th,td{border:1px solid var(--line);padding:7px 9px;text-align:center;white-space:nowrap;}
+  th{background:#f3f5f8;color:#374151;font-weight:600;}
+  tbody tr:nth-child(even){background:#fafbfc;}
+  .up{color:var(--up);font-weight:600;}
+  .down{color:var(--down);font-weight:600;}
+  .amber{color:var(--amber);font-weight:600;}
+  .muted{color:var(--sub);}
+  .seq{font-variant-numeric:tabular-nums;color:#374151;}
+  .kv{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;padding:6px 0;border-bottom:1px dashed var(--line);}
+  .kv:last-child{border-bottom:none;}
+  .kv .r{text-align:right;color:var(--sub);}
+  .kv .r b{color:var(--ink);}
+  .divider{border:none;border-top:2px dashed #c4ccd4;margin:28px 0;}
+  .ev{display:inline-block;background:#eef2ff;color:#2742c4;border-radius:8px;padding:2px 8px;font-size:12.5px;font-weight:600;margin:2px 0;}
+  .tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 10px;border-radius:999px;}
+  .t-retreat{background:var(--green-soft);color:#1a8a3c;}
+  .t-watch{background:var(--amber-soft);color:#b26a00;}
+  .t-confirm{background:var(--red-soft);color:#c0392b;}
+  .t-hot{background:#fdebd0;color:#b9770e;}
+  .judge{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:12px;padding:12px 14px;margin-bottom:12px;}
+  .judge h4{margin:0 0 6px;font-size:15px;}
+  .judge .rule{font-size:12px;color:var(--sub);background:#f6f8fb;border-radius:8px;padding:6px 10px;margin:6px 0;}
+  .judge ol,.judge ul{margin:6px 0;padding-left:18px;font-size:13.5px;}
+  .judge li{margin:5px 0;line-height:1.6;}
+  .foot{color:var(--sub);font-size:12px;text-align:center;margin-top:24px;line-height:1.7;border-top:1px solid var(--line);padding-top:14px;}
+  .scroll-hint{font-size:11px;color:var(--sub);text-align:center;margin:2px 0 0;display:none;}
+  @media(max-width:680px){ .scroll-hint{display:block;} .wrap{max-width:680px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">← 返回市场周期归档</a>
+  <header>
+    <div class="title">市场周期数据观测报告</div>
+    <div class="sub">数据基准日：<b>2026-08-28（周五，最近交易日）</b> ｜ 生成时间：2026-08-28 15:51 ｜ 数据源：腾讯自选股 westock（data_kline 单码 / 指数 kline）</div>
+  </header>
+
+  <div class="note"><b>观测口径说明：</b>报告严格遵循「先数据、后判断」：下方第一～四部分均为结构化原始数据，第五部分每条判断均标注所引用的数据行。板块成交额对全部 31 个申万一级行业逐码调用 data_kline 取真实成交额后排序（<b>已补全原「代表性板块」缺口</b>）；全市场成交额 = 31 行业单码成交额之和。凡接口未返回之字段，一律填「待更新」，绝不臆造。</div>
+
+  <div class="legend">
+    <span><i class="dot" style="background:var(--up)"></i>红 = 偏多 / 站上</span>
+    <span><i class="dot" style="background:var(--down)"></i>绿 = 偏空 / 跌破</span>
+    <span><i class="dot" style="background:var(--amber)"></i>琥珀 = 待更新 / 需关注</span>
+  </div>
+
+  <div class="nav">
+    <a href="#p1">① 总量能</a>
+    <a href="#p2">② 资金</a>
+    <a href="#p3">③ 板块</a>
+    <a href="#p4">④ 风险</a>
+    <a href="#p5">⑤ 判断</a>
+  </div>
+
+  <h2 id="p1">第一部分　市场总量能数据（近 5 个交易日）</h2>
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>日期</th><th>全市场成交额(亿)</th><th>5日均额(亿)</th><th>20日均额(亿)</th><th>5日较20日偏离</th><th>成交额环比昨日</th></tr></thead>
+        <tbody>
+          <tr><td>2026-08-24</td><td class="seq">19,997.20</td><td class="seq">19,703.48</td><td class="seq">22,367.89</td><td class="down">-11.91%</td><td class="amber">待更新</td></tr>
+          <tr><td>2026-08-25</td><td class="seq">18,237.42</td><td class="seq">19,703.48</td><td class="seq">22,367.89</td><td class="down">-11.91%</td><td class="down">-8.80%</td></tr>
+          <tr><td>2026-08-26</td><td class="seq">18,048.35</td><td class="seq">19,703.48</td><td class="seq">22,367.89</td><td class="down">-11.91%</td><td class="down">-1.04%</td></tr>
+          <tr><td>2026-08-27</td><td class="seq">21,237.36</td><td class="seq">19,703.48</td><td class="seq">22,367.89</td><td class="down">-11.91%</td><td class="up">+17.67%</td></tr>
+          <tr><td><b>2026-08-28</td><td class="seq">20,997.07</td><td class="seq">19,703.48</td><td class="seq">22,367.89</td><td class="down">-11.91%</td><td class="down">-1.13%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="scroll-hint">← 左右滑动查看完整表格 →</p>
+    <p class="muted" style="font-size:12.5px;margin:8px 0 0">近 5 日成交额（亿）：19,997.20 → 18,237.42 → 18,048.35 → 21,237.36 → 20,997.07；5 日均额 19,703.48，20 日均额 22,367.89，量能中枢下移。</p>
+  </div>
+
+  <h2 id="p2">第二部分　增量 / 存量资金观测数据</h2>
+  <div class="card">
+    <div class="kv"><span>两融余额(亿)及近 5 日趋势</span><span class="r"><b class="amber">待更新</b> · 可访问接口无全市场两融汇总（仅个股级 data_fund_margin）</span></div>
+    <div class="kv"><span>股票型 ETF 净申购 / 赎回额(亿)</span><span class="r"><b class="amber">待更新</b> · 可访问接口无全市场股票型 ETF 净申赎汇总</span></div>
+    <div class="kv"><span>全市场涨跌家数（上涨 / 下跌 / 平盘）</span><span class="r"><b class="up">2,677</b> / <b class="down">2,212</b> / 127</span></div>
+    <div class="kv"><span>涨停 / 跌停 / 停牌 家数</span><span class="r"><b class="up">81</b> / <b class="down">2</b> / 0</span></div>
+    <div class="kv"><span>上涨占比情绪（upRatio）</span><span class="r"><b class="up">53.43%</b> · </span></div>
+    <div class="table-wrap" style="margin-top:8px;"><table><thead><tr><th>涨跌幅区间</th><th>家数</th></tr></thead><tbody>
+      <tr><td class="up">涨停</td><td class="seq">81</td></tr>
+      <tr><td class="up">>7%</td><td class="seq">36</td></tr>
+      <tr><td class="muted">5%~7%</td><td class="seq">63</td></tr>
+      <tr><td class="muted">2%~5%</td><td class="seq">606</td></tr>
+      <tr><td class="muted">0%~2%</td><td class="seq">1,891</td></tr>
+      <tr><td class="muted">平</td><td class="seq">127</td></tr>
+      <tr><td class="muted">0%~-2%</td><td class="seq">1,465</td></tr>
+      <tr><td class="muted">-2%~-5%</td><td class="seq">622</td></tr>
+      <tr><td class="muted">-5%~-7%</td><td class="seq">84</td></tr>
+      <tr><td class="down"><-7%</td><td class="seq">39</td></tr>
+      <tr><td class="down">跌停</td><td class="seq">2</td></tr>
+    </tbody></table></div>
+    <p class="muted" style="font-size:12.5px;margin:8px 0 0">说明：第二部分中两融 / ETF 为全市场汇总口径，当前可访问接口仅返回个股级或缺失，故标「待更新」；涨跌家数 / 涨跌停已通过 data_changedist 当前快照补充（仅当日报告可填充）。占比字段（第四部分）由真实板块成交额计算得出，已补全。</p>
+  </div>
+
+  <h2 id="p3">第三部分　主流板块原始数据（全市场申万一级行业真实成交额前 10）</h2>
+  <div class="card">
+    <p class="muted" style="font-size:12.5px;margin:0 0 8px">本表为全市场 31 个申万一级行业按当日成交额真实排序的前 10：对全部 31 个行业逐码调用 data_kline 取真实成交额后排序。量比 / 收盘相对 20 日线 / 连续缩量均由单码 K 线序列计算。注：批量 data_kline 的 amount/volume 存在口径偏差，本报告统一采用单码口径以保证准确。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>板块名称</th><th>今日成交额(亿)</th><th>量比</th><th>收盘相对20日线</th><th>偏离%</th><th>近3日成交量(万手)</th><th>连续缩/放</th></tr></thead>
+        <tbody>
+          <tr><td>电子</td><td class="seq">5,606.07</td><td class="seq">1.07</td><td class="up">高于</td><td class="up">+0.48%</td><td class="seq">9577 → 12603 → 11911</td><td>缩5/放2</td></tr>
+          <tr><td>通信</td><td class="seq">1,824.67</td><td class="seq">1.04</td><td class="down">低于</td><td class="down">-0.25%</td><td class="seq">3030 → 3721 → 3383</td><td>缩2/放1</td></tr>
+          <tr><td>机械设备</td><td class="seq">1,555.98</td><td class="seq">1.10</td><td class="up">高于</td><td class="up">+0.19%</td><td class="seq">6672 → 7119 → 7054</td><td>缩0/放0</td></tr>
+          <tr><td>电力设备</td><td class="seq">1,533.61</td><td class="seq">1.04</td><td class="down">低于</td><td class="down">-2.95%</td><td class="seq">6552 → 6943 → 6852</td><td>缩0/放0</td></tr>
+          <tr><td>有色金属</td><td class="seq">1,469.88</td><td class="seq">1.00</td><td class="up">高于</td><td class="up">+3.25%</td><td class="seq">7443 → 6863 → 6897</td><td>缩0/放0</td></tr>
+          <tr><td>基础化工</td><td class="seq">1,369.92</td><td class="seq">1.29</td><td class="up">高于</td><td class="up">+3.16%</td><td class="seq">6880 → 7395 → 8889</td><td>缩0/放2</td></tr>
+          <tr><td>医药生物</td><td class="seq">1,250.26</td><td class="seq">0.90</td><td class="down">低于</td><td class="down">-1.30%</td><td class="seq">8908 → 9092 → 8567</td><td>缩1/放0</td></tr>
+          <tr><td>计算机</td><td class="seq">1,204.63</td><td class="seq">1.42</td><td class="down">低于</td><td class="down">-1.66%</td><td class="seq">4423 → 5154 → 6353</td><td>缩0/放2</td></tr>
+          <tr><td>汽车</td><td class="seq">562.38</td><td class="seq">1.10</td><td class="down">低于</td><td class="down">-0.28%</td><td class="seq">3372 → 3497 → 3555</td><td>缩0/放0</td></tr>
+          <tr><td>国防军工</td><td class="seq">406.93</td><td class="seq">1.12</td><td class="down">低于</td><td class="down">-0.40%</td><td class="seq">1367 → 1593 → 1603</td><td>缩0/放0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="scroll-hint">← 左右滑动查看完整表格 →</p>
+  </div>
+
+  <h2 id="p4">第四部分　风险辅助数据</h2>
+  <div class="card">
+    <div class="kv"><span>融资买入占比(=融资买入额 / 全市场成交额)</span><span class="r"><b class="amber">待更新</b> · 依赖融资买入额（缺失），无法计算</span></div>
+  </div>
+  <div class="card">
+    <h3>附：主要板块成交额占全市场比重及较前一日变化</h3>
+    <p class="muted" style="font-size:12.5px;margin:0 0 8px">全市场 2026-08-28 = 20,997.07 亿、2026-08-27 = 21,237.36 亿，数据源 data_kline 板块单码 amount 求和。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>板块名称</th><th>今日占全市场比重</th><th>较前一日变化(百分点)</th></tr></thead>
+        <tbody>
+          <tr><td>电子</td><td>26.70%</td><td class="down">-0.72 pp</td></tr>
+          <tr><td>通信</td><td>8.69%</td><td class="down">-0.27 pp</td></tr>
+          <tr><td>机械设备</td><td>7.41%</td><td class="down">-0.64 pp</td></tr>
+          <tr><td>电力设备</td><td>7.30%</td><td class="up">+0.01 pp</td></tr>
+          <tr><td>有色金属</td><td>7.00%</td><td class="down">-0.04 pp</td></tr>
+          <tr><td>基础化工</td><td>6.52%</td><td class="up">+1.20 pp</td></tr>
+          <tr><td>医药生物</td><td>5.95%</td><td class="down">-0.54 pp</td></tr>
+          <tr><td>计算机</td><td>5.74%</td><td class="up">+0.88 pp</td></tr>
+          <tr><td>汽车</td><td>2.68%</td><td class="up">+0.18 pp</td></tr>
+          <tr><td>国防军工</td><td>1.94%</td><td class="up">+0.06 pp</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="scroll-hint">← 左右滑动查看完整表格 →</p>
+  </div>
+
+  <hr class="divider">
+
+  <h2 id="p5">第五部分　基于数据的定性判断</h2>
+  <div class="judge">
+    <h4>1. 市场周期阶段（穷 / 变 / 通 / 久）</h4>
+    <div class="rule">判定规则：价格相对 20 日线位置 ＋ 量比是否 &gt;1.2 ＋ 5 日均额趋势</div>
+    <p><span class="ev">阶段判定为「变」</span></p>
+    <ul>
+      <li><b>上证指数</b> 收报相对 20 日线 <b class="up">+0.92%</b>（数据源：westock 指数 kline 单码 MA20）。</li>
+      <li><b>深证成指</b> 收报相对 20 日线 <b class="down">-1.11%</b>（数据源：westock 指数 kline 单码 MA20）。</li>
+      <li><b>创业板指</b> 收报相对 20 日线 <b class="down">-2.73%</b>（数据源：westock 指数 kline 单码 MA20）。</li>
+      <li>市场量比(广义) = 今日成交额 20,997.07 / 5 日均额 19,703.48 ≈ <b>1.07</b>（&lt;1.2）。</li>
+      <li>5 日均额较 20 日均额偏离 <b>-11.91%</b>，近 5 日自 19,997.20 亿变化至今日 20,997.07 亿（数据源：31 行业单码 amount 求和）。</li>
+    </ul>
+  </div>
+
+  <div class="judge">
+    <h4>2. 资金性质（增量 / 存量 / 减量）</h4>
+    <div class="rule">判定规则：5 日均额 vs 20 日均额偏离（&gt;+5% 增量，&lt;-5% 减量，中间存量）＋ 两融与 ETF 合计净流向</div>
+    <p><span class="ev">资金性质为「减量」</span></p>
+    <ul>
+      <li>5 日均额较 20 日均额偏离 <b>-11.91%</b>（&lt;阈值）判定为减量（数据源：31 行业单码 amount 求和）。</li>
+      <li>两融余额与股票型 ETF 净申购 / 赎回额接口未返回市场汇总值，故「两融 + ETF 合计净流向」校验缺失，结论仅基于量能偏离。</li>
+    </ul>
+  </div>
+
+  <div class="judge">
+    <h4>3. 各板块信号标注（关注 / 确认加仓 / 过热 / 撤退）</h4>
+    <div class="rule">判定规则：量比 &gt;1.3 且站上 20 日线且无缩量 → 确认；偏离 &gt;8% → 过热；连续缩量 ≥3 日 → 撤退；其余 → 关注</div>
+    <ul>
+      <li><b>电子</b> → <span class="tag t-retreat">撤退</span> <span class="muted">（量比 1.07、高于 20日线 +0.48%、连续缩量 5 日）</span></li>
+      <li><b>通信</b> → <span class="tag t-watch">关注</span> <span class="muted">（量比 1.04、低于 20日线 -0.25%、连续缩量 2 日）</span></li>
+      <li><b>机械设备</b> → <span class="tag t-watch">关注</span> <span class="muted">（量比 1.10、高于 20日线 +0.19%、连续缩量 0 日）</span></li>
+      <li><b>电力设备</b> → <span class="tag t-watch">关注</span> <span class="muted">（量比 1.04、低于 20日线 -2.95%、连续缩量 0 日）</span></li>
+      <li><b>有色金属</b> → <span class="tag t-watch">关注</span> <span class="muted">（量比 1.00、高于 20日线 +3.25%、连续缩量 0 日）</span></li>
+      <li><b>基础化工</b> → <span class="tag t-watch">关注</span> <span class="muted">（量比 1.29、高于 20日线 +3.16%、连续缩量 0 日）</span></li>
+      <li><b>医药生物</b> → <span class="tag t-watch">关注</span> <span class="muted">（量比 0.90、低于 20日线 -1.30%、连续缩量 1 日）</span></li>
+      <li><b>计算机</b> → <span class="tag t-watch">关注</span> <span class="muted">（量比 1.42、低于 20日线 -1.66%、连续缩量 0 日）</span></li>
+      <li><b>汽车</b> → <span class="tag t-watch">关注</span> <span class="muted">（量比 1.10、低于 20日线 -0.28%、连续缩量 0 日）</span></li>
+      <li><b>国防军工</b> → <span class="tag t-watch">关注</span> <span class="muted">（量比 1.12、低于 20日线 -0.40%、连续缩量 0 日）</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>异常处理与数据缺口汇总</h3>
+    <ul style="margin:6px 0;padding-left:18px;font-size:13.5px;">
+      <li><b>两融余额</b>：可访问接口仅返回个股级 data_fund_margin，无全市场汇总，标「待更新」。</li>
+      <li><b>股票型 ETF 净申购 / 赎回额</b>：可访问接口无此汇总，标「待更新」。</li>
+      <li><b>融资买入占比</b>：依赖融资买入额（缺失），标「待更新」。</li>
+      <li><b>全市场涨跌家数 / 涨跌停</b>：全市场涨跌家数 / 涨跌停：已通过 data_changedist 当前快照补充（该接口仅返回最新市场快照、无法回取历史日，故仅当日报告可填充）。</li>
+      <li><b>板块成交额前 10</b>：已用 data_kline 对全部 31 个申万一级行业逐码拉取真实成交额并排序得出（补全原「代表性板块」缺口）；批量 data_kline 的 amount/volume 存在口径偏差，本报告统一采用单码口径以保证准确。</li>
+    </ul>
+  </div>
+
+  <footer class="foot">报告由市场周期数据观测流程生成 ｜ 全市场量比(广义) ≈ 1.07 ｜ 所有数值均来自 westock 接口原始返回，未做主观插值<br>数据来源于公开行情，可能存在延迟 ｜ 仅供家庭内部学习交流，不构成投资建议</footer>
+</div>
+</body>
+</html>
