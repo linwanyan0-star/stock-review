@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026-09-04 A 股盘面复盘</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#ffffff; --ink:#1f2329; --sub:#6b7280; --line:#eceef1;
+    --up:#e03b3b; --down:#1aa260; --brand:#2b5cff; --brand-soft:#eef2ff; --amber:#c88217;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;}
+  .wrap{max-width:680px;margin:0 auto;padding:16px 14px 48px;}
+  .back{display:inline-block;color:var(--brand);font-size:13px;text-decoration:none;margin:6px 0 10px;}
+  header{padding:4px 0 10px;border-bottom:1px solid var(--line);}
+  .date{font-size:13px;color:var(--sub);}
+  .title{font-size:20px;font-weight:700;margin:2px 0 0;}
+  .conclusion{background:var(--brand-soft);border-radius:14px;padding:14px;margin:16px 0;}
+  .conclusion .label{font-size:12px;color:#2742c4;font-weight:700;letter-spacing:1px;}
+  .conclusion .text{font-size:16px;font-weight:600;margin-top:6px;color:#1a2a6b;}
+  .src{font-size:12px;color:var(--sub);background:#eef6ee;border:1px solid #cfe9d4;border-radius:10px;padding:8px 12px;margin:14px 0;}
+  h2{font-size:16px;margin:22px 0 10px;}
+  .sec{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px;box-shadow:0 1px 2px rgba(0,0,0,.03);}
+  .sec h3{font-size:15px;margin:0 0 8px;}
+  .sec p{margin:6px 0;font-size:14px;}
+  .note{font-size:12px;color:var(--sub);margin:4px 0 8px;}
+  .kv{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;padding:5px 0;border-bottom:1px dashed var(--line);}
+  .kv:last-child{border-bottom:none;}
+  .kv .r{text-align:right;color:var(--sub);}
+  .kv .r b{color:var(--ink);}
+  .up{color:var(--up);font-weight:600;}
+  .down{color:var(--down);font-weight:600;}
+  ul{margin:6px 0;padding-left:18px;font-size:14px;}
+  li{margin:3px 0;}
+  .pill{display:inline-block;font-size:11px;padding:1px 8px;border-radius:999px;background:#fff3e0;color:#b26a00;margin-left:6px;}
+  .v-yes{color:#1a8a3c;font-weight:600;}
+  .v-no{color:#b3261e;font-weight:600;}
+  .v-watch{color:#b26a00;font-weight:600;}
+  .review{list-style:none;margin:8px 0;padding-left:0;}
+  .review li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px;}
+  .r-head{display:flex;align-items:flex-start;gap:10px;margin-bottom:4px;font-size:14px;line-height:1.5;}
+  .r-tag{flex-shrink:0;white-space:nowrap;font-size:12px;padding:2px 8px;border-radius:6px;font-weight:600;}
+  .r-yes{background:#e6f7ec;color:#1a8a3c;}
+  .r-no{background:#ffeaea;color:#b3261e;}
+  .r-watch{background:#fff3e0;color:#b26a00;}
+  .r-body{font-size:13px;color:var(--sub);margin:6px 0 0;line-height:1.6;}
+  .gauge{height:10px;border-radius:999px;background:#eef0f3;overflow:hidden;margin:8px 0 4px;}
+  .gauge > i{display:block;height:100%;background:var(--up);}
+  .gval{font-size:13px;color:var(--sub);}
+  a.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;text-decoration:none;color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.03);}
+  a.card .day{font-size:14px;margin-top:4px;color:var(--brand);}
+  footer{color:var(--sub);font-size:12px;text-align:center;margin-top:24px;line-height:1.6;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">← 返回归档</a>
+  <header>
+    <div class="date">2026-09-04 · 周五 · 交易日收盘（本周最后交易日）</div>
+    <div class="conclusion">
+      <div class="label">一句话结论</div>
+      <div class="text">周五「<b>五指全线收绿、放量下跌 · 上证跌破 3,926 收 3,930.12（守 3,900）· 创业板跌破 3,300 / 深成跌破 13,500 · 成交放量至 2.03 万亿（较昨 +2,717 亿，量增价跌＝派发）· 宽度 43%（情绪正常但指数普跌）· 农业+传媒+消费接旗，电子/资源/机械杀跌</b>」——9-03 设的 5 条观察点 <b>0 绿 2 橙 3 红</b>：9-03 的「弱反抽」被今日放量下跌全面证伪，<b>上证跌破 3,926、科技硬件（半导体 -157.56 亿／消费电子 -29.47 亿／元件 -19.88 亿）与资源（有色 -1.68%／工业金属 -23.04 亿）同遭集中抛售</b>，9-03 的「止跌确认／科技资金回头／资源延续反弹」三条乐观线索全部失败；仅「跌停减半（17→9）+ 银行证券弱护盘（银行 +0.87%／证券 +0.64%）」两条边际改善（橙）。整体是 9-01／9-02 两连跌后的反抽失败、重回下探 3,900 的二次探底。</div>
+    </div>
+  </header>
+
+  <div class="src">✅ 本篇由真实数据聚合生成（2026-09-04 收盘）：指数行情（data_quote）、涨跌宽度（data_changedist）、申万一级 31 行业涨跌与 TTM PE（data_quote 批量板块码）、申万二级主力资金（data_sector ranking mainNetInflow，单位万元÷10000=亿，含 5 日/20 日流向）、热门板块与热股（data_hot board/stock）、交易日确认（data_trade_calendar isTrading=true，isLastTradeDayInWeek=true）。<b>个人持仓/自选股未纳入</b>，个股仅取市场公开涨停/大涨/领跌标的。估值采用 TTM PE。⚠️ 概念三篮（华为/机器人/新能源车）净流向、申万一级逐只量比本次接口未回取，标「待更新」，不编造；两融余额／ETF 申赎／融资买入占比／封板率／北向资金无全市场汇总口径（待更新）。</div>
+
+  <div class="sec">
+    <h3>💰 板块资金流向追踪（当日模块）</h3>
+    <p class="note">亏钱/赚钱效应双榜 + 成交前50聚类 + 量价 + 拥挤度，详见当日独立页面：</p>
+    <a class="card" href="../sector-flow/2026-09-04.html" style="display:inline-block;margin-top:4px;">
+      <div class="day">板块资金流向追踪（2026-09-04）→</div>
+    </a>
+  </div>
+
+  <h2>详细版</h2>
+
+  <div class="sec">
+    <h3>⏮ 前日观察回顾 · 核对 9-03 提出的 5 个观察点</h3>
+    <p class="note">按流程把上一交易日（9-03 周四）「七、次日观察」的推测逐条对照今日盘面，标注验证结论，使观察链条可延续。下一日（9-07 周一）复盘将回看本页「八、次日观察」。</p>
+    <ul class="review">
+      <li>
+        <div class="r-head"><span class="r-tag r-no">未验证</span><span>① 上证能否收回 3,950 确认止跌（最关键，9-03 判据：企稳＝上证收上 3,950 + 成交回 1.8 万亿+ + 宽度 45%+；反向＝跌破 3,926/3,900 或 成交 &lt;1.75 万亿 或 宽度 &lt;25%）</span></div>
+        <div class="r-body">乐观判据<b>全部失败，且反向判据触发</b>，9-03「弱反抽升级为止跌」的假设被证伪。①<b>上证收 3,930.12（开 3,955.55 高开 → 高 3,980.20 → 低 3,915.22 → 收 3,930.12），高开低走、收盘低于均价 3,958.84、且跌破 3,926（✗未收回 3,950、✗反向跌破 3,926 触发，今低 3,915.22 逼近 3,900）</b>；②<b>成交 2.0307 万亿，较昨 +2,717.52 亿 放量（9-03 担心的「缩量逼近 1.75 万亿」未延续，但「放量下跌」更弱——量增价跌＝派发）</b>；③<b>宽度 43%（✗未到 45%、但 &gt;25% 未破位）</b>。结论：<b>9-03 设的「收上 3,950 + 宽度 45%」两条企稳条件均不满足，反向「跌破 3,926」触发，上证重回 3,900 防守线前的二次探底，止跌假设证伪</b>。</div>
+      </li>
+      <li>
+        <div class="r-head"><span class="r-tag r-no">未验证</span><span>② 科技硬件跌幅收窄后能否资金回头（资金面最关键，9-03 判据：企稳＝半导体收红 + 主力净撤收窄至 -30 亿内 + 长鑫守 55 + 元件/消费电子转正；反向＝半导体再净撤超 -60 亿 或 长鑫破 52 或 电子跌破 8,500）</span></div>
+        <div class="r-body">「跌幅收窄」与「资金回头」<b>双双证伪，且抛压加速放大</b>。①<b>半导体 -2.85%（主力 <span class="down">-157.56 亿</span>，较 9-03 的 -44.86 亿 放大逾 3.5 倍、20 日累计 <span class="down">-1,128.00 亿</span> 全市场最深）</b>——9-03「跌幅收窄至 -0.41%」只是单日假象，今日跌幅扩大且资金大逃；②<b>消费电子 -2.28%（<span class="down">-29.47 亿</span>）、元件 -2.44%（<span class="down">-19.88 亿</span>）、通信设备 -1.07%（<span class="down">-29.85 亿</span>）、光学光电子 -2.39%（<span class="down">-28.14 亿</span>），硬件链合计净撤约 -319 亿</b>；③<b>长鑫科技 -1.35% 收 54.80，再破 55（9-03 刚收回的 55 锚点今日失守）</b>，一级电子 -2.72% 收 8,315.93（跌破 8,500，今低 8,251.33）。结论：<b>科技硬件不是「资金回头」，而是「跌幅扩大 + 资金加速撤离」，9-03 唯一正面锚点（长鑫守 55）今日丢失，中期调整深化</b>。</div>
+      </li>
+      <li>
+        <div class="r-head"><span class="r-tag r-watch">延续观察</span><span>③ 券商保险止血能否延续成护盘主线（金融接旗，9-03 判据：证券/保险连续第二日红 + 主力续正 + 银行止跌守 4,100；反向＝非银翻绿 或 银行跌破 4,100 或 证券再净撤超 -20 亿）</span></div>
+        <div class="r-body">「证券续正 + 银行止跌」成立、「保险掉队」，<b>金融整体提供弱支撑但力度有限，故判延续观察</b>。①<b>证券Ⅱ +0.64%（主力 <span class="up">+6.36 亿</span>，连续第二日红 + 续正 ✓），非银金融一级 +0.56%</b>；②<b>银行 +0.87% 收 4,200.64（守 4,200，PE 6.35/PB 0.52，今低 4,157.64 未破 4,100 ✓止跌微红）</b>；③<b>保险Ⅱ -0.35%（主力 <span class="down">-2.03 亿</span> 翻负 ✗）</b>。结论：<b>9-03「非银接旗、银行退半步」的弱护盘格局今日延续——证券+银行托住指数跌幅（全天仅微跌），但保险掉队、且护盘力度不足以扭转五指全绿；需看下周一证券能否连续第三日红、保险能否止跌</b>。</div>
+      </li>
+      <li>
+        <div class="r-head"><span class="r-tag r-no">未验证</span><span>④ 资源链假摔后能否延续反弹（工业金属 / 有色，9-03 判据：延续＝有色守 8,400 + 工业金属主力续正 + 煤炭守 3,400；反向＝有色再破 8,400 或 工业金属再净撤超 -20 亿 或 煤炭跌破 3,400＝假摔变真跌）</span></div>
+        <div class="r-body">9-03「假摔成立」的单日反弹<b>未能延续，资源今日全面回吐、证伪</b>。①<b>有色金属 -1.68% 收 8,305.27（再破 8,400，今低 8,254.72）</b>；②<b>工业金属 -1.10%（主力 <span class="down">-23.04 亿</span>，9-03 为 <span class="up">+1.07 亿</span> 翻负、单日逆转 24.11 亿）</b>；③<b>小金属 -2.86%（<span class="down">-29.57 亿</span>）、贵金属 -1.18%（<span class="down">-0.88 亿</span>）、煤炭开采 -0.23%（<span class="down">-2.27 亿</span>）</b>。结论：<b>9-03 把「单日收复 8,400 + 工业金属翻正」当作假摔成立的证据，今日即被打破——资源是一日游反弹而非趋势反转，9-03 该观察点的「延续反弹」分支证伪</b>。</div>
+      </li>
+      <li>
+        <div class="r-head"><span class="r-tag r-watch">延续观察</span><span>⑤ 个股宽度与跌停是否改善（尾部风险，9-03 判据：企稳＝宽度回升 45%+ + 涨停 60+ + 跌停回落至 &lt;10；反向＝跌停 &gt;20 或 宽度 &lt;25% 或 连板生态坍塌）</span></div>
+        <div class="r-body">「跌停减半」明确改善、「宽度回升但未达标」，<b>边际好转但非企稳，故判延续观察</b>。①<b>跌停 9 家（9-03 为 17，减半 ✓ 满足 &lt;10）</b>；②<b>宽度 43%（9-03 为 33%，回升 10pct，但未达 45%）</b>；③<b>涨停 42（9-03 为 46，略减）、连板生态平稳（楚天龙 9-03 -9.09% 今日反包涨停 +10.00%、昨日连板概念 -0.89% 微绿）</b>。结论：<b>尾部风险较 9-03 明显缓和（跌停减半、宽度回升至「正常」区间），但尚未达到「宽度 45%+ 且涨停 60+」的企稳阈值；9-03「跌停 17→9 倍增惯性恶化」的担忧被证伪，市场未崩但也不强</b>。</div>
+      </li>
+    </ul>
+    <p class="note">📊 汇总：<b>0 绿 2 橙 3 红</b>。9-03 设的 5 条观察点中，<b>0 条被明确验证（绿），「上证止跌」「科技资金回头」「资源延续反弹」三条全部证伪（红），仅「银行证券弱护盘」「跌停/宽度边际改善」两条未定论（橙）</b>。整体信号：<b>9-03 的弱反抽被今日放量下跌全面证伪，市场重回下探 3,900 的二次探底，风险偏好较 9-03 进一步走弱</b>。</p>
+  </div>
+
+  <div class="sec">
+    <h3>一、大盘概览（指数涨跌 + TTM PE）</h3>
+    <p>五指<b>全线收绿（0 红 5 绿）</b>，是<b>「高开 → 单边回落 → 收绿」的放量下跌</b>：上证高开 3,955.55 后几乎全数回吐、收盘跌破 3,926；创业板、深成分别跌破 3,300 / 13,500 整数关。与 9-03「五指全微红」完全镜像反转，且跌幅较 9-03 的真实幅度更大（9-03 是假阳线、今日是真阴线）。涨跌排序（由浅到深）：沪深300 <b class="down">-0.10%</b> ＞ 上证 <b class="down">-0.30%</b> ＞ 深成 <b class="down">-0.79%</b> ≈ 创业板 <b class="down">-0.78%</b> ＞ 中证500 <b class="down">-1.32%</b>——<b>权重（上证/沪深300）抗跌、中证500 与成长（创业板/深成）领跌</b>，结构由 9-03 的「全线贴地」转为「权重护盘、小票杀跌」。</p>
+    <div class="kv"><span>上证指数</span><span class="r"><b>3,930.12</b> <b class="down">-0.30%</b> ｜ PE 17.06x</span></div>
+    <div class="kv"><span>深证成指</span><span class="r"><b>13,516.97</b> <b class="down">-0.79%</b> ｜ PE 41.79x</span></div>
+    <div class="kv"><span>创业板指</span><span class="r"><b>3,286.55</b> <b class="down">-0.78%</b> ｜ PE 54.86x</span></div>
+    <div class="kv"><span>沪深300</span><span class="r"><b>4,548.05</b> <b class="down">-0.10%</b> ｜ PE 13.64x</span></div>
+    <div class="kv"><span>中证500</span><span class="r"><b>7,652.69</b> <b class="down">-1.32%</b> ｜ PE 32.83x</span></div>
+    <p class="note">⚠️ 形态要点：①<b>上证</b>：开 3,955.55（高开 +13.46）／高 <b>3,980.20</b>／低 <b>3,915.22</b>／收 3,930.12（均价 3,958.84，<b>收盘低于均价＝阴线</b>），振幅 1.65%、量比 <b>1.00</b>、成交 <b>9,382.55 亿</b>——<b>高开近 25 点后单边回落，收在 3,930、跌破 3,926（今低 3,915.22 逼近 3,900），3,950 失守、3,900 成下一道生死线</b>；②<b>深成指</b>：开 13,725.65／低 <b>13,448.79（跌破 13,500）</b>／收 13,516.97；③<b>创业板</b>：开 3,344.62／高 3,370.47／低 <b>3,266.80（跌破 3,300）</b>／收 3,286.55，<b>失守 3,300 整数关、振幅 3.13%、换手 3.59% 为五指最高</b>；④<b>沪深300</b>：收 4,548.05（<b>未回 4,600</b>，盘中摸 4,602.20 后回落）；⑤<b>中证500</b>：收 7,652.69（<b>跌破 7,700</b>，今低 7,610.58）。<b>多周期维度</b>：<b>5 日</b>上证 <b class="down">-0.56%</b>／沪深300 -1.33%／中证500 -3.07%／深成 -3.13%／创业板 <b class="down">-4.03%</b>；<b>10 日</b>上证 <b class="up">+0.64%</b>／沪深300 -1.53%／中证500 -2.57%／深成 -4.10%／创业板 <b class="down">-7.31%</b>；<b>20 日</b>上证 <b class="down">-0.25%</b>／沪深300 -3.12%／中证500 -4.10%／深成 -5.55%／创业板 <b class="down">-7.76%</b>；<b>60 日</b>上证 <b class="down">-1.43%</b>／沪深300 -3.69%／中证500 -4.77%／深成 -8.99%／创业板 <b class="down">-13.77%</b>；<b>年内（YTD）</b>中证500 <b class="up">+2.51%</b>／创业板 <b class="up">+2.60%</b>／深成 <b class="down">-0.06%</b>／上证 <b class="down">-0.98%</b>／沪深300 <b class="down">-1.77%</b>。<b>60 日维度上证 -1.43% 与创业板 -13.77% 强弱差 12.34 个百分点（9-03 为 12.79，略收窄），风格撕裂仍极端</b>。逐只更细口径（<b>待更新</b>），不做推测。</p>
+  </div>
+
+  <div class="sec">
+    <h3>二、市场情绪与宽度 <span class="pill">情绪正常·放量普跌·跌停减半</span></h3>
+    <div class="gauge"><i style="width:43%"></i></div>
+    <div class="gval">情绪温度计：<b>正常（宽度 43%，较昨 33% 回升 10pct，但指数五指全绿、属「指数跌/个股略多」的放量普跌）</b>（上涨占比 <b>43%</b>，官方口径「当前市场上涨家数占比全市场 43%，市场情绪正常」）</div>
+    <div class="kv"><span>上涨 / 下跌 / 平盘</span><span class="r"><b>2,444</b> / <b>2,914</b> / 198（停牌 8）</span></div>
+    <div class="kv"><span>涨停 / 跌停</span><span class="r"><b>42</b> / <b>9</b>（9-03 为 46 / 17，跌停减半）</span></div>
+    <div class="kv"><span>两市成交额</span><span class="r"><b>2.0307 万亿</b>（较昨 <b class="up">+2,717.52 亿</b> → <b>放量、量增价跌＝派发</b>）</span></div>
+    <div class="kv"><span>涨幅分布（涨侧）</span><span class="r">涨停 42 ｜ &gt;7% 49 ｜ 7~5% 71 ｜ 5~2% 540 ｜ 2~0% 1,742</span></div>
+    <div class="kv"><span>跌幅分布（跌侧）</span><span class="r">跌停 9 ｜ &gt;7% 62 ｜ 7~5% 143 ｜ 5~2% 932 ｜ 0~2% <b>1,768</b></span></div>
+    <p class="note">🔍 <b>今日的关键读数是「指数全绿、但宽度回升至正常、跌停减半」的放量普跌。</b>①<b>宽度 43%</b>：较 9-03 的 33% 回升 10 个百分点，回到官方「情绪正常」区间，<b>下跌家数 2,914 略多于上涨 2,444（约 1.19:1）</b>——指数跌但个股并非一边倒惨烈，与 9-03「指数微红、个股弱」形成反差；②<b>成交 2.0307 万亿</b>：较 9-03 的 1.7589 万亿 <b>放量 +2,717.52 亿</b>，<b>9-03「逼近 1.75 万亿警戒」的缩量担忧被「放量下跌」取代——价跌量增＝派发特征，比缩量阴跌更需警惕</b>；③<b>跌停 9 家（9-03 为 17，减半）</b>、跌超 5% 约 205 家（&gt;7% 62 + 7~5% 143）、涨超 5% 约 162 家（涨停 42 + &gt;7% 49 + 7~5% 71）——<b>尾部风险较 9-03 缓和，但跌超 5% 家数（205）仍多于涨超 5%（162），属中等强度普跌而非踩踏</b>；④涨停 42 家中<b>「昨日连板」概念 -0.89% 微绿</b>，但楚天龙反包涨停 +10.00%、连板梯队尚在。<b>诚实标注</b>：两融余额／ETF 申赎／融资买入占比／封板率／北向资金无全市场汇总口径（<b>待更新</b>），不做推测。</p>
+  </div>
+
+  <div class="sec">
+    <h3>三、板块结构（申万一级 31 行业 · 领涨 / 领跌 / 热门概念）</h3>
+    <p>申万一级 <b>15 红 16 绿 0 平</b>（9-03 为 11 红 20 绿），<b>红旗数量由 11 面回升至 15 面，但指数五指全绿、属「行业层面略有抵抗、指数层面权重拖累」</b>。方向切换特征：<b>9-03 逆势的「非银/有色」今日分化——非银微红延续（证券 +0.64%、保险 -0.35%）、有色翻绿（-1.68%）；今日接旗的是「农业（+4.16%，饲料/养殖/种植三箭齐发）+ 传媒（+3.16%，广告营销/游戏/影视）+ 食品饮料（+2.11%，白酒）」低位消费+农业+传媒，而 9-03 的「资源假摔反弹」证伪（有色 -1.68%／工业金属 -1.10%）、科技硬件延续杀跌（电子 -2.72%／通信 -1.07%）</b>。</p>
+    <p class="note">🔺 领涨 TOP5</p>
+    <div class="kv"><span>① 农林牧渔</span><span class="r"><b class="up">+4.16%</b> ｜ PE 82.81x ｜ 饲料 +4.79% / 养殖业 +5.30% / 种植业 +3.20% 三箭齐发</span></div>
+    <div class="kv"><span>② 传媒</span><span class="r"><b class="up">+3.16%</b> ｜ PE 34.30x ｜ 广告营销 +3.87% / 游戏Ⅱ +3.57% / 影视院线 +2.24%</span></div>
+    <div class="kv"><span>③ 食品饮料</span><span class="r"><b class="up">+2.11%</b> ｜ PE 20.97x ｜ 白酒Ⅱ +2.64% / 贵州茅台 +2.40%</span></div>
+    <div class="kv"><span>④ 美容护理</span><span class="r"><b class="up">+1.41%</b> ｜ PE 28.16x ｜ 量比 1.05</span></div>
+    <div class="kv"><span>⑤ 商贸零售</span><span class="r"><b class="up">+1.19%</b> ｜ PE 34.39x ｜ 一般零售 +1.07%（翠微股份涨停）</span></div>
+    <p class="note">🔻 领跌 TOP6</p>
+    <div class="kv"><span>① 电子</span><span class="r"><b class="down">-2.72%</b> ｜ PE 61.95x ｜ 收 8,315.93 跌破 8,500（半导体 -2.85% / 元件 -2.44%）</span></div>
+    <div class="kv"><span>② 建筑材料</span><span class="r"><b class="down">-2.14%</b> ｜ PE 36.45x ｜ 量比 1.07</span></div>
+    <div class="kv"><span>③ 综合</span><span class="r"><b class="down">-1.96%</b> ｜ PE 80.24x ｜ 9-03 为领涨之一，今日翻绿</span></div>
+    <div class="kv"><span>④ 机械设备</span><span class="r"><b class="down">-1.86%</b> ｜ PE 42.08x ｜ 通用设备 -2.36%（主力 -23.18 亿）</span></div>
+    <div class="kv"><span>⑤ 有色金属</span><span class="r"><b class="down">-1.68%</b> ｜ PE 18.48x ｜ 收 8,305.27 再破 8,400（工业金属 -1.10% / 小金属 -2.86%）</span></div>
+    <div class="kv"><span>⑥ 通信</span><span class="r"><b class="down">-1.07%</b> ｜ PE 48.40x ｜ 通信设备 -1.15%（60 日 <b class="down">-20.24%</b>）</span></div>
+    <p class="note">📌 <b>今日最值得记录的是「农业+传媒+消费低位接旗，电子/资源/机械杀跌」的再切换</b>：9-03 领涨的「非银（+0.56% 微红延续）/ 有色（-1.68% 翻绿）」分化，9-03 领跌的「社会服务（-0.89%→+0.82% 翻红）/ 美容护理（-0.85%→+1.41% 翻红）」回补；取而代之的是<b>农林牧渔 +4.16%（全市场最强）、传媒 +3.16%、食品饮料 +2.11%</b> 三条低位线。这种「前日弱势一日即强、前日强势一日即弱」的快速轮动，是 8 月以来「单日主线切换」规律的延续（今日为农业/传媒/消费日）。科技硬件（电子 -2.72%）与资源（有色 -1.68%）成为今日主要杀跌方向，与 9-03「资源假摔成立」的判断反向。</p>
+    <p class="note">🔥 热门板块 TOP（data_hot board 热度榜，按热度指数排序，含当日涨跌）</p>
+    <div class="kv"><span>① 航海装备Ⅱ（热度 6083，全场第一）</span><span class="r"><b class="up">+6.49%</b></span></div>
+    <div class="kv"><span>② 半导体（5900）</span><span class="r"><b class="down">-2.85%</b></span></div>
+    <div class="kv"><span>③ 一般零售（4956）</span><span class="r"><b class="up">+1.07%</b></span></div>
+    <div class="kv"><span>④ 证券Ⅱ（3968）</span><span class="r"><b class="up">+0.64%</b></span></div>
+    <div class="kv"><span>⑤ 通信设备（3654）</span><span class="r"><b class="down">-1.15%</b></span></div>
+    <div class="kv"><span>⑥ 种植业（3554）</span><span class="r"><b class="up">+3.20%</b></span></div>
+    <div class="kv"><span>⑦ 养殖业（3498）</span><span class="r"><b class="up">+5.30%</b></span></div>
+    <div class="kv"><span>⑧ 广告营销（3487）</span><span class="r"><b class="up">+3.87%</b></span></div>
+    <div class="kv"><span>⑨ 猪肉（3395）</span><span class="r"><b class="up">+5.83%</b></span></div>
+    <div class="kv"><span>⑩ 元件（3370）</span><span class="r"><b class="down">-2.44%</b></span></div>
+    <div class="kv"><span>⑪ 白酒Ⅱ（3358）</span><span class="r"><b class="up">+2.64%</b></span></div>
+    <div class="kv"><span>⑫ 电力（3071）</span><span class="r"><b class="down">-0.08%</b></span></div>
+    <div class="kv"><span>⑬ 玻璃玻纤（3036）</span><span class="r"><b class="down">-4.86%</b></span></div>
+    <div class="kv"><span>⑭ 文化传媒概念（3007）</span><span class="r"><b class="up">+1.76%</b></span></div>
+    <div class="kv"><span>⑮ 电网设备（2772）</span><span class="r"><b class="up">+0.33%</b></span></div>
+    <div class="kv"><span>⑯ 饲料（2714）</span><span class="r"><b class="up">+4.79%</b></span></div>
+    <div class="kv"><span>⑰ 软件开发（2637）</span><span class="r"><b class="up">+1.06%</b></span></div>
+    <div class="kv"><span>⑱ 游戏Ⅱ（2603）</span><span class="r"><b class="up">+3.57%</b></span></div>
+    <div class="kv"><span>⑲ 银行（2531）</span><span class="r"><b class="up">+0.87%</b></span></div>
+    <div class="kv"><span>⑳ 昨日连板（2512）</span><span class="r"><b class="down">-0.89%</b></span></div>
+    <p class="note">热度榜前十中<b>收红占多数（航海装备/一般零售/证券Ⅱ/种植业/养殖业/广告营销/猪肉/白酒Ⅱ/银行），仅半导体/通信设备/元件/玻璃玻纤仍绿</b>——资金热度集中在「农业（猪肉/饲料/养殖/种植）+ 传媒（广告营销/游戏/文化传媒）+ 军工造船（航海装备）+ 白酒 + 银行证券」五条线，与真实宽度 43%、五指全绿形成「指数弱、结构有抵抗」的背离。⚠️ 概念三篮（华为／机器人／新能源车）净流向本次接口未单独回取（<b>待更新</b>），不编造。</p>
+  </div>
+
+  <div class="sec">
+    <h3>四、个股盘面 · 市场级异动（仅公开涨停 / 大涨 / 大跌标的）</h3>
+    <p class="note">以下仅取市场公开异动股用于记录盘面结构，<b>不含任何个人持仓 / 自选股</b>，也不构成任何投资建议。</p>
+    <p class="note">🔺 涨停 / 大涨（农业 + 传媒 + 消费 + 军工造船 + 零售 + 计算机 多线并行）</p>
+    <div class="kv"><span>新 希 望 sz000876（养殖业）</span><span class="r"><b class="up">+10.00%</b> 收 7.70（<b>涨停</b>）</span></div>
+    <div class="kv"><span>罗 牛 山 sz000735（养殖业）</span><span class="r"><b class="up">+10.05%</b> 收 7.30（<b>涨停</b>）</span></div>
+    <div class="kv"><span>播恩集团 sz001366（饲料）</span><span class="r"><b class="up">+10.04%</b> 收 24.02（<b>涨停</b>）</span></div>
+    <div class="kv"><span>亚盛集团 sh600108（种植业）</span><span class="r"><b class="up">+10.10%</b> 收 4.15（<b>涨停</b>）</span></div>
+    <div class="kv"><span>中国船舶 sh600150（航海装备龙头）</span><span class="r"><b class="up">+9.18%</b> 收 37.47（军工造船领涨，主力 +22.19 亿）</span></div>
+    <div class="kv"><span>我爱我家 sz000560（房地产服务）</span><span class="r"><b class="up">+10.14%</b> 收 3.15（<b>涨停</b>）</span></div>
+    <div class="kv"><span>欢瑞世纪 sz000892（影视院线）</span><span class="r"><b class="up">+10.04%</b> 收 5.59（<b>涨停</b>）</span></div>
+    <div class="kv"><span>楚天龙 sz003040（数字货币）</span><span class="r"><b class="up">+10.00%</b> 收 21.12（<b>涨停</b>，9-03 -9.09% 今日反包）</span></div>
+    <div class="kv"><span>平潭发展 sz000592（林业）</span><span class="r"><b class="up">+9.99%</b> 收 7.49（<b>涨停</b>）</span></div>
+    <div class="kv"><span>龙版传媒 sh605577（出版）</span><span class="r"><b class="up">+9.97%</b> 收 15.55（<b>涨停</b>）</span></div>
+    <div class="kv"><span>易点天下 sz301171（广告营销）</span><span class="r"><b class="up">+11.12%</b> 收 30.90（板块龙头，主力 +38.84 亿当日最强）</span></div>
+    <div class="kv"><span>四方精创 sz300468（软件开发）</span><span class="r"><b class="up">+14.58%</b> 收 28.60（大涨）</span></div>
+    <div class="kv"><span>世纪华通 sz002602（游戏Ⅱ）</span><span class="r"><b class="up">+7.96%</b> 收 16.88</span></div>
+    <div class="kv"><span>蓝色光标 sz300058（广告营销）</span><span class="r"><b class="up">+5.91%</b> 收 13.97</span></div>
+    <div class="kv"><span>贵州茅台 sh600519（白酒权重）</span><span class="r"><b class="up">+2.40%</b> 收 1,330.00</span></div>
+    <p class="note">🔻 大跌 / 跌停</p>
+    <div class="kv"><span>浪潮信息 sz000977（计算机）</span><span class="r"><b class="down">-9.99%</b> 收 77.72（近跌停）</span></div>
+    <div class="kv"><span>哈药股份 sh600664（医药）</span><span class="r"><b class="down">-9.01%</b> 收 7.78</span></div>
+    <div class="kv"><span>紫光股份 sz000938（计算机）</span><span class="r"><b class="down">-7.50%</b> 收 35.27</span></div>
+    <div class="kv"><span>飞龙股份 sz002536（汽车零部件）</span><span class="r"><b class="down">-7.57%</b> 收 58.26（9-03 +8.54% 大涨今日回落）</span></div>
+    <div class="kv"><span>英维克 sz002837（液冷）</span><span class="r"><b class="down">-6.69%</b> 收 63.91（9-03 +3.41% 今日回落）</span></div>
+    <div class="kv"><span>中国巨石 sh600176（玻纤权重）</span><span class="r"><b class="down">-5.75%</b> 收 40.18（9-03 -3.40% 续跌）</span></div>
+    <div class="kv"><span>长电科技 sh600584（半导体）</span><span class="r"><b class="down">-5.49%</b> 收 67.36</span></div>
+    <div class="kv"><span>亨通光电 sh600487（通信设备）</span><span class="r"><b class="down">-4.70%</b> 收 62.22</span></div>
+    <div class="kv"><span>白银有色 sh601212（工业金属）</span><span class="r"><b class="down">-0.41%</b> 收 7.30（9-03 涨停今日回落）</span></div>
+    <div class="kv"><span>长鑫科技 sh688825（存储）</span><span class="r"><b class="down">-1.35%</b> 收 <b>54.80（再破 55）</b></span></div>
+    <div class="kv"><span>C马矿 sh601123（次新股）</span><span class="r"><b class="down">-7.10%</b> 收 17.54</span></div>
+    <p class="note">📌 结构读数：<b>涨停梯队高度集中于「农业（新希望/罗牛山/播恩/亚盛）+ 传媒（欢瑞世纪/龙版传媒/蓝色光标）+ 军工造船（中国船舶）+ 零售（我爱我家/翠微）+ 计算机（四方精创）」五条线</b>，与 9-03「工业金属/中药/光学/零售/液冷」高度不重合——再次印证主线一日一换。价资同向方向：农业（种植业 +6.92 亿、饲料 +7.88 亿、养殖 +7.53 亿）+ 传媒（广告营销 +38.84 亿、游戏 +11.71 亿）+ 军工造船（航海装备 +22.19 亿）三条线「价涨资入」确立今日合力；而<b>科技硬件（半导体 -157.56 亿、消费电子 -29.47 亿、元件 -19.88 亿、光学 -28.14 亿）与资源（工业金属 -23.04 亿、小金属 -29.57 亿）「价跌资撤」</b>。⚠️ <b>楚天龙 +10.00%（9-03 -9.09% 反包）、飞龙股份 -7.57%（9-03 +8.54% 回落）、英维克 -6.69%（9-03 +3.41% 回落）、中国巨石 -5.75%（9-03 -3.40% 续跌）、白银有色 -0.41%（9-03 涨停回落）</b>显示 9-03 的强势股今日明显分化（连板生态未崩但接力降温）。C马矿为次新股（-7.10%），脱离涨跌幅约束期正常剧烈波动，仅作盘面记录。</p>
+  </div>
+
+  <div class="sec">
+    <h3>五、资金面（申万二级主力净流入 / 净流出，含 5 日 / 20 日）</h3>
+    <p class="note">单位：亿元（接口 mainNetInflow 单位万元 ÷ 10000）。</p>
+    <p class="note">💰 主力净流入 TOP10</p>
+    <div class="kv"><span>① 广告营销（+3.87%）</span><span class="r"><b class="up">+38.84</b> ｜ 5日 +21.10 ｜ 20日 -21.77</span></div>
+    <div class="kv"><span>② 软件开发（+1.06%）</span><span class="r"><b class="up">+22.63</b> ｜ 5日 -10.89 ｜ 20日 -86.72</span></div>
+    <div class="kv"><span>③ 航海装备Ⅱ（+6.49%）</span><span class="r"><b class="up">+22.19</b> ｜ 5日 +21.69 ｜ 20日 +3.26</span></div>
+    <div class="kv"><span>④ 游戏Ⅱ（+3.57%）</span><span class="r"><b class="up">+11.71</b> ｜ 5日 +18.48 ｜ 20日 -9.75</span></div>
+    <div class="kv"><span>⑤ 白酒Ⅱ（+2.64%）</span><span class="r"><b class="up">+9.87</b> ｜ 5日 +6.09 ｜ 20日 -32.20</span></div>
+    <div class="kv"><span>⑥ 饲料（+4.79%）</span><span class="r"><b class="up">+7.88</b> ｜ 5日 +7.59 ｜ 20日 +5.84</span></div>
+    <div class="kv"><span>⑦ 养殖业（+5.30%）</span><span class="r"><b class="up">+7.53</b> ｜ 5日 +4.19 ｜ 20日 +6.70</span></div>
+    <div class="kv"><span>⑧ 房地产服务（+3.85%）</span><span class="r"><b class="up">+7.12</b> ｜ 5日 +4.38 ｜ 20日 +9.82</span></div>
+    <div class="kv"><span>⑨ 种植业（+3.20%）</span><span class="r"><b class="up">+6.92</b> ｜ 5日 +9.84 ｜ 20日 <b class="up">+36.69（中周期最强）</b></span></div>
+    <div class="kv"><span>⑩ 证券Ⅱ（+0.64%）</span><span class="r"><b class="up">+6.36</b> ｜ 5日 -7.40 ｜ 20日 -74.07</span></div>
+    <p class="note">💸 主力净流出 TOP10</p>
+    <div class="kv"><span>① 半导体（-2.85%）</span><span class="r"><b class="down">-157.56</b> ｜ 5日 <b class="down">-427.38</b> ｜ 20日 <b class="down">-1,128.00（全市场最深）</b></span></div>
+    <div class="kv"><span>② 小金属（-2.86%）</span><span class="r"><b class="down">-29.57</b> ｜ 5日 <b class="down">-77.26</b> ｜ 20日 <b class="down">-240.69</b></span></div>
+    <div class="kv"><span>③ 消费电子（-2.28%）</span><span class="r"><b class="down">-29.47</b> ｜ 5日 <b class="down">-25.91</b> ｜ 20日 <b class="down">-115.63</b></span></div>
+    <div class="kv"><span>④ 通信设备（-1.15%）</span><span class="r"><b class="down">-29.85</b> ｜ 5日 <b class="down">-180.41</b> ｜ 20日 <b class="down">-356.15</b></span></div>
+    <div class="kv"><span>⑤ 光学光电子（-2.39%）</span><span class="r"><b class="down">-28.14</b> ｜ 5日 <b class="down">-30.07</b> ｜ 20日 <b class="down">-112.03</b></span></div>
+    <div class="kv"><span>⑥ 玻璃玻纤（-4.86%）</span><span class="r"><b class="down">-27.74</b> ｜ 5日 <b class="down">-45.61</b> ｜ 20日 <b class="down">-152.75</b></span></div>
+    <div class="kv"><span>⑦ 自动化设备（-2.62%）</span><span class="r"><b class="down">-27.15</b> ｜ 5日 <b class="down">-31.06</b> ｜ 20日 <b class="down">-121.54</b></span></div>
+    <div class="kv"><span>⑧ 计算机设备（-1.86%）</span><span class="r"><b class="down">-26.74</b> ｜ 5日 <b class="down">-30.90</b> ｜ 20日 <b class="down">-116.11</b></span></div>
+    <div class="kv"><span>⑨ 通用设备（-2.36%）</span><span class="r"><b class="down">-23.18</b> ｜ 5日 +0.79 ｜ 20日 -27.87</span></div>
+    <div class="kv"><span>⑩ 工业金属（-1.10%）</span><span class="r"><b class="down">-23.04</b> ｜ 5日 <b class="down">-92.29</b> ｜ 20日 <b class="down">-161.94</b></span></div>
+    <p class="note">🧭 <b>资金面三条判断</b>：<b>第一，科技硬件「跌幅扩大 + 资金加速撤离」。</b>半导体 <b class="down">-157.56 亿</b>（20 日累计 <b class="down">-1,128.00 亿</b>，较 9-03 的 -863.79 亿 再恶化 264.21 亿、全市场最深），叠加消费电子 -29.47 亿、通信设备 -29.85 亿、光学光电子 -28.14 亿、元件 -19.88 亿、计算机设备 -26.74 亿、自动化设备 -27.15 亿——<b>硬件链合计净撤约 -319 亿，与 9-03「-98.88 亿边际收窄」完全反转，呈加速撤离</b>；长鑫 -1.35% 收 54.80 再破 55，一级电子 -2.72% 跌破 8,500。<b>第二，资源链「假摔反弹一日游」证伪。</b>工业金属 -1.10%（<b class="down">-23.04 亿</b>，9-03 为 <b class="up">+1.07 亿</b> 翻负）、小金属 -2.86%（<b class="down">-29.57 亿</b>）、有色金属一级 -1.68%（收 8,305.27 再破 8,400），资源今日全面回吐，9-03「假摔成立」的单日读数被证伪。<b>第三，农业+传媒+消费成今日唯一合力方向。</b>种植业 +6.92 亿（20 日 <b class="up">+36.69 亿</b>，中周期最强方向）、饲料 +7.88 亿、养殖业 +7.53 亿、白酒Ⅱ +9.87 亿、广告营销 +38.84 亿（当日最强）、游戏Ⅱ +11.71 亿、航海装备Ⅱ +22.19 亿（军工造船接力）、证券Ⅱ +6.36 亿（连续第二日红）。<b>但农业/传媒多为「低位超跌反弹 + 事件驱动」，种植业 20 日 +36.69 亿已是少数中周期全正方向，持续性待验；半导体 -1,128 亿的撤出规模远超农业+传媒当日合力（约 +150 亿），存量博弈下主线难持续</b>。</p>
+  </div>
+
+  <div class="sec">
+    <h3>六、技术关键位</h3>
+    <div class="kv"><span>上证指数</span><span class="r">收 <b>3,930.12</b>｜<b>跌破 3,926（今低 3,915.22）、守 3,900，未收回 3,950</b>｜下方 <b>3,915（今低）/ 3,900 / 3,882（8-24 低）/ 3,850</b>｜上方 3,950 / 3,980（今高）/ 4,000</span></div>
+    <div class="kv"><span>深证成指</span><span class="r">收 <b>13,516.97</b>｜<b>跌破 13,500（今低 13,448.79）</b>｜下方 <b>13,448（今低）/ 13,400 / 13,200</b>｜上方 13,500 / 13,725 / 13,798</span></div>
+    <div class="kv"><span>创业板指</span><span class="r">收 <b>3,286.55</b>｜<b>跌破 3,300（今低 3,266.80）</b>｜下方 <b>3,266（今低）/ 3,250 / 3,200</b>｜上方 3,300 / 3,344 / 3,370</span></div>
+    <div class="kv"><span>沪深300</span><span class="r">收 <b>4,548.05</b>｜<b>未回 4,600（盘中摸 4,602.20 后回落）</b>｜下方 <b>4,530（今低）/ 4,500</b>｜上方 4,600 / 4,575</span></div>
+    <div class="kv"><span>中证500</span><span class="r">收 <b>7,652.69</b>｜<b>跌破 7,700（今低 7,610.58）</b>｜下方 <b>7,610（今低）/ 7,600 / 7,500</b>｜上方 7,700 / 7,806 / 7,850</span></div>
+    <div class="kv"><span>申万一级 · 电子</span><span class="r">收 <b>8,315.93</b>｜<b>跌破 8,500（今低 8,251.33）</b>｜下方 8,251（今低）/ 8,200</span></div>
+    <div class="kv"><span>申万一级 · 有色金属</span><span class="r">收 <b>8,305.27</b>｜<b class="down">再破 8,400（9-03 收复，今日失守，今低 8,254.72）</b>｜下方 8,254（今低）/ 8,200 / 8,000</span></div>
+    <div class="kv"><span>申万一级 · 银行</span><span class="r">收 <b>4,200.64</b>｜<b class="up">守 4,200（今低 4,157.64）</b>｜PE 6.35x / PB 0.52x</span></div>
+    <div class="kv"><span>关键个股 · 长鑫科技</span><span class="r">收 <b>54.80</b>｜<b class="down">再破 55（9-03 收回，今日失守）</b>｜下方 54.37（今低）/ 52</span></div>
+    <p class="note">📐 <b>技术面结构变化</b>：今日是 9-03「弱反抽」失败后的<b>二次探底日</b>——9-03 收复的「有色 8,400、长鑫 55」两道今日全部失守，且<b>上证 3,926、深成 13,500、创业板 3,300、中证500 7,700 四道新关口今日同步告破</b>（仅银行守 4,200、沪深300 守 4,500 未破）。上证收 3,930.12 紧贴 3,900 防守线（今低 3,915.22 距 3,900 仅 15.22 点），<b>3,900~3,995 箱体下沿格局被打破下沿、进入「3,900 生死线」博弈</b>。与 9-03 不同：<b>今日是「高开低走真阴线」（收盘低于均价）、放量下跌（2.03 万亿），抛压真实而非缩量假摔</b>，下一档具成交量意义的位置为：上证 3,900（生死线）/ 3,882（8-24 低）/ 3,850、创业板 3,266（今低）/ 3,250、中证500 7,610（今低）/ 7,500、深成 13,448（今低）/ 13,400、一级电子 8,251（今低）/ 8,200、有色 8,254（今低）/ 8,200。</p>
+  </div>
+
+  <div class="sec">
+    <h3>七、次日观察</h3>
+    <ul>
+      <li><b>上证 3,900 能否守住（最关键）：</b>今日收 3,930.12（开 3,955.55 → 高 3,980.20 → 低 3,915.22），跌破 3,926、守 3,900，成交放量至 2.0307 万亿、宽度 43%。判据（企稳）：<b>上证收上 3,950 + 成交维持 2 万亿+ + 宽度回升至 45%+</b>＝止跌确认、重回 3,900~3,995 箱体；若<b>上证跌破 3,900（今低 3,915.22 逼近）或 成交再缩至 &lt;1.9 万亿 或 宽度跌破 40%</b>＝下探 3,882（8-24 低）/ 3,850（8 月防守线）。此项决定「二次探底企稳」与「破位下杀」的分野。</li>
+      <li><b>科技硬件（半导体 -157.56 亿）抛压是否缓和（资金面最关键）：</b>今日半导体 -2.85%（主力 <b>-157.56 亿</b>，20 日累计 <b>-1,128.00 亿</b> 全市场最深）、消费电子 -2.28%（-29.47 亿）、元件 -2.44%（-19.88 亿）、通信设备 -1.07%（-29.85 亿）、长鑫 -1.35% 收 54.80 再破 55、一级电子 -2.72% 跌破 8,500（今低 8,251.33）。判据（企稳）：<b>半导体收红 + 主力净撤收窄至 -50 亿内 + 长鑫守 55 + 电子守住 8,200</b>＝三次探底有止跌迹象、硬件链风险释放；若<b>半导体再净撤超 -100 亿 或 长鑫破 52 或 电子破 8,200</b>＝科技中期调整深化，不接飞刀。<b>注意：今日半导体单日 -157.56 亿 较 9-03 的 -44.86 亿 放大逾 3.5 倍，是本轮调整以来单日最大撤出之一，需警惕加速</b>。</li>
+      <li><b>农业+传媒+消费能否成为新主线（低位接旗）：</b>今日农林牧渔 +4.16%（饲料/养殖/种植三箭齐发）、传媒 +3.16%（广告营销/游戏/影视）、食品饮料 +2.11%（白酒），资金种植业 +6.92 亿（20 日 +36.69 亿 中周期最强）、广告营销 +38.84 亿、游戏Ⅱ +11.71 亿、白酒Ⅱ +9.87 亿、养殖业 +7.53 亿。判据（主线）：<b>农业/传媒连续第二日收红 + 主力续正且 20 日三周期全正（种植业已满足）+ 白酒守 20 日</b>＝低位新主线确立；反向＝<b>一日游（农业/传媒历史上单日爆发频发）翻绿 或 资金次日转净撤</b>＝又一条单日切换，回防。此项验证 8 月以来「单日主线」规律是否终结。</li>
+      <li><b>资源链（有色/工业金属）假摔后是否真正止跌：</b>今日有色金属 -1.68% 收 8,305.27（再破 8,400）、工业金属 -1.10%（主力 <b>-23.04 亿</b>，9-03 为 +1.07 亿翻负）、小金属 -2.86%（-29.57 亿）、贵金属 -1.18%（-0.88 亿）。判据（止跌）：<b>有色收回 8,400 + 工业金属主力翻正 + 小金属止跌</b>＝9-03 假摔为真、资源企稳；若<b>有色再破 8,254（今低）或 工业金属再净撤超 -30 亿 或 小金属破 20 日低位</b>＝资源确认转弱，9-03「假摔」读数证伪、重回调整。</li>
+      <li><b>银行+证券弱护盘能否延续（权重端）：</b>今日银行 +0.87% 收 4,200.64（守 4,200，PE 6.35）、证券Ⅱ +0.64%（+6.36 亿，连续第二日红），但保险Ⅱ -0.35%（-2.03 亿 翻负）。判据（护盘）：<b>银行连续第二日红守 4,200 + 证券主力续正 + 保险止跌</b>＝低估值金融成唯一稳定器，上证 3,900 上方企稳；若<b>银行跌破 4,200 或 证券再净撤超 -20 亿 或 保险继续翻负</b>＝权重端独木难支，指数失守 3,900。关键看银行（PE 6.35 历史低位）能否在 3,900 关口提供估值锚。</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h3>八、风险提示</h3>
+    <p>今日由 9-03「五指全微红、宽度 33%」转为「五指全线收绿、宽度 43%」，前日 5 条观察点录得 <b>0 绿 2 橙 3 红</b>，9-03 的「弱反抽」被今日放量下跌全面证伪，<b>上证跌破 3,926、重回 3,900 生死线博弈，9-03「止跌确认／科技资金回头／资源延续反弹」三条乐观线索全部失败</b>。<b>第一，放量下跌比缩量阴跌更需警惕。</b>今日成交 2.0307 万亿（较昨 +2,717.52 亿 放量），但五指全绿、收盘全低于均价——量增价跌＝派发特征，9-03「逼近 1.75 万亿警戒」的缩量担忧虽缓解，却以「放量下跌」形式出现，抛压真实。<b>第二，科技硬件中期资金面加速恶化。</b>半导体 20 日累计从 -863.79 亿扩大到 <b>-1,128.00 亿</b>（单日再撤 157.56 亿，较 9-03 的 -44.86 亿 放大逾 3.5 倍），通信设备 -356.15 亿、元件 -375.57 亿、消费电子 -115.63 亿、光学光电子 -112.03 亿，硬件多方向 20 日合计撤资超 2,000 亿；<b>长鑫收 54.80 再破 55、一级电子跌破 8,500，9-03 唯一正面锚点丢失</b>。<b>第三，资源链「假摔」证伪，今日全面回吐。</b>有色再破 8,400、工业金属主力由 +1.07 亿翻负至 -23.04 亿、小金属 -29.57 亿，9-03「假摔成立」的单日读数被一日游证伪。<b>第四，农业+传媒+消费的接旗可持续性存疑。</b>今日种植业/广告营销/游戏资金合力约 +150 亿，远小于半导体单方向 -157.56 亿的撤出规模；农业/传媒历史单日爆发频发（8-27 传媒、9-01 农业均曾一日游），「低位接旗」需下周一第二日续证，不能视为新趋势。<b>第五，金融弱护盘是唯一亮点但力度有限。</b>银行 +0.87% 守 4,200（PE 6.35 历史低位）、证券 +6.36 亿连续第二日红，但保险翻负、且护盘力度不足以扭转五指全绿——权重端仅能延缓下跌、难言反转。<b>第六，尾部风险边际缓和但未解除。</b>跌停 17→9 减半、宽度回升至 43%，但涨超 5% 仅 162 家 vs 跌超 5% 205 家，仍属中等强度普跌；连板生态平稳（楚天龙反包涨停）但未强化。<b>第七，风格撕裂仍极端。</b>60 日维度上证 -1.43% vs 创业板 <b>-13.77%</b>，强弱差 12.34 个百分点；YTD 仅中证500 +2.51%/创业板 +2.60% 为正，上证 -0.98%/沪深300 -1.77% 转负——<b>宽基指数赚钱效应极度分化，市场缺乏可持续主线，仅剩低位板块的轮动博弈</b>。<b>第八，下方关键支撑</b>：上证 3,915（今低）/ 3,900 / 3,882（8-24 低）/ 3,850（防守线）；深成 13,448（今低）/ 13,400；创业板 3,266（今低）/ 3,250；沪深300 4,530（今低）/ 4,500；中证500 7,610（今低）/ 7,500；一级电子 8,251（今低）/ 8,200、有色 8,254（今低）/ 8,200；长鑫 54.37（今低）/ 52。<b>诚实标注</b>：两融余额 / ETF 申赎 / 融资买入占比 / 封板率 / 北向资金无全市场汇总口径（<b>待更新</b>），不做推测；概念三篮（华为/机器人/新能源车）与宽基三篮净流向本次接口未单独回取（待更新）；申万一级逐只量比未完整回取（待更新）；北向热门板块接口返回 2024-08-16 陈旧快照已弃用；C马矿为次新股，其 -7.10% 不具备涨跌幅参考意义，仅作盘面记录。</p>
+  </div>
+
+  <div class="sec">
+    <h3>📈 相关分析</h3>
+    <p class="note">查看「市场周期数据观测」：量能 / 资金 / 板块四维度原始数据 + 周期阶段与资金性质判断（当日页未生成，回退总览）→</p>
+    <a class="card" href="../market-cycle/index.html" style="display:inline-block;margin-top:4px;">
+      <div class="day">市场周期数据观测（总览）→</div>
+    </a>
+  </div>
+
+  <footer>数据来源于腾讯自选股等公开行情，可能存在延迟 ｜ 仅供家庭内部学习交流，不构成投资建议</footer>
+</div>
+</body>
+</html>
